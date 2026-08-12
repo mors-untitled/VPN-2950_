@@ -1,0 +1,339 @@
+name: Whitelist IP and SNI filter
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "31 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  filter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Filter VPN configs by whitelist IP/CIDR and SNI
+        shell: python
+        run: |
+          import ipaddress
+          import re
+          import socket
+          import urllib.parse
+          import urllib.request
+          from pathlib import Path
+
+          INPUT_FILE = Path("web_configs/04_vless_all.txt")
+          OUT_DIR = Path("whitelist_results")
+          OUT_DIR.mkdir(exist_ok=True)
+
+          WHITELIST_DOMAINS_URL = (
+              "https://raw.githubusercontent.com/"
+              "hxehex/russia-mobile-internet-whitelist/main/whitelist.txt"
+          )
+
+          WHITELIST_IP_URL = (
+              "https://raw.githubusercontent.com/"
+              "hxehex/russia-mobile-internet-whitelist/main/ipwhitelist.txt"
+          )
+
+          WHITELIST_CIDR_URL = (
+              "https://raw.githubusercontent.com/"
+              "hxehex/russia-mobile-internet-whitelist/main/cidrwhitelist.txt"
+          )
+
+          HEADERS = {
+              "User-Agent": "Mozilla/5.0 whitelist-filter/1.0"
+          }
+
+          def download_lines(url):
+              req = urllib.request.Request(
+                  url,
+                  headers=HEADERS
+              )
+
+              with urllib.request.urlopen(
+                  req,
+                  timeout=30
+              ) as response:
+                  text = response.read().decode(
+                      "utf-8",
+                      errors="ignore"
+                  )
+
+              return [
+                  line.strip()
+                  for line in text.splitlines()
+                  if line.strip()
+                  and not line.lstrip().startswith("#")
+              ]
+
+          domains = set(
+              d.lower().strip(".")
+              for d in download_lines(
+                  WHITELIST_DOMAINS_URL
+              )
+          )
+
+          raw_ips = download_lines(
+              WHITELIST_IP_URL
+          )
+
+          raw_cidrs = download_lines(
+              WHITELIST_CIDR_URL
+          )
+
+          whitelist_ips = set()
+
+          for value in raw_ips:
+              try:
+                  whitelist_ips.add(
+                      ipaddress.ip_address(value)
+                  )
+              except ValueError:
+                  pass
+
+          whitelist_networks = []
+
+          for value in raw_cidrs:
+              try:
+                  whitelist_networks.append(
+                      ipaddress.ip_network(
+                          value,
+                          strict=False
+                      )
+                  )
+              except ValueError:
+                  pass
+
+          print("Whitelist domains:", len(domains))
+          print("Whitelist exact IPs:", len(whitelist_ips))
+          print("Whitelist CIDRs:", len(whitelist_networks))
+
+          def get_param(query, *names):
+              for name in names:
+                  values = query.get(name)
+                  if values:
+                      return urllib.parse.unquote(
+                          values[0]
+                      ).lower().strip()
+              return ""
+
+          def domain_matches(name):
+              name = name.lower().strip(".")
+
+              if not name:
+                  return False
+
+              if name in domains:
+                  return True
+
+              return any(
+                  name.endswith("." + d)
+                  for d in domains
+              )
+
+          def resolve_host(host):
+              try:
+                  ipaddress.ip_address(host)
+                  return [host]
+              except ValueError:
+                  pass
+
+              try:
+                  infos = socket.getaddrinfo(
+                      host,
+                      None,
+                      type=socket.SOCK_STREAM
+                  )
+              except Exception:
+                  return []
+
+              result = []
+
+              for info in infos:
+                  ip = info[4][0]
+                  if ip not in result:
+                      result.append(ip)
+
+              return result
+
+          def ip_matches(ip_string):
+              try:
+                  ip = ipaddress.ip_address(ip_string)
+              except ValueError:
+                  return False
+
+              if ip in whitelist_ips:
+                  return True
+
+              return any(
+                  ip in network
+                  for network in whitelist_networks
+              )
+
+          if not INPUT_FILE.exists():
+              raise SystemExit(
+                  f"Missing input file: {INPUT_FILE}"
+              )
+
+          raw_configs = [
+              line.strip()
+              for line in INPUT_FILE.read_text(
+                  encoding="utf-8",
+                  errors="ignore"
+              ).splitlines()
+              if line.strip().startswith("vless://")
+          ]
+
+          both = []
+          ip_only = []
+          sni_only = []
+          neither = []
+
+          seen = set()
+
+          for line in raw_configs:
+
+              if line in seen:
+                  continue
+              seen.add(line)
+
+              try:
+                  parsed = urllib.parse.urlsplit(line)
+                  query = urllib.parse.parse_qs(
+                      parsed.query,
+                      keep_blank_values=True
+                  )
+              except Exception:
+                  continue
+
+              host = parsed.hostname or ""
+
+              sni = get_param(
+                  query,
+                  "sni",
+                  "serverName",
+                  "servername"
+              )
+
+              resolved_ips = resolve_host(host)
+
+              has_ip_match = any(
+                  ip_matches(ip)
+                  for ip in resolved_ips
+              )
+
+              has_sni_match = domain_matches(sni)
+
+              if has_ip_match and has_sni_match:
+                  both.append(line)
+
+              elif has_ip_match:
+                  ip_only.append(line)
+
+              elif has_sni_match:
+                  sni_only.append(line)
+
+              else:
+                  neither.append(line)
+
+          def write(name, items):
+              (OUT_DIR / name).write_text(
+                  "\n".join(items)
+                  + ("\n" if items else ""),
+                  encoding="utf-8"
+              )
+
+          write(
+              "01_ip_and_sni.txt",
+              both
+          )
+
+          write(
+              "02_ip_match.txt",
+              ip_only
+          )
+
+          write(
+              "03_sni_match.txt",
+              sni_only
+          )
+
+          write(
+              "04_neither.txt",
+              neither
+          )
+
+          # Small test batches from the strongest class.
+          BATCH_SIZE = 50
+
+          for old in OUT_DIR.glob(
+              "test_*.txt"
+          ):
+              old.unlink()
+
+          for i in range(
+              0,
+              len(both),
+              BATCH_SIZE
+          ):
+              chunk = both[
+                  i:i + BATCH_SIZE
+              ]
+
+              number = (
+                  i // BATCH_SIZE
+              ) + 1
+
+              write(
+                  f"test_{number:03d}.txt",
+                  chunk
+              )
+
+          report = [
+              f"Input unique VLESS: {len(seen)}",
+              f"IP + SNI match: {len(both)}",
+              f"IP only: {len(ip_only)}",
+              f"SNI only: {len(sni_only)}",
+              f"Neither: {len(neither)}",
+              "",
+              "Priority order:",
+              "1. 01_ip_and_sni.txt",
+              "2. 02_ip_match.txt",
+              "3. 03_sni_match.txt",
+          ]
+
+          write(
+              "report.txt",
+              report
+          )
+
+          print()
+          print("Input:", len(seen))
+          print("IP + SNI:", len(both))
+          print("IP only:", len(ip_only))
+          print("SNI only:", len(sni_only))
+          print("Neither:", len(neither))
+
+      - name: Commit whitelist results
+        run: |
+          git config user.name \
+            "github-actions[bot]"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add whitelist_results
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m \
+              "Update whitelist-filtered VPN configs"
+
+            git push
+          fi
