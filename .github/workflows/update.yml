@@ -1,0 +1,41 @@
+name: Update VPN configs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download latest configs
+        run: |
+          curl -L --fail \
+          "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/26.txt" \
+          -o source.txt
+
+          grep -v '^[[:space:]]*$' source.txt | head -n 2950 > 26_2950.txt
+
+          rm source.txt
+
+      - name: Commit updated configs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add 26_2950.txt
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update VPN configs"
+            git push
+          fi
