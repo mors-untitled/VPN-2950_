@@ -1,0 +1,215 @@
+name: Update Kaluga VPN matches
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download latest configs
+        run: |
+          curl -L --fail \
+          "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/26.txt" \
+          -o source.txt
+
+      - name: Rank configs by similarity to confirmed working profile
+        shell: python
+        run: |
+          import urllib.parse
+          from pathlib import Path
+
+          source = Path("source.txt")
+
+          TARGET_SNI = "rutube.ru"
+          TARGET_FP = "qq"
+          TARGET_FLOW = "xtls-rprx-vision"
+          TARGET_PACKET_ENCODING = "xudp"
+          TARGET_PORT = 55443
+
+          rows = []
+          seen = set()
+
+          def first(q, key):
+              return urllib.parse.unquote(
+                  q.get(key, [""])[0]
+              ).lower().strip()
+
+          for idx, raw in enumerate(
+              source.read_text(
+                  encoding="utf-8",
+                  errors="ignore"
+              ).splitlines()
+          ):
+              line = raw.strip()
+
+              if not line.startswith("vless://"):
+                  continue
+
+              if line in seen:
+                  continue
+              seen.add(line)
+
+              try:
+                  parsed = urllib.parse.urlsplit(line)
+                  q = urllib.parse.parse_qs(
+                      parsed.query,
+                      keep_blank_values=True
+                  )
+              except Exception:
+                  continue
+
+              security = first(q, "security")
+              flow = first(q, "flow")
+              transport = first(q, "type")
+              fp = first(q, "fp")
+              packet_encoding = first(q, "packetEncoding")
+
+              if not packet_encoding:
+                  packet_encoding = first(q, "packet_encoding")
+
+              sni = first(q, "sni")
+              if not sni:
+                  sni = first(q, "serverName")
+
+              try:
+                  port = parsed.port or 0
+              except Exception:
+                  port = 0
+
+              score = 0
+              reasons = []
+
+              # VLESS уже обязателен.
+              score += 5
+              reasons.append("VLESS")
+
+              if security == "reality":
+                  score += 20
+                  reasons.append("REALITY")
+
+              if flow == TARGET_FLOW:
+                  score += 18
+                  reasons.append("VISION")
+
+              if transport in ("tcp", "raw"):
+                  score += 10
+                  reasons.append("TCP/RAW")
+
+              if packet_encoding == TARGET_PACKET_ENCODING:
+                  score += 12
+                  reasons.append("XUDP")
+
+              if fp == TARGET_FP:
+                  score += 10
+                  reasons.append("FP=QQ")
+              elif fp in ("chrome", "firefox", "safari"):
+                  score += 3
+                  reasons.append("COMMON-FP")
+
+              if sni == TARGET_SNI:
+                  score += 30
+                  reasons.append("SNI=RUTUBE")
+
+              elif sni.endswith(".rutube.ru"):
+                  score += 24
+                  reasons.append("RUTUBE-FAMILY")
+
+              if port == TARGET_PORT:
+                  score += 5
+                  reasons.append("PORT=55443")
+
+              # Дополнительный бонус, если есть REALITY-ключи.
+              if first(q, "pbk"):
+                  score += 3
+                  reasons.append("PBK")
+
+              if first(q, "sid"):
+                  score += 2
+                  reasons.append("SID")
+
+              rows.append({
+                  "score": score,
+                  "idx": idx,
+                  "line": line,
+                  "sni": sni,
+                  "reasons": reasons,
+              })
+
+          rows.sort(
+              key=lambda x: (-x["score"], x["idx"])
+          )
+
+          # Очень близкие к рабочему профилю.
+          exact_like = [
+              r for r in rows
+              if r["score"] >= 75
+          ]
+
+          # Более широкий пул кандидатов.
+          probable = [
+              r for r in rows
+              if r["score"] >= 45
+          ]
+
+          best_200 = probable[:200]
+          best_500 = probable[:500]
+
+          Path("kaluga_exact_like.txt").write_text(
+              "\n".join(r["line"] for r in exact_like)
+              + ("\n" if exact_like else ""),
+              encoding="utf-8"
+          )
+
+          Path("kaluga_best_200.txt").write_text(
+              "\n".join(r["line"] for r in best_200)
+              + ("\n" if best_200 else ""),
+              encoding="utf-8"
+          )
+
+          Path("kaluga_best_500.txt").write_text(
+              "\n".join(r["line"] for r in best_500)
+              + ("\n" if best_500 else ""),
+              encoding="utf-8"
+          )
+
+          print("Unique VLESS:", len(rows))
+          print("Exact-like:", len(exact_like))
+          print("Probable:", len(probable))
+          print("Best 200:", len(best_200))
+          print("Best 500:", len(best_500))
+
+          print("\nTOP 30:")
+          for r in rows[:30]:
+              print(
+                  r["score"],
+                  r["sni"],
+                  ",".join(r["reasons"])
+              )
+
+      - name: Commit updated configs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+          "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            kaluga_exact_like.txt \
+            kaluga_best_200.txt \
+            kaluga_best_500.txt
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update Kaluga VPN matches"
+            git push
+          fi
