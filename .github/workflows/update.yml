@@ -22,16 +22,33 @@ jobs:
           "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/26.txt" \
           -o source.txt
 
-          grep -v '^[[:space:]]*$' source.txt | head -n 2950 > 26_2950.txt
+      - name: Clean and deduplicate configs
+        run: |
+          grep -v '^[[:space:]]*$' source.txt | awk '!seen[$0]++' > cleaned.txt
 
-          rm source.txt
+      - name: Generate config lists
+        run: |
+          head -n 500 cleaned.txt > 26_fast_500.txt
+          head -n 1000 cleaned.txt > 26_balanced_1000.txt
+          head -n 2950 cleaned.txt > 26_2950.txt
+
+      - name: Show counts
+        run: |
+          echo "500 list:"
+          wc -l 26_fast_500.txt
+
+          echo "1000 list:"
+          wc -l 26_balanced_1000.txt
+
+          echo "2950 list:"
+          wc -l 26_2950.txt
 
       - name: Commit updated configs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add 26_2950.txt
+          git add 26_fast_500.txt 26_balanced_1000.txt 26_2950.txt
 
           if git diff --cached --quiet; then
             echo "No changes"
