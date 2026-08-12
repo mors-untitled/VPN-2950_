@@ -15,6 +15,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
 
     steps:
       - name: Checkout repository
@@ -32,6 +33,7 @@ jobs:
           import html
           import re
           import time
+          from collections import defaultdict, deque
           from pathlib import Path
           from urllib.parse import unquote, urljoin, urlparse
 
@@ -39,33 +41,18 @@ jobs:
           from bs4 import BeautifulSoup
 
 
-          # ==========================================================
-          # WEBSITES ONLY
-          # No GitHub repositories are used as input here.
-          # ==========================================================
-
           START_PAGES = [
-              # V2Nodes
               "https://www.v2nodes.com/",
               "https://www.v2nodes.com/country/de/",
               "https://www.v2nodes.com/country/nl/",
               "https://www.v2nodes.com/country/fi/",
               "https://www.v2nodes.com/country/pl/",
               "https://www.v2nodes.com/country/lv/",
-
-              # SSHStores public VLESS pages
               "https://sshstores.net/vless",
               "https://sshstores.net/vless-grpc",
-              "https://sshstores.net/vless/united-states",
-
-              # FreeVPN.us
               "https://www.freevpn.us/v2ray/",
           ]
 
-
-          # ==========================================================
-          # What we learned from confirmed working configs
-          # ==========================================================
 
           PRIORITY_SNI = [
               "max.ru",
@@ -75,8 +62,6 @@ jobs:
               "ads.x5.ru",
           ]
 
-          # max.ru gets much higher priority because it was repeatedly
-          # confirmed working across independent endpoints.
           SNI_SCORE = {
               "max.ru": 100,
               "st.vk.com": 35,
@@ -86,29 +71,28 @@ jobs:
           }
 
 
+          # Hard limits
+          MAX_TOTAL_PAGES = 80
+          MAX_PAGES_PER_HOST = 25
+          MAX_DEPTH = 1
+          MAX_LINKS_FROM_PAGE = 15
+          MAX_CONFIGS = 5000
+
+          TIMEOUT = 12
+          DELAY = 0.25
+
+
           HEADERS = {
               "User-Agent": (
                   "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) "
                   "AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1"
               ),
-              "Accept": (
-                  "text/html,application/xhtml+xml,application/xml;"
-                  "q=0.9,*/*;q=0.8"
-              ),
+              "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
           }
 
-          SESSION = requests.Session()
-          SESSION.headers.update(HEADERS)
+          session = requests.Session()
+          session.headers.update(HEADERS)
 
-          TIMEOUT = 20
-
-          # Don't turn this into a huge crawler.
-          MAX_LINKS_PER_SITE = 40
-
-
-          # ==========================================================
-          # Extraction
-          # ==========================================================
 
           URI_RE = re.compile(
               r'(?:vless|vmess|trojan|ss|ssr|hy2|hysteria2|tuic)'
@@ -120,52 +104,35 @@ jobs:
           def clean_uri(uri):
               uri = html.unescape(uri)
               uri = unquote(uri)
-
-              # Remove common HTML / JS garbage at the end.
-              uri = uri.rstrip(
-                  ".,;)]}>'\""
-              )
-
-              return uri.strip()
+              return uri.rstrip(".,;)]}>'\"").strip()
 
 
           def extract_uris(text):
-              results = []
-
               if not text:
-                  return results
+                  return []
 
-              # Raw text
-              for value in URI_RE.findall(text):
-                  results.append(clean_uri(value))
+              result = []
 
-              # URL-decoded representation
-              decoded = unquote(text)
+              versions = {
+                  text,
+                  unquote(text),
+                  html.unescape(text),
+              }
 
-              if decoded != text:
-                  for value in URI_RE.findall(decoded):
-                      results.append(clean_uri(value))
+              for version in versions:
+                  for value in URI_RE.findall(version):
+                      result.append(clean_uri(value))
 
-              # HTML-decoded representation
-              decoded_html = html.unescape(text)
-
-              if decoded_html != text:
-                  for value in URI_RE.findall(decoded_html):
-                      results.append(clean_uri(value))
-
-              return results
+              return result
 
 
           def try_base64(text):
-              """
-              Some websites expose subscription blobs as base64.
-              """
-              candidates = []
+              result = []
 
-              for block in re.findall(
-                  r'[A-Za-z0-9_\-+/=]{80,}',
-                  text
-              ):
+              if not text:
+                  return result
+
+              for block in re.findall(r'[A-Za-z0-9_\-+/=]{100,}', text):
                   try:
                       value = block.replace("-", "+").replace("_", "/")
                       value += "=" * (-len(value) % 4)
@@ -173,31 +140,22 @@ jobs:
                       decoded = base64.b64decode(
                           value,
                           validate=False
-                      ).decode(
-                          "utf-8",
-                          errors="ignore"
-                      )
+                      ).decode("utf-8", errors="ignore")
 
                       if "vless://" in decoded.lower():
-                          candidates.extend(
-                              extract_uris(decoded)
-                          )
+                          result.extend(extract_uris(decoded))
 
                   except Exception:
                       pass
 
-              return candidates
+              return result
 
-
-          # ==========================================================
-          # Download
-          # ==========================================================
 
           def fetch(url):
               try:
-                  print(f"GET {url}")
+                  print("GET", url, flush=True)
 
-                  r = SESSION.get(
+                  r = session.get(
                       url,
                       timeout=TIMEOUT,
                       allow_redirects=True
@@ -207,57 +165,42 @@ jobs:
                       " ->",
                       r.status_code,
                       len(r.content),
-                      r.url
+                      r.url,
+                      flush=True
                   )
 
                   if r.status_code != 200:
                       return None, None
 
+                  # Don't process absurdly huge pages
+                  if len(r.content) > 4_000_000:
+                      print(" -> skipped: page too large", flush=True)
+                      return None, None
+
                   return r.text, r.url
 
               except Exception as exc:
-                  print("FAILED:", exc)
+                  print("FAILED:", exc, flush=True)
                   return None, None
 
 
-          # ==========================================================
-          # Same-site crawler
-          # ==========================================================
-
-          def same_site_links(page_url, text):
+          def candidate_links(page_url, text):
               result = []
 
               try:
-                  soup = BeautifulSoup(
-                      text,
-                      "html.parser"
-                  )
-
+                  soup = BeautifulSoup(text, "html.parser")
                   root_host = urlparse(page_url).netloc.lower()
 
-                  for tag in soup.find_all(
-                      ["a", "link", "script"]
-                  ):
-
-                      target = (
-                          tag.get("href")
-                          or tag.get("src")
-                      )
+                  for tag in soup.find_all("a"):
+                      target = tag.get("href")
 
                       if not target:
                           continue
 
-                      url = urljoin(
-                          page_url,
-                          target
-                      )
-
+                      url = urljoin(page_url, target)
                       parsed = urlparse(url)
 
-                      if parsed.scheme not in (
-                          "http",
-                          "https"
-                      ):
+                      if parsed.scheme not in ("http", "https"):
                           continue
 
                       if parsed.netloc.lower() != root_host:
@@ -265,39 +208,42 @@ jobs:
 
                       lower = url.lower()
 
-                      # Only follow pages likely to contain configs.
+                      # Ignore obvious irrelevant sections
+                      blocked = (
+                          "/login",
+                          "/register",
+                          "/privacy",
+                          "/terms",
+                          "/contact",
+                          "/about",
+                          "/knowledgebase/",
+                          "/blog/",
+                      )
+
+                      if any(x in lower for x in blocked):
+                          continue
+
                       keywords = (
                           "vless",
                           "v2ray",
-                          "config",
-                          "node",
-                          "server",
-                          "subscription",
-                          "country",
                           "reality",
                           "grpc",
+                          "server",
+                          "node",
+                          "country",
+                          "config",
                       )
 
-                      if not any(
-                          word in lower
-                          for word in keywords
-                      ):
+                      if not any(k in lower for k in keywords):
                           continue
 
                       result.append(url)
 
               except Exception:
-                  pass
+                  return []
 
-              # preserve order + deduplicate
-              return list(
-                  dict.fromkeys(result)
-              )[:MAX_LINKS_PER_SITE]
+              return list(dict.fromkeys(result))[:MAX_LINKS_FROM_PAGE]
 
-
-          # ==========================================================
-          # VLESS analysis
-          # ==========================================================
 
           def param(uri, name):
               match = re.search(
@@ -309,86 +255,40 @@ jobs:
               if not match:
                   return ""
 
-              return unquote(
-                  match.group(1)
-              ).lower()
+              return unquote(match.group(1)).lower()
 
 
           def score_vless(uri):
-              """
-              Ranking only.
-              We DO NOT modify the URI.
-              """
-
-              lower = uri.lower()
-
-              if not lower.startswith(
-                  "vless://"
-              ):
+              if not uri.lower().startswith("vless://"):
                   return -10000
 
               score = 10
 
-              security = param(
-                  uri,
-                  "security"
-              )
+              security = param(uri, "security")
+              transport = param(uri, "type")
+              sni = param(uri, "sni")
+              flow = param(uri, "flow")
+              fp = param(uri, "fp")
 
-              transport = param(
-                  uri,
-                  "type"
-              )
-
-              sni = param(
-                  uri,
-                  "sni"
-              )
-
-              flow = param(
-                  uri,
-                  "flow"
-              )
-
-              fp = param(
-                  uri,
-                  "fp"
-              )
-
-              # REALITY was present in essentially all
-              # confirmed working examples.
               if security == "reality":
                   score += 100
               else:
                   score -= 80
 
-              # Confirmed useful transports.
               if transport == "grpc":
                   score += 35
-
-              elif transport in (
-                  "tcp",
-                  "raw"
-              ):
+              elif transport in ("tcp", "raw"):
                   score += 20
 
-              # Vision is another confirmed working pattern.
               if "xtls-rprx-vision" in flow:
                   score += 35
 
-              # SNI
               if sni in SNI_SCORE:
                   score += SNI_SCORE[sni]
 
-              # Port 443 appeared very frequently.
-              if re.search(
-                  r'@[^\s/:?#]+:443(?:[/?#])',
-                  uri
-              ):
+              if re.search(r'@[^\s/:?#]+:443(?:[/?#])', uri):
                   score += 15
 
-              # Fingerprint is intentionally LOW weight.
-              # We already observed working chrome/firefox/edge/
-              # safari/qq/random fingerprints.
               if fp in (
                   "chrome",
                   "firefox",
@@ -413,24 +313,34 @@ jobs:
               }
 
 
-          # ==========================================================
+          # -----------------------------------
           # Crawl
-          # ==========================================================
+          # -----------------------------------
 
-          all_configs = []
-          source_stats = {}
+          queue = deque()
+
+          for url in START_PAGES:
+              queue.append((url, 0))
 
           visited = set()
-          queue = list(START_PAGES)
+          pages_per_host = defaultdict(int)
+          source_stats = {}
+          all_configs = []
 
-          while queue:
+          while queue and len(visited) < MAX_TOTAL_PAGES:
 
-              url = queue.pop(0)
+              url, depth = queue.popleft()
 
               if url in visited:
                   continue
 
+              host = urlparse(url).netloc.lower()
+
+              if pages_per_host[host] >= MAX_PAGES_PER_HOST:
+                  continue
+
               visited.add(url)
+              pages_per_host[host] += 1
 
               text, final_url = fetch(url)
 
@@ -438,53 +348,28 @@ jobs:
                   continue
 
               found = []
+              found.extend(extract_uris(text))
+              found.extend(try_base64(text))
 
-              found.extend(
-                  extract_uris(text)
-              )
-
-              found.extend(
-                  try_base64(text)
-              )
-
-              # Also inspect HTML attributes and script contents.
               try:
-                  soup = BeautifulSoup(
-                      text,
-                      "html.parser"
-                  )
+                  soup = BeautifulSoup(text, "html.parser")
 
                   found.extend(
                       extract_uris(
-                          soup.get_text(
-                              "\n"
-                          )
+                          soup.get_text("\n")
                       )
                   )
 
                   for tag in soup.find_all(True):
                       for value in tag.attrs.values():
 
-                          if isinstance(
-                              value,
-                              str
-                          ):
-                              found.extend(
-                                  extract_uris(value)
-                              )
+                          if isinstance(value, str):
+                              found.extend(extract_uris(value))
 
-                          elif isinstance(
-                              value,
-                              list
-                          ):
+                          elif isinstance(value, list):
                               for item in value:
-                                  if isinstance(
-                                      item,
-                                      str
-                                  ):
-                                      found.extend(
-                                          extract_uris(item)
-                                      )
+                                  if isinstance(item, str):
+                                      found.extend(extract_uris(item))
 
               except Exception:
                   pass
@@ -496,35 +381,41 @@ jobs:
               ]
 
               source_stats[url] = len(found)
+              all_configs.extend(found)
 
-              all_configs.extend(
-                  found
+              print(
+                  f"FOUND {len(found)} configs | "
+                  f"total raw={len(all_configs)} | "
+                  f"pages={len(visited)}/{MAX_TOTAL_PAGES}",
+                  flush=True
               )
 
-              # Follow relevant links from the site.
-              for link in same_site_links(
-                  final_url or url,
-                  text
-              ):
-                  if link not in visited:
-                      queue.append(link)
+              if len(all_configs) >= MAX_CONFIGS:
+                  print("Reached config limit", flush=True)
+                  break
 
-              # Be polite to public websites.
-              time.sleep(1)
+              # Follow only one level from start pages
+              if depth < MAX_DEPTH:
+                  for link in candidate_links(
+                      final_url or url,
+                      text
+                  ):
+                      if link not in visited:
+                          queue.append((link, depth + 1))
+
+              time.sleep(DELAY)
 
 
-          # ==========================================================
+          # -----------------------------------
           # Deduplicate
-          # ==========================================================
+          # -----------------------------------
 
           unique = []
           seen = set()
 
           for uri in all_configs:
 
-              if not uri.lower().startswith(
-                  "vless://"
-              ):
+              if not uri.lower().startswith("vless://"):
                   continue
 
               if uri in seen:
@@ -534,25 +425,24 @@ jobs:
               unique.append(uri)
 
 
-          # ==========================================================
-          # Sort by resemblance to confirmed working profiles
-          # ==========================================================
-
           ranked = sorted(
               unique,
               key=score_vless,
               reverse=True
           )
 
+
           reality = [
               x for x in ranked
               if param(x, "security") == "reality"
           ]
 
+
           max_ru = [
               x for x in reality
               if param(x, "sni") == "max.ru"
           ]
+
 
           whitelist_sni = [
               x for x in reality
@@ -560,92 +450,41 @@ jobs:
           ]
 
 
-          # ==========================================================
-          # Output
-          # ==========================================================
+          out = Path("web_configs")
+          out.mkdir(exist_ok=True)
 
-          out = Path(
-              "web_configs"
-          )
 
-          out.mkdir(
-              exist_ok=True
-          )
-
-          for old in out.glob(
-              "*.txt"
-          ):
+          for old in out.glob("*.txt"):
               old.unlink()
 
 
           def save(name, data):
-              Path(
-                  out / name
-              ).write_text(
+              (out / name).write_text(
                   "\n".join(data)
                   + ("\n" if data else ""),
                   encoding="utf-8"
               )
 
 
-          save(
-              "01_max_ru.txt",
-              max_ru
-          )
-
-          save(
-              "02_whitelist_sni.txt",
-              whitelist_sni
-          )
-
-          save(
-              "03_reality_all.txt",
-              reality
-          )
-
-          save(
-              "04_vless_all.txt",
-              ranked
-          )
+          save("01_max_ru.txt", max_ru)
+          save("02_whitelist_sni.txt", whitelist_sni)
+          save("03_reality_all.txt", reality)
+          save("04_vless_all.txt", ranked)
 
 
-          # ==========================================================
-          # Small test batches
-          # ==========================================================
-
+          # Small batches for Karing
           BATCH_SIZE = 50
 
-          for old in out.glob(
-              "test_*.txt"
-          ):
-              old.unlink()
+          for i in range(0, len(reality), BATCH_SIZE):
+              chunk = reality[i:i + BATCH_SIZE]
 
-          # Test the highest ranked configs first.
-          test_pool = reality
-
-          for i in range(
-              0,
-              len(test_pool),
-              BATCH_SIZE
-          ):
-
-              chunk = test_pool[
-                  i:i + BATCH_SIZE
-              ]
-
-              number = (
-                  i // BATCH_SIZE
-              ) + 1
+              number = (i // BATCH_SIZE) + 1
 
               save(
                   f"test_{number:03d}.txt",
                   chunk
               )
 
-
-          # ==========================================================
-          # Human-readable report
-          # ==========================================================
 
           report = [
               f"Pages visited: {len(visited)}",
@@ -654,8 +493,23 @@ jobs:
               f"Priority whitelist SNI: {len(whitelist_sni)}",
               f"max.ru: {len(max_ru)}",
               "",
-              "TOP 100:",
+              "Pages per host:",
           ]
+
+
+          for host, count in sorted(
+              pages_per_host.items()
+          ):
+              report.append(
+                  f"{host}: {count}"
+              )
+
+
+          report.extend([
+              "",
+              "TOP 100:"
+          ])
+
 
           for uri in ranked[:100]:
 
@@ -664,20 +518,23 @@ jobs:
               report.append(
                   f"{d['score']:4} | "
                   f"SNI={d['sni'] or '-':25} | "
-                  f"type={d['transport'] or '-':6} | "
+                  f"type={d['transport'] or '-':7} | "
                   f"flow={d['flow'] or '-':20} | "
                   f"fp={d['fp'] or '-'}"
               )
+
 
           report.extend([
               "",
               "SOURCE PAGES:"
           ])
 
+
           for url, count in source_stats.items():
               report.append(
                   f"{count:5} | {url}"
               )
+
 
           save(
               "report.txt",
@@ -686,23 +543,12 @@ jobs:
 
 
           print()
-          print(
-              "Unique VLESS:",
-              len(unique)
-          )
-          print(
-              "REALITY:",
-              len(reality)
-          )
-          print(
-              "Whitelist SNI:",
-              len(whitelist_sni)
-          )
-          print(
-              "max.ru:",
-              len(max_ru)
-          )
-
+          print("DONE")
+          print("Pages visited:", len(visited))
+          print("Unique VLESS:", len(unique))
+          print("REALITY:", len(reality))
+          print("Whitelist SNI:", len(whitelist_sni))
+          print("max.ru:", len(max_ru))
           PY
 
           python /tmp/collector.py
