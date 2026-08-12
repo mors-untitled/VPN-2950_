@@ -3,7 +3,7 @@ name: Web Whitelist VPN Collector
 on:
   workflow_dispatch:
   schedule:
-    - cron: "23 * * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
@@ -15,7 +15,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
 
     steps:
       - name: Checkout repository
@@ -26,19 +26,39 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
-      - name: Collect configs from public websites
+      - name: Collect VLESS configs from public websites
         run: |
           cat > /tmp/collector.py <<'PY'
-          import base64
-          import html
           import re
           import time
-          from collections import defaultdict, deque
           from pathlib import Path
-          from urllib.parse import unquote, urljoin, urlparse
+          from urllib.parse import unquote, urljoin, urlparse, parse_qs
 
           import requests
           from bs4 import BeautifulSoup
+
+
+          # =========================================================
+          # SETTINGS
+          # =========================================================
+
+          MAX_SERVER_PAGES = 1000
+          MAX_LIST_PAGES = 120
+
+          REQUEST_TIMEOUT = 12
+          REQUEST_DELAY = 0.15
+
+          BATCH_SIZE = 100
+
+          OUT_DIR = Path("web_configs")
+
+          PRIORITY_SNI = {
+              "max.ru",
+              "st.vk.com",
+              "music.yandex.ru",
+              "event.yandex.ru",
+              "ads.x5.ru",
+          }
 
 
           START_PAGES = [
@@ -48,375 +68,508 @@ jobs:
               "https://www.v2nodes.com/country/fi/",
               "https://www.v2nodes.com/country/pl/",
               "https://www.v2nodes.com/country/lv/",
-              "https://sshstores.net/vless",
-              "https://sshstores.net/vless-grpc",
-              "https://www.freevpn.us/v2ray/",
+              "https://www.v2nodes.com/country/se/",
+              "https://www.v2nodes.com/country/fr/",
+              "https://www.v2nodes.com/country/at/",
+              "https://www.v2nodes.com/country/be/",
+              "https://www.v2nodes.com/country/ee/",
+              "https://www.v2nodes.com/country/lt/",
+              "https://www.v2nodes.com/country/cz/",
           ]
-
-
-          PRIORITY_SNI = [
-              "max.ru",
-              "st.vk.com",
-              "music.yandex.ru",
-              "event.yandex.ru",
-              "ads.x5.ru",
-          ]
-
-          SNI_SCORE = {
-              "max.ru": 100,
-              "st.vk.com": 35,
-              "music.yandex.ru": 35,
-              "event.yandex.ru": 35,
-              "ads.x5.ru": 35,
-          }
-
-
-          # Hard limits
-          MAX_TOTAL_PAGES = 80
-          MAX_PAGES_PER_HOST = 25
-          MAX_DEPTH = 1
-          MAX_LINKS_FROM_PAGE = 15
-          MAX_CONFIGS = 5000
-
-          TIMEOUT = 12
-          DELAY = 0.25
 
 
           HEADERS = {
               "User-Agent": (
                   "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) "
-                  "AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1"
+                  "AppleWebKit/605.1.15 "
+                  "Version/18.0 Mobile/15E148 Safari/604.1"
               ),
-              "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+              "Accept": (
+                  "text/html,application/xhtml+xml,"
+                  "application/xml;q=0.9,*/*;q=0.8"
+              ),
           }
+
 
           session = requests.Session()
           session.headers.update(HEADERS)
 
 
-          URI_RE = re.compile(
-              r'(?:vless|vmess|trojan|ss|ssr|hy2|hysteria2|tuic)'
-              r'://[^\s<>"\'\\]+',
+          VLESS_RE = re.compile(
+              r'vless://[^\s<>"\'\\]+',
+              re.I
+          )
+
+          SERVER_LINK_RE = re.compile(
+              r'^/servers/\d+/?$',
               re.I
           )
 
 
-          def clean_uri(uri):
-              uri = html.unescape(uri)
-              uri = unquote(uri)
-              return uri.rstrip(".,;)]}>'\"").strip()
-
-
-          def extract_uris(text):
-              if not text:
-                  return []
-
-              result = []
-
-              versions = {
-                  text,
-                  unquote(text),
-                  html.unescape(text),
-              }
-
-              for version in versions:
-                  for value in URI_RE.findall(version):
-                      result.append(clean_uri(value))
-
-              return result
-
-
-          def try_base64(text):
-              result = []
-
-              if not text:
-                  return result
-
-              for block in re.findall(r'[A-Za-z0-9_\-+/=]{100,}', text):
-                  try:
-                      value = block.replace("-", "+").replace("_", "/")
-                      value += "=" * (-len(value) % 4)
-
-                      decoded = base64.b64decode(
-                          value,
-                          validate=False
-                      ).decode("utf-8", errors="ignore")
-
-                      if "vless://" in decoded.lower():
-                          result.extend(extract_uris(decoded))
-
-                  except Exception:
-                      pass
-
-              return result
-
+          # =========================================================
+          # HTTP
+          # =========================================================
 
           def fetch(url):
               try:
-                  print("GET", url, flush=True)
-
                   r = session.get(
                       url,
-                      timeout=TIMEOUT,
+                      timeout=REQUEST_TIMEOUT,
                       allow_redirects=True
                   )
 
                   print(
-                      " ->",
-                      r.status_code,
-                      len(r.content),
-                      r.url,
+                      f"GET {url} -> {r.status_code} "
+                      f"{len(r.content)} bytes",
                       flush=True
                   )
 
                   if r.status_code != 200:
-                      return None, None
+                      return ""
 
-                  # Don't process absurdly huge pages
-                  if len(r.content) > 4_000_000:
-                      print(" -> skipped: page too large", flush=True)
-                      return None, None
-
-                  return r.text, r.url
+                  return r.text
 
               except Exception as exc:
-                  print("FAILED:", exc, flush=True)
-                  return None, None
+                  print(
+                      f"FAILED {url}: {exc}",
+                      flush=True
+                  )
+                  return ""
 
 
-          def candidate_links(page_url, text):
+          # =========================================================
+          # URI CLEANUP
+          # =========================================================
+
+          def clean_uri(uri):
+              uri = uri.strip()
+
+              # remove common trailing HTML punctuation
+              uri = uri.rstrip(
+                  ".,;)]}>'\""
+              )
+
+              return uri
+
+
+          def extract_vless(text):
+              if not text:
+                  return []
+
+              found = []
+
+              for uri in VLESS_RE.findall(text):
+                  uri = clean_uri(uri)
+
+                  if uri.lower().startswith("vless://"):
+                      found.append(uri)
+
+              return found
+
+
+          # =========================================================
+          # V2NODES SERVER DISCOVERY
+          # =========================================================
+
+          def find_server_links(base_url, html):
               result = []
 
               try:
-                  soup = BeautifulSoup(text, "html.parser")
-                  root_host = urlparse(page_url).netloc.lower()
+                  soup = BeautifulSoup(
+                      html,
+                      "html.parser"
+                  )
 
-                  for tag in soup.find_all("a"):
-                      target = tag.get("href")
+                  for a in soup.find_all(
+                      "a",
+                      href=True
+                  ):
+                      href = a["href"].strip()
 
-                      if not target:
+                      parsed = urlparse(href)
+
+                      # absolute link
+                      if parsed.scheme in (
+                          "http",
+                          "https"
+                      ):
+                          path = parsed.path
+
+                          if (
+                              parsed.netloc.lower()
+                              != "www.v2nodes.com"
+                          ):
+                              continue
+
+                      else:
+                          path = parsed.path
+
+                      if not SERVER_LINK_RE.match(
+                          path
+                      ):
                           continue
 
-                      url = urljoin(page_url, target)
+                      url = urljoin(
+                          base_url,
+                          path
+                      )
+
+                      result.append(url)
+
+              except Exception as exc:
+                  print(
+                      "LINK PARSE ERROR:",
+                      exc,
+                      flush=True
+                  )
+
+              return list(
+                  dict.fromkeys(result)
+              )
+
+
+          # =========================================================
+          # PAGINATION DISCOVERY
+          # =========================================================
+
+          def find_list_pages(
+              base_url,
+              html
+          ):
+              result = []
+
+              try:
+                  soup = BeautifulSoup(
+                      html,
+                      "html.parser"
+                  )
+
+                  root_host = urlparse(
+                      base_url
+                  ).netloc.lower()
+
+                  for a in soup.find_all(
+                      "a",
+                      href=True
+                  ):
+                      href = a["href"].strip()
+
+                      url = urljoin(
+                          base_url,
+                          href
+                      )
+
                       parsed = urlparse(url)
 
-                      if parsed.scheme not in ("http", "https"):
-                          continue
-
-                      if parsed.netloc.lower() != root_host:
+                      if (
+                          parsed.netloc.lower()
+                          != root_host
+                      ):
                           continue
 
                       lower = url.lower()
 
-                      # Ignore obvious irrelevant sections
-                      blocked = (
-                          "/login",
-                          "/register",
-                          "/privacy",
-                          "/terms",
-                          "/contact",
-                          "/about",
-                          "/knowledgebase/",
-                          "/blog/",
-                      )
-
-                      if any(x in lower for x in blocked):
-                          continue
-
-                      keywords = (
-                          "vless",
-                          "v2ray",
-                          "reality",
-                          "grpc",
-                          "server",
-                          "node",
-                          "country",
-                          "config",
-                      )
-
-                      if not any(k in lower for k in keywords):
-                          continue
-
-                      result.append(url)
+                      # pagination patterns
+                      if (
+                          "page=" in lower
+                          or "/page/" in lower
+                      ):
+                          result.append(url)
 
               except Exception:
-                  return []
+                  pass
 
-              return list(dict.fromkeys(result))[:MAX_LINKS_FROM_PAGE]
-
-
-          def param(uri, name):
-              match = re.search(
-                  rf'(?:[?&]){re.escape(name)}=([^&#]+)',
-                  uri,
-                  flags=re.I
+              return list(
+                  dict.fromkeys(result)
               )
 
-              if not match:
+
+          # =========================================================
+          # VLESS PARSING
+          # =========================================================
+
+          def get_param(uri, name):
+              try:
+                  parsed = urlparse(uri)
+
+                  query = parse_qs(
+                      parsed.query,
+                      keep_blank_values=True
+                  )
+
+                  value = query.get(name)
+
+                  if not value:
+                      return ""
+
+                  return unquote(
+                      value[0]
+                  ).lower().strip()
+
+              except Exception:
                   return ""
 
-              return unquote(match.group(1)).lower()
+
+          def server_host(uri):
+              try:
+                  parsed = urlparse(uri)
+                  return parsed.hostname or ""
+              except Exception:
+                  return ""
 
 
-          def score_vless(uri):
-              if not uri.lower().startswith("vless://"):
-                  return -10000
+          def server_port(uri):
+              try:
+                  parsed = urlparse(uri)
+                  return parsed.port or 0
+              except Exception:
+                  return 0
 
-              score = 10
 
-              security = param(uri, "security")
-              transport = param(uri, "type")
-              sni = param(uri, "sni")
-              flow = param(uri, "flow")
-              fp = param(uri, "fp")
+          # =========================================================
+          # SCORING
+          # =========================================================
 
+          def score(uri):
+              result = 0
+
+              security = get_param(
+                  uri,
+                  "security"
+              )
+
+              sni = get_param(
+                  uri,
+                  "sni"
+              )
+
+              transport = get_param(
+                  uri,
+                  "type"
+              )
+
+              flow = get_param(
+                  uri,
+                  "flow"
+              )
+
+              fp = get_param(
+                  uri,
+                  "fp"
+              )
+
+              sid = get_param(
+                  uri,
+                  "sid"
+              )
+
+              port = server_port(uri)
+
+              # Reality is our main target
               if security == "reality":
-                  score += 100
+                  result += 200
               else:
-                  score -= 80
+                  result -= 100
 
+              # confirmed patterns from your working configs
               if transport == "grpc":
-                  score += 35
-              elif transport in ("tcp", "raw"):
-                  score += 20
+                  result += 60
 
-              if "xtls-rprx-vision" in flow:
-                  score += 35
+              elif transport in (
+                  "tcp",
+                  "raw"
+              ):
+                  result += 35
 
-              if sni in SNI_SCORE:
-                  score += SNI_SCORE[sni]
+              if flow == "xtls-rprx-vision":
+                  result += 50
 
-              if re.search(r'@[^\s/:?#]+:443(?:[/?#])', uri):
-                  score += 15
+              # whitelist-looking SNI
+              if sni in PRIORITY_SNI:
+                  result += 150
 
-              if fp in (
+              if sni == "max.ru":
+                  result += 100
+
+              # common useful port
+              if port == 443:
+                  result += 25
+
+              # REALITY short ID exists
+              if sid:
+                  result += 10
+
+              # fingerprint is low priority
+              if fp in {
                   "chrome",
                   "firefox",
                   "edge",
                   "safari",
                   "qq",
                   "random",
+              }:
+                  result += 3
+
+              return result
+
+
+          # =========================================================
+          # COLLECT LIST PAGES
+          # =========================================================
+
+          list_pages = []
+          list_seen = set()
+
+          queue = list(START_PAGES)
+
+          while (
+              queue
+              and len(list_pages)
+              < MAX_LIST_PAGES
+          ):
+              url = queue.pop(0)
+
+              if url in list_seen:
+                  continue
+
+              list_seen.add(url)
+              list_pages.append(url)
+
+              html = fetch(url)
+
+              if not html:
+                  continue
+
+              for page in find_list_pages(
+                  url,
+                  html
               ):
-                  score += 2
+                  if (
+                      page not in list_seen
+                      and page not in queue
+                  ):
+                      queue.append(page)
 
-              return score
-
-
-          def describe(uri):
-              return {
-                  "score": score_vless(uri),
-                  "sni": param(uri, "sni"),
-                  "security": param(uri, "security"),
-                  "transport": param(uri, "type"),
-                  "flow": param(uri, "flow"),
-                  "fp": param(uri, "fp"),
-              }
+              time.sleep(
+                  REQUEST_DELAY
+              )
 
 
-          # -----------------------------------
-          # Crawl
-          # -----------------------------------
+          print(
+              f"List pages discovered: "
+              f"{len(list_pages)}",
+              flush=True
+          )
 
-          queue = deque()
 
-          for url in START_PAGES:
-              queue.append((url, 0))
+          # =========================================================
+          # COLLECT SERVER PAGE URLS
+          # =========================================================
 
-          visited = set()
-          pages_per_host = defaultdict(int)
-          source_stats = {}
-          all_configs = []
+          server_urls = []
+          server_seen = set()
 
-          while queue and len(visited) < MAX_TOTAL_PAGES:
+          for list_url in list_pages:
 
-              url, depth = queue.popleft()
+              if len(
+                  server_urls
+              ) >= MAX_SERVER_PAGES:
+                  break
 
-              if url in visited:
+              html = fetch(
+                  list_url
+              )
+
+              if not html:
                   continue
 
-              host = urlparse(url).netloc.lower()
+              links = find_server_links(
+                  list_url,
+                  html
+              )
 
-              if pages_per_host[host] >= MAX_PAGES_PER_HOST:
-                  continue
+              for url in links:
 
-              visited.add(url)
-              pages_per_host[host] += 1
+                  if url in server_seen:
+                      continue
 
-              text, final_url = fetch(url)
+                  server_seen.add(url)
+                  server_urls.append(url)
 
-              if not text:
-                  continue
-
-              found = []
-              found.extend(extract_uris(text))
-              found.extend(try_base64(text))
-
-              try:
-                  soup = BeautifulSoup(text, "html.parser")
-
-                  found.extend(
-                      extract_uris(
-                          soup.get_text("\n")
-                      )
-                  )
-
-                  for tag in soup.find_all(True):
-                      for value in tag.attrs.values():
-
-                          if isinstance(value, str):
-                              found.extend(extract_uris(value))
-
-                          elif isinstance(value, list):
-                              for item in value:
-                                  if isinstance(item, str):
-                                      found.extend(extract_uris(item))
-
-              except Exception:
-                  pass
-
-              found = [
-                  clean_uri(x)
-                  for x in found
-                  if x
-              ]
-
-              source_stats[url] = len(found)
-              all_configs.extend(found)
+                  if (
+                      len(server_urls)
+                      >= MAX_SERVER_PAGES
+                  ):
+                      break
 
               print(
-                  f"FOUND {len(found)} configs | "
-                  f"total raw={len(all_configs)} | "
-                  f"pages={len(visited)}/{MAX_TOTAL_PAGES}",
+                  f"Server pages: "
+                  f"{len(server_urls)}",
                   flush=True
               )
 
-              if len(all_configs) >= MAX_CONFIGS:
-                  print("Reached config limit", flush=True)
-                  break
-
-              # Follow only one level from start pages
-              if depth < MAX_DEPTH:
-                  for link in candidate_links(
-                      final_url or url,
-                      text
-                  ):
-                      if link not in visited:
-                          queue.append((link, depth + 1))
-
-              time.sleep(DELAY)
+              time.sleep(
+                  REQUEST_DELAY
+              )
 
 
-          # -----------------------------------
-          # Deduplicate
-          # -----------------------------------
+          print(
+              f"Total server pages queued: "
+              f"{len(server_urls)}",
+              flush=True
+          )
+
+
+          # =========================================================
+          # DOWNLOAD EACH SERVER PAGE
+          # =========================================================
+
+          configs = []
+
+          for index, url in enumerate(
+              server_urls,
+              start=1
+          ):
+
+              html = fetch(url)
+
+              if not html:
+                  continue
+
+              found = extract_vless(
+                  html
+              )
+
+              configs.extend(
+                  found
+              )
+
+              if (
+                  index % 25
+                  == 0
+              ):
+                  print(
+                      f"Processed "
+                      f"{index}/"
+                      f"{len(server_urls)} "
+                      f"| raw configs="
+                      f"{len(configs)}",
+                      flush=True
+                  )
+
+              time.sleep(
+                  REQUEST_DELAY
+              )
+
+
+          # =========================================================
+          # DEDUPLICATE
+          # =========================================================
 
           unique = []
           seen = set()
 
-          for uri in all_configs:
-
-              if not uri.lower().startswith("vless://"):
-                  continue
+          for uri in configs:
 
               if uri in seen:
                   continue
@@ -425,60 +578,191 @@ jobs:
               unique.append(uri)
 
 
+          # =========================================================
+          # GROUPS
+          # =========================================================
+
           ranked = sorted(
               unique,
-              key=score_vless,
+              key=score,
               reverse=True
           )
 
 
           reality = [
-              x for x in ranked
-              if param(x, "security") == "reality"
+              uri
+              for uri in ranked
+              if get_param(
+                  uri,
+                  "security"
+              ) == "reality"
+          ]
+
+
+          priority_sni = [
+              uri
+              for uri in reality
+              if get_param(
+                  uri,
+                  "sni"
+              ) in PRIORITY_SNI
           ]
 
 
           max_ru = [
-              x for x in reality
-              if param(x, "sni") == "max.ru"
+              uri
+              for uri in reality
+              if get_param(
+                  uri,
+                  "sni"
+              ) == "max.ru"
           ]
 
 
-          whitelist_sni = [
-              x for x in reality
-              if param(x, "sni") in PRIORITY_SNI
+          reality_443 = [
+              uri
+              for uri in reality
+              if server_port(
+                  uri
+              ) == 443
           ]
 
 
-          out = Path("web_configs")
-          out.mkdir(exist_ok=True)
+          grpc_reality = [
+              uri
+              for uri in reality
+              if get_param(
+                  uri,
+                  "type"
+              ) == "grpc"
+          ]
 
 
-          for old in out.glob("*.txt"):
+          vision_reality = [
+              uri
+              for uri in reality
+              if get_param(
+                  uri,
+                  "flow"
+              ) == "xtls-rprx-vision"
+          ]
+
+
+          # =========================================================
+          # OUTPUT
+          # =========================================================
+
+          OUT_DIR.mkdir(
+              exist_ok=True
+          )
+
+
+          for old in OUT_DIR.glob(
+              "*.txt"
+          ):
               old.unlink()
 
 
-          def save(name, data):
-              (out / name).write_text(
+          def save(
+              filename,
+              data
+          ):
+              (
+                  OUT_DIR
+                  / filename
+              ).write_text(
                   "\n".join(data)
-                  + ("\n" if data else ""),
+                  + (
+                      "\n"
+                      if data
+                      else ""
+                  ),
                   encoding="utf-8"
               )
 
 
-          save("01_max_ru.txt", max_ru)
-          save("02_whitelist_sni.txt", whitelist_sni)
-          save("03_reality_all.txt", reality)
-          save("04_vless_all.txt", ranked)
+          save(
+              "01_max_ru.txt",
+              max_ru
+          )
+
+          save(
+              "02_priority_sni.txt",
+              priority_sni
+          )
+
+          save(
+              "03_reality_443.txt",
+              reality_443
+          )
+
+          save(
+              "04_grpc_reality.txt",
+              grpc_reality
+          )
+
+          save(
+              "05_vision_reality.txt",
+              vision_reality
+          )
+
+          save(
+              "06_reality_all.txt",
+              reality
+          )
+
+          save(
+              "07_vless_all.txt",
+              ranked
+          )
+
+          # compatibility with whitelist-filter workflow
+          save(
+              "04_vless_all.txt",
+              ranked
+          )
 
 
-          # Small batches for Karing
-          BATCH_SIZE = 50
+          # =========================================================
+          # TEST BATCHES
+          # =========================================================
 
-          for i in range(0, len(reality), BATCH_SIZE):
-              chunk = reality[i:i + BATCH_SIZE]
+          for old in OUT_DIR.glob(
+              "test_*.txt"
+          ):
+              old.unlink()
 
-              number = (i // BATCH_SIZE) + 1
+
+          # priority:
+          # whitelist SNI first,
+          # then all Reality
+          test_pool = []
+
+          test_seen = set()
+
+          for uri in (
+              priority_sni
+              + reality
+          ):
+              if uri not in test_seen:
+                  test_seen.add(uri)
+                  test_pool.append(uri)
+
+
+          for start in range(
+              0,
+              len(test_pool),
+              BATCH_SIZE
+          ):
+              chunk = test_pool[
+                  start:
+                  start + BATCH_SIZE
+              ]
+
+              number = (
+                  start
+                  // BATCH_SIZE
+              ) + 1
 
               save(
                   f"test_{number:03d}.txt",
@@ -486,53 +770,39 @@ jobs:
               )
 
 
+          # =========================================================
+          # REPORT
+          # =========================================================
+
           report = [
-              f"Pages visited: {len(visited)}",
+              f"List pages: {len(list_pages)}",
+              f"Server pages: {len(server_urls)}",
               f"Unique VLESS: {len(unique)}",
               f"REALITY: {len(reality)}",
-              f"Priority whitelist SNI: {len(whitelist_sni)}",
+              f"REALITY port 443: {len(reality_443)}",
+              f"gRPC REALITY: {len(grpc_reality)}",
+              f"Vision REALITY: {len(vision_reality)}",
+              f"Priority whitelist SNI: {len(priority_sni)}",
               f"max.ru: {len(max_ru)}",
               "",
-              "Pages per host:",
+              "TOP 100",
           ]
-
-
-          for host, count in sorted(
-              pages_per_host.items()
-          ):
-              report.append(
-                  f"{host}: {count}"
-              )
-
-
-          report.extend([
-              "",
-              "TOP 100:"
-          ])
 
 
           for uri in ranked[:100]:
 
-              d = describe(uri)
-
               report.append(
-                  f"{d['score']:4} | "
-                  f"SNI={d['sni'] or '-':25} | "
-                  f"type={d['transport'] or '-':7} | "
-                  f"flow={d['flow'] or '-':20} | "
-                  f"fp={d['fp'] or '-'}"
-              )
-
-
-          report.extend([
-              "",
-              "SOURCE PAGES:"
-          ])
-
-
-          for url, count in source_stats.items():
-              report.append(
-                  f"{count:5} | {url}"
+                  f"{score(uri):4} | "
+                  f"{server_host(uri)}:"
+                  f"{server_port(uri)} | "
+                  f"SNI="
+                  f"{get_param(uri, 'sni') or '-'} | "
+                  f"security="
+                  f"{get_param(uri, 'security') or '-'} | "
+                  f"type="
+                  f"{get_param(uri, 'type') or '-'} | "
+                  f"flow="
+                  f"{get_param(uri, 'flow') or '-'}"
               )
 
 
@@ -544,11 +814,31 @@ jobs:
 
           print()
           print("DONE")
-          print("Pages visited:", len(visited))
-          print("Unique VLESS:", len(unique))
-          print("REALITY:", len(reality))
-          print("Whitelist SNI:", len(whitelist_sni))
-          print("max.ru:", len(max_ru))
+          print(
+              "List pages:",
+              len(list_pages)
+          )
+          print(
+              "Server pages:",
+              len(server_urls)
+          )
+          print(
+              "Unique VLESS:",
+              len(unique)
+          )
+          print(
+              "REALITY:",
+              len(reality)
+          )
+          print(
+              "Priority SNI:",
+              len(priority_sni)
+          )
+          print(
+              "max.ru:",
+              len(max_ru)
+          )
+
           PY
 
           python /tmp/collector.py
@@ -557,13 +847,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email \
-          "41898282+github-actions[bot]@users.noreply.github.com"
+            "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add web_configs
 
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Update VPN configs collected from public websites"
+            git commit -m \
+              "Update targeted V2Nodes VLESS collection"
             git push
           fi
