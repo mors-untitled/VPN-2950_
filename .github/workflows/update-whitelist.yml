@@ -1,12 +1,16 @@
-name: Update White List VPN configs
+name: Update split 26 configs
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "*/9 * * * *"
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-26-split
+  cancel-in-progress: true
 
 jobs:
   update:
@@ -16,170 +20,62 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Collect whitelist configs
+      - name: Download latest 26.txt
+        run: |
+          curl -L --fail --retry 3 \
+          "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/26.txt" \
+          -o source.txt
+
+      - name: Split configs into two equal parts
         shell: python
         run: |
-          import urllib.request
           from pathlib import Path
 
-          SOURCES = [
-              # CIDR Mobile №1
-              "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt",
+          source = Path("source.txt")
 
-              # CIDR Mobile №2
-              "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile-2.txt",
-
-              # Полная CIDR-база
-              "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/WHITE-CIDR-RU-all.txt",
-
-              # Полная SNI-база
-              "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/WHITE-SNI-RU-all.txt",
+          configs = [
+              line.strip()
+              for line in source.read_text(
+                  encoding="utf-8",
+                  errors="ignore"
+              ).splitlines()
+              if line.strip()
           ]
 
-          HEADERS = {
-              "User-Agent": "Mozilla/5.0"
-          }
+          total = len(configs)
 
-          configs = []
-          seen = set()
+          # При нечётном количестве первая часть получит
+          # на одну конфигурацию больше.
+          middle = (total + 1) // 2
 
-          for url in SOURCES:
+          part1 = configs[:middle]
+          part2 = configs[middle:]
 
-              print("Downloading:", url)
-
-              try:
-                  req = urllib.request.Request(
-                      url,
-                      headers=HEADERS
-                  )
-
-                  with urllib.request.urlopen(
-                      req,
-                      timeout=30
-                  ) as response:
-
-                      text = response.read().decode(
-                          "utf-8",
-                          errors="ignore"
-                      )
-
-              except Exception as error:
-
-                  print(
-                      "FAILED:",
-                      url,
-                      error
-                  )
-
-                  continue
-
-              added = 0
-
-              for raw in text.splitlines():
-
-                  line = raw.strip()
-
-                  if not line.startswith("vless://"):
-                      continue
-
-                  if line in seen:
-                      continue
-
-                  seen.add(line)
-                  configs.append(line)
-
-                  added += 1
-
-              print(
-                  "Added:",
-                  added
-              )
-
-          print(
-              "TOTAL UNIQUE:",
-              len(configs)
-          )
-
-          # -----------------------------------------
-          # Output
-          # -----------------------------------------
-
-          output = Path("white")
-
-          output.mkdir(
-              exist_ok=True
-          )
-
-          # Удаляем старые автоматически
-          # созданные куски.
-          for old in output.glob(
-              "white_*.txt"
-          ):
-              old.unlink()
-
-          CHUNK_SIZE = 100
-
-          chunks = [
-              configs[i:i + CHUNK_SIZE]
-              for i in range(
-                  0,
-                  len(configs),
-                  CHUNK_SIZE
-              )
-          ]
-
-          index = []
-
-          for number, chunk in enumerate(
-              chunks,
-              start=1
-          ):
-
-              filename = (
-                  f"white_{number:03d}.txt"
-              )
-
-              (
-                  output / filename
-              ).write_text(
-                  "\n".join(chunk)
-                  + "\n",
-                  encoding="utf-8"
-              )
-
-              index.append(
-                  f"{filename} | "
-                  f"{len(chunk)} configs"
-              )
-
-              print(
-                  filename,
-                  len(chunk)
-              )
-
-          (
-              output / "index.txt"
-          ).write_text(
-              "\n".join(index)
-              + "\n",
+          Path("26_part_1.txt").write_text(
+              "\n".join(part1) + ("\n" if part1 else ""),
               encoding="utf-8"
           )
 
-      - name: Commit updated configs
-        run: |
-          git config user.name \
-          "github-actions[bot]"
+          Path("26_part_2.txt").write_text(
+              "\n".join(part2) + ("\n" if part2 else ""),
+              encoding="utf-8"
+          )
 
+          print(f"Total configs: {total}")
+          print(f"Part 1: {len(part1)}")
+          print(f"Part 2: {len(part2)}")
+
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
           git config user.email \
           "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add white
+          git add 26_part_1.txt 26_part_2.txt
 
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m \
-            "Update whitelist VPN configs"
-
+            git commit -m "Update split 26 configs"
             git push
           fi
