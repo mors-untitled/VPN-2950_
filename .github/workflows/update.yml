@@ -1,4 +1,4 @@
-name: Update VPN configs
+name: Update Kaluga VPN candidates
 
 on:
   workflow_dispatch:
@@ -22,37 +22,132 @@ jobs:
           "https://raw.githubusercontent.com/AvenCores/goida-vpn-configs/main/githubmirror/26.txt" \
           -o source.txt
 
-      - name: Clean and deduplicate configs
+      - name: Filter VLESS configs
+        shell: python
         run: |
-          grep -v '^[[:space:]]*$' source.txt | awk '!seen[$0]++' > cleaned.txt
+          import urllib.parse
+          from pathlib import Path
 
-      - name: Generate config lists
+          source = Path("source.txt")
+
+          sni_suffixes = (
+              "yandex.ru",
+              "yandex.net",
+              "ya.ru",
+              "vk.com",
+              "userapi.com",
+              "ok.ru",
+              "max.ru",
+              "rutube.ru",
+              "rzd.ru",
+              "ozon.ru",
+          )
+
+          def allowed_sni(sni: str) -> bool:
+              sni = sni.lower().strip(".")
+              if not sni:
+                  return True
+
+              return any(
+                  sni == suffix or sni.endswith("." + suffix)
+                  for suffix in sni_suffixes
+              )
+
+          reality = []
+          other_vless = []
+
+          seen_reality = set()
+          seen_other = set()
+
+          for raw in source.read_text(
+              encoding="utf-8",
+              errors="ignore"
+          ).splitlines():
+
+              line = raw.strip()
+
+              if not line.startswith("vless://"):
+                  continue
+
+              try:
+                  parsed = urllib.parse.urlsplit(line)
+
+                  query = urllib.parse.parse_qs(
+                      parsed.query,
+                      keep_blank_values=True
+                  )
+              except Exception:
+                  continue
+
+              security = query.get("security", [""])[0].lower()
+
+              sni = query.get("sni", [""])[0]
+
+              if not sni:
+                  sni = query.get("serverName", [""])[0]
+
+              sni = urllib.parse.unquote(sni).lower()
+
+              if not allowed_sni(sni):
+                  continue
+
+              if security == "reality":
+                  if line not in seen_reality:
+                      reality.append(line)
+                      seen_reality.add(line)
+              else:
+                  if line not in seen_other:
+                      other_vless.append(line)
+                      seen_other.add(line)
+
+          # Приоритет: сначала VLESS + REALITY,
+          # затем остальные VLESS.
+          combined = reality + other_vless
+
+          Path("kaluga_vless_reality.txt").write_text(
+              "\n".join(reality) + ("\n" if reality else ""),
+              encoding="utf-8"
+          )
+
+          Path("kaluga_vless_all.txt").write_text(
+              "\n".join(combined) + ("\n" if combined else ""),
+              encoding="utf-8"
+          )
+
+          Path("kaluga_candidates.txt").write_text(
+              "\n".join(combined[:500]) + ("\n" if combined[:500] else ""),
+              encoding="utf-8"
+          )
+
+          print("VLESS + REALITY:", len(reality))
+          print("Other VLESS:", len(other_vless))
+          print("Total VLESS:", len(combined))
+          print("Karing candidates:", min(len(combined), 500))
+
+      - name: Show result counts
         run: |
-          head -n 500 cleaned.txt > 26_fast_500.txt
-          head -n 1000 cleaned.txt > 26_balanced_1000.txt
-          head -n 2950 cleaned.txt > 26_2950.txt
+          echo "Reality:"
+          wc -l kaluga_vless_reality.txt || true
 
-      - name: Show counts
-        run: |
-          echo "500 list:"
-          wc -l 26_fast_500.txt
+          echo "All VLESS:"
+          wc -l kaluga_vless_all.txt || true
 
-          echo "1000 list:"
-          wc -l 26_balanced_1000.txt
-
-          echo "2950 list:"
-          wc -l 26_2950.txt
+          echo "Karing candidates:"
+          wc -l kaluga_candidates.txt || true
 
       - name: Commit updated configs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add 26_fast_500.txt 26_balanced_1000.txt 26_2950.txt
+          git add \
+            kaluga_vless_reality.txt \
+            kaluga_vless_all.txt \
+            kaluga_candidates.txt
 
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "Update VPN configs"
+            git commit -m "Update Kaluga VPN candidates"
             git push
           fi
