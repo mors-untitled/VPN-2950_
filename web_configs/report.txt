@@ -1,0 +1,66 @@
+Pages visited: 44
+Unique VLESS: 8
+REALITY: 3
+Priority whitelist SNI: 0
+max.ru: 0
+
+Pages per host:
+sshstores.net: 13
+www.freevpn.us: 6
+www.v2nodes.com: 25
+
+TOP 100:
+ 182 | SNI=n1.famlegacy.online       | type=tcp     | flow=xtls-rprx-vision     | fp=chrome
+ 167 | SNI=fuck.rkn                  | type=tcp     | flow=xtls-rprx-vision     | fp=chrome
+ 167 | SNI=swdist.apple.com          | type=tcp     | flow=xtls-rprx-vision     | fp=chrome
+ -53 | SNI=support.zoom.us.yxls.eu.cc | type=ws      | flow=-                    | fp=chrome
+ -53 | SNI=lucxi.lightorbitlab-kiloilm.sbs | type=ws      | flow=-                    | fp=firefox
+ -70 | SNI=-                         | type=ws      | flow=-                    | fp=-
+ -70 | SNI=-                         | type=ws      | flow=-                    | fp=-
+ -70 | SNI=-                         | type=ws      | flow=-                    | fp=-
+
+SOURCE PAGES:
+    0 | https://www.v2nodes.com/
+    0 | https://www.v2nodes.com/country/de/
+    0 | https://www.v2nodes.com/country/nl/
+    0 | https://www.v2nodes.com/country/fi/
+    0 | https://www.v2nodes.com/country/pl/
+    0 | https://www.v2nodes.com/country/lv/
+    0 | https://sshstores.net/vless
+    0 | https://sshstores.net/vless-grpc
+    0 | https://www.freevpn.us/v2ray/
+    0 | https://www.v2nodes.com/country/sg/
+    0 | https://www.v2nodes.com/country/fr/
+    0 | https://www.v2nodes.com/country/us/
+    0 | https://www.v2nodes.com/pages/premium-vpn.html
+    6 | https://www.v2nodes.com/servers/4897885/
+   10 | https://www.v2nodes.com/servers/15363477/
+   10 | https://www.v2nodes.com/servers/107359/
+    6 | https://www.v2nodes.com/servers/14522151/
+    6 | https://www.v2nodes.com/servers/6585330/
+    6 | https://www.v2nodes.com/servers/15257010/
+    6 | https://www.v2nodes.com/servers/15257075/
+    6 | https://www.v2nodes.com/servers/15125979/
+    6 | https://www.v2nodes.com/servers/12459467/
+    6 | https://www.v2nodes.com/servers/12908405/
+    6 | https://www.v2nodes.com/servers/12471532/
+    6 | https://www.v2nodes.com/servers/9761114/
+   10 | https://www.v2nodes.com/servers/15091455/
+    6 | https://www.v2nodes.com/servers/15305321/
+    6 | https://www.v2nodes.com/servers/15367209/
+    0 | https://sshstores.net/vless/singapore
+    0 | https://sshstores.net/vless/united-states
+    0 | https://sshstores.net/vless/hongkong
+    0 | https://sshstores.net/vless/australia
+    0 | https://sshstores.net/vless/japan
+    0 | https://sshstores.net/vless/india
+    0 | https://sshstores.net/vless/united-kingdom
+    0 | https://sshstores.net/vless/german
+    0 | https://sshstores.net/vless/france
+    0 | https://sshstores.net/vless/poland
+    0 | https://sshstores.net/vless/canada
+    0 | https://www.freevpn.us/pages/server-status.html
+    0 | https://www.freevpn.us/v2ray/#chooseServer
+    0 | https://www.freevpn.us/v2ray/fr/
+    0 | https://www.freevpn.us/v2ray/us/
+    0 | https://www.freevpn.us/v2ray/#cryptocurrency
