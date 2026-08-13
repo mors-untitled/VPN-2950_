@@ -1,0 +1,1192 @@
+name: Live Web Whitelist VPN Hunter
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: live-whitelist-hunter
+  cancel-in-progress: true
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Crawl public sites and filter by LTE whitelist
+        shell: python
+        run: |
+          import base64
+          import html
+          import ipaddress
+          import re
+          import socket
+          import time
+          import urllib.parse
+          from collections import defaultdict, deque
+          from pathlib import Path
+
+          import requests
+          from bs4 import BeautifulSoup
+
+
+          # ==========================================================
+          # FILES
+          # ==========================================================
+
+          WHITELIST_FILE = Path("whitelist_subnets.txt")
+          SOURCES_FILE = Path("public_sources.txt")
+
+          OUT = Path("live_whitelist_matches")
+          OUT.mkdir(exist_ok=True)
+
+          for old in OUT.glob("*"):
+              if old.is_file():
+                  old.unlink()
+
+
+          if not WHITELIST_FILE.exists():
+              raise SystemExit(
+                  "whitelist_subnets.txt not found"
+              )
+
+          if not SOURCES_FILE.exists():
+              raise SystemExit(
+                  "public_sources.txt not found"
+              )
+
+
+          # ==========================================================
+          # LIMITS
+          # ==========================================================
+
+          MAX_TOTAL_PAGES = 500
+          MAX_PAGES_PER_HOST = 300
+
+          # 0 = source page
+          # 1 = category/list page
+          # 2 = individual server page
+          MAX_DEPTH = 2
+
+          MAX_LINKS_PER_PAGE = 80
+
+          REQUEST_TIMEOUT = 10
+          DELAY = 0.10
+
+          BATCH_SIZE = 20
+
+
+          # ==========================================================
+          # HTTP
+          # ==========================================================
+
+          session = requests.Session()
+
+          session.headers.update({
+              "User-Agent": (
+                  "Mozilla/5.0 "
+                  "(iPhone; CPU iPhone OS 18_0 like Mac OS X) "
+                  "AppleWebKit/605.1.15 "
+                  "Version/18.0 Mobile/15E148 Safari/604.1"
+              ),
+              "Accept": (
+                  "text/html,application/xhtml+xml,"
+                  "application/xml;q=0.9,*/*;q=0.8"
+              ),
+          })
+
+
+          # ==========================================================
+          # LOAD WHITELIST
+          # ==========================================================
+
+          whitelist_networks = []
+
+          for raw in WHITELIST_FILE.read_text(
+              encoding="utf-8",
+              errors="ignore"
+          ).splitlines():
+
+              line = raw.strip()
+
+              if not line or line.startswith("#"):
+                  continue
+
+              try:
+                  network = ipaddress.ip_network(
+                      line,
+                      strict=False
+                  )
+
+                  if network.version == 4:
+                      whitelist_networks.append(network)
+
+              except ValueError:
+                  print(
+                      "Invalid whitelist subnet:",
+                      line
+                  )
+
+
+          if not whitelist_networks:
+              raise SystemExit(
+                  "No whitelist networks loaded"
+              )
+
+
+          print("Whitelist networks:")
+
+          for net in whitelist_networks:
+              print(" ", net)
+
+
+          # ==========================================================
+          # LOAD SOURCES
+          # ==========================================================
+
+          start_urls = []
+
+          for raw in SOURCES_FILE.read_text(
+              encoding="utf-8",
+              errors="ignore"
+          ).splitlines():
+
+              line = raw.strip()
+
+              if not line or line.startswith("#"):
+                  continue
+
+              if line.startswith(
+                  ("http://", "https://")
+              ):
+                  start_urls.append(line)
+
+
+          print()
+          print(
+              "Public source seeds:",
+              len(start_urls)
+          )
+
+
+          # ==========================================================
+          # VLESS EXTRACTION
+          # ==========================================================
+
+          URI_RE = re.compile(
+              r'vless://[^\s<>"\'\\]+',
+              re.I
+          )
+
+
+          def clean_uri(value):
+
+              value = html.unescape(value)
+              value = urllib.parse.unquote(value)
+
+              value = value.rstrip(
+                  ".,;)]}>'\""
+              )
+
+              return value.strip()
+
+
+          def extract_vless(text):
+
+              if not text:
+                  return []
+
+              result = []
+
+              versions = [
+                  text,
+                  html.unescape(text),
+                  urllib.parse.unquote(text),
+              ]
+
+              for version in versions:
+
+                  for match in URI_RE.findall(
+                      version
+                  ):
+                      result.append(
+                          clean_uri(match)
+                      )
+
+              return result
+
+
+          # ==========================================================
+          # BASE64 SUBSCRIPTIONS EMBEDDED IN HTML
+          # ==========================================================
+
+          def extract_base64_vless(text):
+
+              result = []
+
+              if not text:
+                  return result
+
+              blocks = re.findall(
+                  r'[A-Za-z0-9_\-+/=]{100,}',
+                  text
+              )
+
+              for block in blocks:
+
+                  try:
+
+                      candidate = (
+                          block
+                          .replace("-", "+")
+                          .replace("_", "/")
+                      )
+
+                      candidate += (
+                          "=" * (-len(candidate) % 4)
+                      )
+
+                      decoded = base64.b64decode(
+                          candidate,
+                          validate=False
+                      ).decode(
+                          "utf-8",
+                          errors="ignore"
+                      )
+
+                      if "vless://" in decoded.lower():
+
+                          result.extend(
+                              extract_vless(decoded)
+                          )
+
+                  except Exception:
+                      pass
+
+              return result
+
+
+          # ==========================================================
+          # URI PARSER
+          # ==========================================================
+
+          def first(query, key):
+
+              return urllib.parse.unquote(
+                  query.get(
+                      key,
+                      [""]
+                  )[0]
+              ).lower().strip()
+
+
+          def parse_vless(uri):
+
+              try:
+
+                  parsed = urllib.parse.urlsplit(
+                      uri
+                  )
+
+                  if parsed.scheme.lower() != "vless":
+                      return None
+
+                  query = urllib.parse.parse_qs(
+                      parsed.query,
+                      keep_blank_values=True
+                  )
+
+                  return {
+                      "uri": uri,
+
+                      "host": (
+                          parsed.hostname or ""
+                      ),
+
+                      "port": (
+                          parsed.port or 0
+                      ),
+
+                      "security": first(
+                          query,
+                          "security"
+                      ),
+
+                      "transport": first(
+                          query,
+                          "type"
+                      ),
+
+                      "flow": first(
+                          query,
+                          "flow"
+                      ),
+
+                      "sni": (
+                          first(query, "sni")
+                          or first(
+                              query,
+                              "servername"
+                          )
+                      ),
+
+                      "fp": first(
+                          query,
+                          "fp"
+                      ),
+
+                      "pbk": first(
+                          query,
+                          "pbk"
+                      ),
+
+                      "sid": first(
+                          query,
+                          "sid"
+                      ),
+
+                      "service": (
+                          first(
+                              query,
+                              "servicename"
+                          )
+                      ),
+                  }
+
+              except Exception:
+                  return None
+
+
+          # ==========================================================
+          # DNS
+          # ==========================================================
+
+          dns_cache = {}
+
+
+          def resolve_host(host):
+
+              if not host:
+                  return []
+
+              if host in dns_cache:
+                  return dns_cache[host]
+
+
+              # literal IP
+              try:
+
+                  ip = ipaddress.ip_address(
+                      host
+                  )
+
+                  if ip.version == 4:
+
+                      result = [
+                          str(ip)
+                      ]
+
+                      dns_cache[host] = result
+
+                      return result
+
+              except ValueError:
+                  pass
+
+
+              result = []
+
+              try:
+
+                  answers = socket.getaddrinfo(
+                      host,
+                      None,
+                      family=socket.AF_INET,
+                      type=socket.SOCK_STREAM
+                  )
+
+                  for answer in answers:
+
+                      ip = answer[4][0]
+
+                      if ip not in result:
+                          result.append(ip)
+
+              except Exception:
+                  pass
+
+
+              dns_cache[host] = result
+
+              return result
+
+
+          # ==========================================================
+          # WHITELIST MATCH
+          # ==========================================================
+
+          def whitelist_match(ips):
+
+              for text_ip in ips:
+
+                  try:
+                      ip = ipaddress.ip_address(
+                          text_ip
+                      )
+
+                  except ValueError:
+                      continue
+
+
+                  for network in whitelist_networks:
+
+                      if ip in network:
+
+                          return str(network)
+
+
+              return ""
+
+
+          # ==========================================================
+          # HTTP FETCH
+          # ==========================================================
+
+          def fetch(url):
+
+              try:
+
+                  print(
+                      "GET",
+                      url,
+                      flush=True
+                  )
+
+                  response = session.get(
+                      url,
+                      timeout=REQUEST_TIMEOUT,
+                      allow_redirects=True
+                  )
+
+                  print(
+                      " ->",
+                      response.status_code,
+                      len(response.content),
+                      response.url,
+                      flush=True
+                  )
+
+                  if response.status_code != 200:
+                      return None, None
+
+                  # avoid gigantic downloads
+                  if len(response.content) > 5_000_000:
+
+                      print(
+                          " -> skipped huge page"
+                      )
+
+                      return None, None
+
+
+                  return (
+                      response.text,
+                      response.url
+                  )
+
+              except Exception as exc:
+
+                  print(
+                      "FAILED:",
+                      exc,
+                      flush=True
+                  )
+
+                  return None, None
+
+
+          # ==========================================================
+          # LINK DISCOVERY
+          # ==========================================================
+
+          def relevant_links(page_url, text):
+
+              try:
+
+                  soup = BeautifulSoup(
+                      text,
+                      "html.parser"
+                  )
+
+              except Exception:
+                  return []
+
+
+              root_host = urllib.parse.urlparse(
+                  page_url
+              ).netloc.lower()
+
+
+              links = []
+
+
+              for tag in soup.find_all(
+                  ["a", "link"]
+              ):
+
+                  href = tag.get("href")
+
+                  if not href:
+                      continue
+
+
+                  url = urllib.parse.urljoin(
+                      page_url,
+                      href
+                  )
+
+                  parsed = urllib.parse.urlparse(
+                      url
+                  )
+
+
+                  if parsed.scheme not in (
+                      "http",
+                      "https"
+                  ):
+                      continue
+
+
+                  # do not crawl other websites
+                  if (
+                      parsed.netloc.lower()
+                      != root_host
+                  ):
+                      continue
+
+
+                  low = url.lower()
+
+
+                  blocked = (
+                      "/login",
+                      "/register",
+                      "/privacy",
+                      "/terms",
+                      "/contact",
+                      "/about",
+                      "/blog/",
+                      "/faq",
+                  )
+
+
+                  if any(
+                      value in low
+                      for value in blocked
+                  ):
+                      continue
+
+
+                  interesting = (
+                      "vless",
+                      "v2ray",
+                      "reality",
+                      "grpc",
+                      "server",
+                      "servers",
+                      "node",
+                      "country",
+                      "location",
+                      "proxy",
+                  )
+
+
+                  if not any(
+                      value in low
+                      for value in interesting
+                  ):
+                      continue
+
+
+                  links.append(url)
+
+
+              return list(
+                  dict.fromkeys(links)
+              )[:MAX_LINKS_PER_PAGE]
+
+
+          # ==========================================================
+          # CONFIG CHECK
+          # ==========================================================
+
+          all_seen_uris = set()
+          matches = []
+
+          source_found = defaultdict(int)
+          source_matches = defaultdict(int)
+
+
+          def process_uri(
+              uri,
+              source_url
+          ):
+
+              if uri in all_seen_uris:
+                  return
+
+              all_seen_uris.add(uri)
+
+
+              config = parse_vless(
+                  uri
+              )
+
+              if not config:
+                  return
+
+
+              ips = resolve_host(
+                  config["host"]
+              )
+
+
+              subnet = whitelist_match(
+                  ips
+              )
+
+
+              if not subnet:
+                  return
+
+
+              config["ips"] = ips
+              config["subnet"] = subnet
+              config["source"] = source_url
+
+              matches.append(
+                  config
+              )
+
+              source_matches[source_url] += 1
+
+
+              print(
+                  "MATCH:",
+                  config["host"],
+                  ips,
+                  subnet,
+                  flush=True
+              )
+
+
+          # ==========================================================
+          # CRAWL
+          # ==========================================================
+
+          queue = deque()
+
+          for url in start_urls:
+
+              queue.append(
+                  (url, 0)
+              )
+
+
+          visited = set()
+
+          pages_per_host = defaultdict(
+              int
+          )
+
+
+          while (
+              queue
+              and len(visited) < MAX_TOTAL_PAGES
+          ):
+
+              url, depth = queue.popleft()
+
+
+              if url in visited:
+                  continue
+
+
+              host = urllib.parse.urlparse(
+                  url
+              ).netloc.lower()
+
+
+              if (
+                  pages_per_host[host]
+                  >= MAX_PAGES_PER_HOST
+              ):
+                  continue
+
+
+              visited.add(url)
+              pages_per_host[host] += 1
+
+
+              text, final_url = fetch(
+                  url
+              )
+
+
+              if not text:
+                  continue
+
+
+              found = []
+
+              found.extend(
+                  extract_vless(text)
+              )
+
+              found.extend(
+                  extract_base64_vless(text)
+              )
+
+
+              try:
+
+                  soup = BeautifulSoup(
+                      text,
+                      "html.parser"
+                  )
+
+                  found.extend(
+                      extract_vless(
+                          soup.get_text("\n")
+                      )
+                  )
+
+
+                  for tag in soup.find_all(True):
+
+                      for value in tag.attrs.values():
+
+                          if isinstance(
+                              value,
+                              str
+                          ):
+
+                              found.extend(
+                                  extract_vless(
+                                      value
+                                  )
+                              )
+
+
+                          elif isinstance(
+                              value,
+                              list
+                          ):
+
+                              for item in value:
+
+                                  if isinstance(
+                                      item,
+                                      str
+                                  ):
+
+                                      found.extend(
+                                          extract_vless(
+                                              item
+                                          )
+                                      )
+
+              except Exception:
+                  pass
+
+
+              found = list(
+                  dict.fromkeys(
+                      clean_uri(x)
+                      for x in found
+                      if x
+                  )
+              )
+
+
+              source_found[url] = len(found)
+
+
+              for uri in found:
+
+                  process_uri(
+                      uri,
+                      url
+                  )
+
+
+              print(
+                  "PAGE:",
+                  len(visited),
+                  "/",
+                  MAX_TOTAL_PAGES,
+                  "| found:",
+                  len(found),
+                  "| total URI:",
+                  len(all_seen_uris),
+                  "| whitelist matches:",
+                  len(matches),
+                  flush=True
+              )
+
+
+              if depth < MAX_DEPTH:
+
+                  for link in relevant_links(
+                      final_url or url,
+                      text
+                  ):
+
+                      if link not in visited:
+
+                          queue.append(
+                              (
+                                  link,
+                                  depth + 1
+                              )
+                          )
+
+
+              time.sleep(DELAY)
+
+
+          # ==========================================================
+          # RANKING INSIDE WHITELIST
+          # ==========================================================
+
+          known_sni = {
+              "max.ru",
+              "st.vk.com",
+              "music.yandex.ru",
+              "event.yandex.ru",
+              "ads.x5.ru",
+          }
+
+
+          def score(c):
+
+              # IP whitelist match is already mandatory.
+              score = 1000
+              reasons = [
+                  "WHITELIST-IP"
+              ]
+
+
+              if c["security"] == "reality":
+
+                  score += 120
+                  reasons.append(
+                      "REALITY"
+                  )
+
+
+              elif c["security"] == "tls":
+
+                  score += 20
+                  reasons.append(
+                      "TLS"
+                  )
+
+
+              if c["transport"] == "grpc":
+
+                  score += 70
+                  reasons.append(
+                      "gRPC"
+                  )
+
+
+              elif c["transport"] in (
+                  "tcp",
+                  "raw"
+              ):
+
+                  score += 50
+                  reasons.append(
+                      "TCP/RAW"
+                  )
+
+
+              elif c["transport"] == "ws":
+
+                  score += 20
+                  reasons.append(
+                      "WS"
+                  )
+
+
+              if (
+                  c["flow"]
+                  == "xtls-rprx-vision"
+              ):
+
+                  score += 60
+                  reasons.append(
+                      "VISION"
+                  )
+
+
+              if c["port"] == 443:
+
+                  score += 50
+                  reasons.append(
+                      "443"
+                  )
+
+
+              if c["sni"] in known_sni:
+
+                  score += 10
+                  reasons.append(
+                      "KNOWN-SNI"
+                  )
+
+
+              if c["pbk"]:
+                  score += 5
+
+
+              if c["sid"]:
+                  score += 5
+
+
+              c["score"] = score
+              c["reasons"] = reasons
+
+
+          for c in matches:
+              score(c)
+
+
+          matches.sort(
+              key=lambda x: x["score"],
+              reverse=True
+          )
+
+
+          # ==========================================================
+          # CATEGORIES
+          # ==========================================================
+
+          reality = [
+              c for c in matches
+              if c["security"] == "reality"
+          ]
+
+
+          grpc_reality = [
+              c for c in reality
+              if c["transport"] == "grpc"
+          ]
+
+
+          vision_reality = [
+              c for c in reality
+              if (
+                  c["flow"]
+                  == "xtls-rprx-vision"
+              )
+          ]
+
+
+          tls_ws = [
+              c for c in matches
+              if (
+                  c["security"] == "tls"
+                  and c["transport"] == "ws"
+              )
+          ]
+
+
+          # ==========================================================
+          # SAVE
+          # ==========================================================
+
+          def save(name, rows):
+
+              (
+                  OUT / name
+              ).write_text(
+                  "\n".join(
+                      c["uri"]
+                      for c in rows
+                  )
+                  + (
+                      "\n"
+                      if rows
+                      else ""
+                  ),
+                  encoding="utf-8"
+              )
+
+
+          save(
+              "01_ALL_WHITELIST_MATCHES.txt",
+              matches
+          )
+
+          save(
+              "02_REALITY.txt",
+              reality
+          )
+
+          save(
+              "03_REALITY_GRPC.txt",
+              grpc_reality
+          )
+
+          save(
+              "04_REALITY_VISION.txt",
+              vision_reality
+          )
+
+          save(
+              "05_TLS_WS.txt",
+              tls_ws
+          )
+
+
+          # ==========================================================
+          # BATCHES
+          # ==========================================================
+
+          for i in range(
+              0,
+              len(matches),
+              BATCH_SIZE
+          ):
+
+              chunk = matches[
+                  i:i + BATCH_SIZE
+              ]
+
+              number = (
+                  i // BATCH_SIZE
+              ) + 1
+
+              save(
+                  f"batch_{number:02d}.txt",
+                  chunk
+              )
+
+
+          # ==========================================================
+          # REPORT
+          # ==========================================================
+
+          report = [
+              f"Whitelist networks: {len(whitelist_networks)}",
+              f"Public source seeds: {len(start_urls)}",
+              f"Pages visited: {len(visited)}",
+              f"Unique public VLESS found: {len(all_seen_uris)}",
+              f"Whitelist endpoint matches: {len(matches)}",
+              f"REALITY matches: {len(reality)}",
+              f"REALITY + gRPC: {len(grpc_reality)}",
+              f"REALITY + Vision: {len(vision_reality)}",
+              f"TLS + WS: {len(tls_ws)}",
+              "",
+              "WHITELIST NETWORKS:",
+          ]
+
+
+          for net in whitelist_networks:
+              report.append(str(net))
+
+
+          report.extend([
+              "",
+              "MATCHES:"
+          ])
+
+
+          for index, c in enumerate(
+              matches,
+              start=1
+          ):
+
+              report.append(
+                  f"{index:03d} | "
+                  f"score={c['score']} | "
+                  f"{c['host']}:{c['port']} | "
+                  f"IP={','.join(c['ips'])} | "
+                  f"PASS={c['subnet']} | "
+                  f"security={c['security'] or '-'} | "
+                  f"type={c['transport'] or '-'} | "
+                  f"flow={c['flow'] or '-'} | "
+                  f"SNI={c['sni'] or '-'} | "
+                  f"{','.join(c['reasons'])}"
+              )
+
+
+          report.extend([
+              "",
+              "PAGES PER HOST:"
+          ])
+
+
+          for host, count in sorted(
+              pages_per_host.items()
+          ):
+              report.append(
+                  f"{host}: {count}"
+              )
+
+
+          (
+              OUT / "report.txt"
+          ).write_text(
+              "\n".join(report)
+              + "\n",
+              encoding="utf-8"
+          )
+
+
+          print()
+          print("DONE")
+          print(
+              "Pages:",
+              len(visited)
+          )
+          print(
+              "Public VLESS:",
+              len(all_seen_uris)
+          )
+          print(
+              "Whitelist matches:",
+              len(matches)
+          )
+
+      - name: Commit live whitelist matches
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+          "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add live_whitelist_matches
+
+          if git diff --cached --quiet; then
+            echo "No live whitelist changes"
+          else
+            git commit -m \
+            "Collect public VPN configs inside measured LTE whitelist"
+
+            git push
+          fi
