@@ -1,5 +1,3 @@
-vless://0b053b33-d63a-403c-8b8d-9d2881c8a4d8@104.18.155.141:8443?&security=tls&fp=chrome&sni=ftp.skylinknet.ir&type=ws&headerType=none&host=ftp.skylinknet.ir&path=%2F#🇩🇪[www.v2nodes.com
-vless://08f96221-9b7b-4e6f-8ffe-aee8b9c9b504@ov-canada1.09vpn.com:8443?encryption=none&type=ws&security=tls&path=%2Fvless%2F&host=ov-canada1.09vpn.com&sni=ov-canada1.09vpn.com&fp=chrome&insecure=0&allowInsecure=0#🏳[www.v2nodes.com
 vless://916e3030-6eac-418b-9402-7508ca7d6280@172.64.145.158:8443?&security=tls&fp=chrome&sni=us-akile.nanniang.top&type=ws&headerType=none&host=us-akile.nanniang.top&path=%2F#🇺🇸[www.v2nodes.com
 vless://f265b49a-70a3-407a-b17b-e45dfb9f255c@103.180.20.228:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#🏳[www.v2nodes.com
 vless://b1e6a8df-effc-4b70-9132-4dca98085420@www.speedtest.net:8443?&security=tls&fp=chrome&sni=free-irancell.warzonmob.ir&type=ws&headerType=none&host=free-irancell.warzonmob.ir&path=%2F#🇬🇧[www.v2nodes.com
@@ -18,3 +16,5 @@ vless://9a9fe945246a431ebd051cb981464c8d@2.59.163.45:59992?type=tcp&headerType=n
 vless://6de486c1-dbad-4540-8875-98c35e9cd173@46.8.228.91:47424?&type=tcp&headerType=none&path=%2F#🇱🇻[www.v2nodes.com
 vless://d2733ae6-44e7-4b14-8c2d-3f5bef74cdec@144.31.157.104:20017?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#🇩🇪[www.v2nodes.com
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@52.59.99.227:22222?&type=tcp&headerType=none&path=%2F#🇩🇪[www.v2nodes.com
+vless://ddd72e51-9224-43a2-b3a0-9c4170f78ed1@178.83.46.30:5794?&type=tcp&headerType=none&path=%2F#🇩🇪[www.v2nodes.com
+vless://23a9b46e-9443-4268-81c5-399929919ab0@155.103.69.195:48711?encryption=none&type=tcp&headerType=http&path=%2F&host=snapp.ir#🇹🇷[www.v2nodes.com
