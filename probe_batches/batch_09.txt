@@ -1,3 +1,4 @@
+vless://7170c66c-3c0b-4cd0-acbb-01774a6b7179@81.163.23.248:443?&security=tls&fp=firefox&alpn=http%2F1.1&sni=selec248.apruxdomain.website&type=ws&headerType=none&host=selec248.apruxdomain.website&path=%2Favi%2Fv1%2Finfo#🇳🇱[www.v2nodes.com
 vless://7ce54bb3-d612-4aa7-be08-089d3c461d53@18.239.83.52:443?encryption=none&security=tls&sni=d1yxsk0zprgivr.cloudfront.net&fp=chrome&insecure=0&allowInsecure=0&type=ws&host=d1yxsk0zprgivr.cloudfront.net&path=%2F#🇹🇭[www.v2nodes.com
 vless://XpnTeam-29@140.248.186.45:443?&security=tls&fp=chrome&alpn=http%2F1.1&sni=ssl.fastly.com&type=ws&headerType=none&host=Appxdn.global.ssl.fastly.net&path=%2F#🇬🇧[www.v2nodes.com
 vless://8c00ea88-31f7-445a-8f74-f6e7f03a1553@82.115.6.93:443?ed=2048&eh=Sec-WebSocket-Protocol&encryption=none&fp=chrome&host=kuraakavaa-5l7.pages.dev&path=/&security=tls&sni=kuraakavaa-5l7.pages.dev&type=ws#🇳🇱[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://04c808e2-0b59-47b0-a54b-32fc7ef1c902@www.baipiao.eu.org:443?security=tls
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.17.22.240:443?&security=tls&fp=random&sni=hhlfy.twiladaphne.ndjp.net&type=ws&headerType=none&host=hhlfy.twiladaphne.ndjp.net&path=%2F#🇸🇬[www.v2nodes.com
 vless://1bc380b1-cff7-446f-b13f-5c0ad29fc75a@16.176.42.97:443?&security=tls&fp=chrome&sni=zero.csmaster.ggff.net&type=ws&headerType=none&host=zero.csmaster.ggff.net&path=/#🇸🇬[www.v2nodes.com
 vless://b2f6aa3a-2550-4a1c-b2c0-1c94b1207217@45.130.125.207:443?path=%2Fhdgrbws&security=tls&encryption=none&insecure=0&host=terazhediii.info&fp=chrome&type=ws&allowInsecure=0&sni=terazhediii.info#🇬🇧[www.v2nodes.com
-vless://50414e45-4c5f-5a45-5553-87784dde8e7a@173.245.49.57:443?path=%2Fstream%2FPANEL_ZEUS%2F87784dde8e7a&security=tls&encryption=none&insecure=0&host=z-e-u-s-jipumr.nova-69a264.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=z-e-u-s-jipumr.nova-69a264.workers.dev#🏳[www.v2nodes.com
