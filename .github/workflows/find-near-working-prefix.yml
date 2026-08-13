@@ -1,0 +1,395 @@
+name: Find configs near working prefix
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: find-near-working-prefix
+  cancel-in-progress: true
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Find candidates near confirmed working IP
+        shell: python
+        run: |
+          import ipaddress
+          import socket
+          import urllib.parse
+          from pathlib import Path
+
+          SOURCE = Path("web_configs/04_vless_all.txt")
+
+          if not SOURCE.exists():
+              raise SystemExit(
+                  "web_configs/04_vless_all.txt not found. "
+                  "Run Web Whitelist VPN Collector first."
+              )
+
+          OUT = Path("near_working_prefix")
+          OUT.mkdir(exist_ok=True)
+
+          for old in OUT.glob("*.txt"):
+              old.unlink()
+
+          # ==========================================================
+          # CONFIRMED WORKING CONTROL
+          # ==========================================================
+
+          WORKING_IP = ipaddress.ip_address("81.163.22.35")
+          WORKING_24 = ipaddress.ip_network("81.163.22.0/24")
+          WORKING_23 = ipaddress.ip_network("81.163.22.0/23")
+          WORKING_22 = ipaddress.ip_network("81.163.20.0/22")
+          WORKING_21 = ipaddress.ip_network("81.163.16.0/21")
+          WORKING_20 = ipaddress.ip_network("81.163.16.0/20")
+          WORKING_16 = ipaddress.ip_network("81.163.0.0/16")
+
+          # Positive control characteristics
+          CONTROL_PORT = 443
+          CONTROL_SECURITY = "reality"
+          CONTROL_TRANSPORT = "grpc"
+          CONTROL_SNI = "st.vk.com"
+          CONTROL_FP = "firefox"
+
+          dns_cache = {}
+
+          def first(q, key):
+              return urllib.parse.unquote(
+                  q.get(key, [""])[0]
+              ).lower().strip()
+
+          def parse(uri):
+              try:
+                  p = urllib.parse.urlsplit(uri)
+
+                  q = urllib.parse.parse_qs(
+                      p.query,
+                      keep_blank_values=True
+                  )
+
+                  return {
+                      "uri": uri,
+                      "host": p.hostname or "",
+                      "port": p.port or 0,
+                      "security": first(q, "security"),
+                      "type": first(q, "type"),
+                      "flow": first(q, "flow"),
+                      "sni": first(q, "sni") or first(q, "servername"),
+                      "fp": first(q, "fp"),
+                      "pbk": first(q, "pbk"),
+                      "sid": first(q, "sid"),
+                  }
+
+              except Exception:
+                  return None
+
+          def resolve(host):
+              if not host:
+                  return []
+
+              if host in dns_cache:
+                  return dns_cache[host]
+
+              try:
+                  ip = ipaddress.ip_address(host)
+
+                  if ip.version == 4:
+                      dns_cache[host] = [str(ip)]
+                      return [str(ip)]
+
+              except ValueError:
+                  pass
+
+              result = []
+
+              try:
+                  answers = socket.getaddrinfo(
+                      host,
+                      None,
+                      family=socket.AF_INET,
+                      type=socket.SOCK_STREAM
+                  )
+
+                  for a in answers:
+                      ip = a[4][0]
+
+                      if ip not in result:
+                          result.append(ip)
+
+              except Exception:
+                  pass
+
+              dns_cache[host] = result
+              return result
+
+          def best_prefix_score(ips):
+              best = 0
+              label = ""
+
+              for text in ips:
+                  try:
+                      ip = ipaddress.ip_address(text)
+                  except ValueError:
+                      continue
+
+                  if ip == WORKING_IP:
+                      return 1000, "EXACT"
+
+                  if ip in WORKING_24:
+                      if best < 500:
+                          best = 500
+                          label = "/24"
+
+                  elif ip in WORKING_23:
+                      if best < 350:
+                          best = 350
+                          label = "/23"
+
+                  elif ip in WORKING_22:
+                      if best < 250:
+                          best = 250
+                          label = "/22"
+
+                  elif ip in WORKING_21:
+                      if best < 180:
+                          best = 180
+                          label = "/21"
+
+                  elif ip in WORKING_20:
+                      if best < 120:
+                          best = 120
+                          label = "/20"
+
+                  elif ip in WORKING_16:
+                      if best < 20:
+                          best = 20
+                          label = "/16"
+
+              return best, label
+
+          def score(c):
+              score = 0
+              reasons = []
+
+              ips = resolve(c["host"])
+              c["ips"] = ips
+
+              net_score, prefix = best_prefix_score(ips)
+              score += net_score
+
+              if prefix:
+                  reasons.append(f"PREFIX-{prefix}")
+
+              # Structural similarity to the positive control
+              if c["security"] == CONTROL_SECURITY:
+                  score += 100
+                  reasons.append("REALITY")
+              else:
+                  score -= 80
+
+              if c["type"] == CONTROL_TRANSPORT:
+                  score += 80
+                  reasons.append("gRPC")
+              elif c["type"] in ("tcp", "raw"):
+                  score += 25
+                  reasons.append("TCP/RAW")
+              elif c["type"] == "ws":
+                  score += 5
+                  reasons.append("WS")
+
+              if c["port"] == CONTROL_PORT:
+                  score += 40
+                  reasons.append("PORT-443")
+
+              if c["sni"] == CONTROL_SNI:
+                  score += 35
+                  reasons.append("SNI-STVK")
+
+              if c["fp"] == CONTROL_FP:
+                  score += 10
+                  reasons.append("FP-FIREFOX")
+
+              if c["pbk"]:
+                  score += 5
+
+              if c["sid"]:
+                  score += 5
+
+              return score, reasons
+
+          # ==========================================================
+          # READ
+          # ==========================================================
+
+          items = []
+          seen = set()
+
+          for raw in SOURCE.read_text(
+              encoding="utf-8",
+              errors="ignore"
+          ).splitlines():
+
+              uri = raw.strip()
+
+              if not uri.startswith("vless://"):
+                  continue
+
+              if uri in seen:
+                  continue
+
+              seen.add(uri)
+
+              c = parse(uri)
+
+              if not c:
+                  continue
+
+              c["score"], c["reasons"] = score(c)
+
+              items.append(c)
+
+          items.sort(
+              key=lambda x: x["score"],
+              reverse=True
+          )
+
+          # ==========================================================
+          # OUTPUT GROUPS
+          # ==========================================================
+
+          exact_or_24 = [
+              c for c in items
+              if any(
+                  r in c["reasons"]
+                  for r in ("PREFIX-EXACT", "PREFIX-/24")
+              )
+          ]
+
+          near_23_22 = [
+              c for c in items
+              if any(
+                  r in c["reasons"]
+                  for r in ("PREFIX-/23", "PREFIX-/22")
+              )
+          ]
+
+          near_21_20 = [
+              c for c in items
+              if any(
+                  r in c["reasons"]
+                  for r in ("PREFIX-/21", "PREFIX-/20")
+              )
+          ]
+
+          same_16 = [
+              c for c in items
+              if "PREFIX-/16" in c["reasons"]
+          ]
+
+          reality_grpc_443 = [
+              c for c in items
+              if (
+                  c["security"] == "reality"
+                  and c["type"] == "grpc"
+                  and c["port"] == 443
+              )
+          ]
+
+          def save(name, rows):
+              (OUT / name).write_text(
+                  "\n".join(
+                      c["uri"]
+                      for c in rows
+                  ) + ("\n" if rows else ""),
+                  encoding="utf-8"
+              )
+
+          save("01_exact_or_same_24.txt", exact_or_24)
+          save("02_near_23_22.txt", near_23_22[:100])
+          save("03_near_21_20.txt", near_21_20[:100])
+          save("04_same_16.txt", same_16[:100])
+          save("05_reality_grpc_443.txt", reality_grpc_443[:100])
+          save("06_top_50.txt", items[:50])
+
+          # Small batches
+          BATCH_SIZE = 20
+
+          for i in range(0, min(len(items), 200), BATCH_SIZE):
+              chunk = items[i:i + BATCH_SIZE]
+              number = i // BATCH_SIZE + 1
+
+              save(
+                  f"batch_{number:02d}.txt",
+                  chunk
+              )
+
+          # ==========================================================
+          # REPORT
+          # ==========================================================
+
+          report = [
+              f"Total VLESS: {len(items)}",
+              f"Same /24 or exact: {len(exact_or_24)}",
+              f"Near /23-/22: {len(near_23_22)}",
+              f"Near /21-/20: {len(near_21_20)}",
+              f"Same /16: {len(same_16)}",
+              f"REALITY+gRPC+443: {len(reality_grpc_443)}",
+              "",
+              "Positive control:",
+              "81.163.22.35:443",
+              "VLESS + REALITY + gRPC",
+              "SNI=st.vk.com",
+              "fp=firefox",
+              "",
+              "TOP 100:",
+          ]
+
+          for c in items[:100]:
+              ips = ",".join(c["ips"]) or "-"
+
+              report.append(
+                  f"{c['score']:4} | "
+                  f"{c['host']}:{c['port']} | "
+                  f"IP={ips} | "
+                  f"SNI={c['sni'] or '-'} | "
+                  f"type={c['type'] or '-'} | "
+                  f"security={c['security'] or '-'} | "
+                  f"fp={c['fp'] or '-'} | "
+                  f"{','.join(c['reasons'])}"
+              )
+
+          (OUT / "report.txt").write_text(
+              "\n".join(report) + "\n",
+              encoding="utf-8"
+          )
+
+          print("Done")
+          print("Total VLESS:", len(items))
+          print("Same /24 or exact:", len(exact_or_24))
+          print("REALITY+gRPC+443:", len(reality_grpc_443))
+
+      - name: Commit candidates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+          "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add near_working_prefix
+
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Find VPN configs near confirmed working prefix"
+            git push
+          fi
