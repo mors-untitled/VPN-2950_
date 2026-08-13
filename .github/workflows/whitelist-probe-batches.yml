@@ -1,0 +1,429 @@
+name: Build whitelist probe batches
+
+on:
+  workflow_dispatch:
+  schedule:
+    # После web collector и ranking
+    - cron: "37 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: whitelist-probe-batches
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build diversified LTE probe batches
+        shell: python
+        run: |
+          import ipaddress
+          import socket
+          import urllib.parse
+          from collections import defaultdict, deque
+          from pathlib import Path
+
+          # Берём уже собранную веб-базу
+          SOURCE = Path("web_configs/04_vless_all.txt")
+
+          if not SOURCE.exists():
+              raise SystemExit(
+                  "web_configs/04_vless_all.txt not found. "
+                  "Run Web Whitelist VPN Collector first."
+              )
+
+          OUT = Path("probe_batches")
+          OUT.mkdir(exist_ok=True)
+
+          for old in OUT.glob("*.txt"):
+              old.unlink()
+
+          # ==========================================================
+          # SETTINGS
+          # ==========================================================
+
+          BATCH_SIZE = 20
+          MAX_BATCHES = 12
+
+          # Сколько кандидатов максимум брать из одного /24
+          MAX_PER_24 = 2
+
+          # Сколько кандидатов максимум брать с одного hostname/IP
+          MAX_PER_HOST = 1
+
+          PRIORITY_SNI = {
+              "max.ru",
+              "ads.x5.ru",
+              "event.yandex.ru",
+              "music.yandex.ru",
+              "st.vk.com",
+          }
+
+          GOOD_PORTS = {
+              443,
+              8443,
+              2055,
+              2053,
+              9443,
+              55443,
+          }
+
+          # ==========================================================
+          # HELPERS
+          # ==========================================================
+
+          def first(q, key):
+              return urllib.parse.unquote(
+                  q.get(key, [""])[0]
+              ).lower().strip()
+
+          def parse(uri):
+              try:
+                  p = urllib.parse.urlsplit(uri)
+
+                  q = urllib.parse.parse_qs(
+                      p.query,
+                      keep_blank_values=True
+                  )
+
+                  return {
+                      "uri": uri,
+                      "host": p.hostname or "",
+                      "port": p.port or 0,
+                      "security": first(q, "security"),
+                      "type": first(q, "type"),
+                      "flow": first(q, "flow"),
+                      "sni": first(q, "sni") or first(q, "servername"),
+                      "fp": first(q, "fp"),
+                      "pbk": first(q, "pbk"),
+                      "sid": first(q, "sid"),
+                  }
+
+              except Exception:
+                  return None
+
+          dns_cache = {}
+
+          def resolve(host):
+              if not host:
+                  return []
+
+              if host in dns_cache:
+                  return dns_cache[host]
+
+              try:
+                  ip = ipaddress.ip_address(host)
+
+                  if ip.version == 4:
+                      dns_cache[host] = [str(ip)]
+                      return [str(ip)]
+
+              except ValueError:
+                  pass
+
+              result = []
+
+              try:
+                  answers = socket.getaddrinfo(
+                      host,
+                      None,
+                      family=socket.AF_INET,
+                      type=socket.SOCK_STREAM
+                  )
+
+                  for a in answers:
+                      ip = a[4][0]
+
+                      if ip not in result:
+                          result.append(ip)
+
+              except Exception:
+                  pass
+
+              dns_cache[host] = result
+              return result
+
+          def network24(ips):
+              for text in ips:
+                  try:
+                      ip = ipaddress.ip_address(text)
+
+                      return str(
+                          ipaddress.ip_network(
+                              f"{ip}/24",
+                              strict=False
+                          )
+                      )
+
+                  except Exception:
+                      pass
+
+              return "unresolved"
+
+          def score(c):
+              score = 0
+              reasons = []
+
+              if c["security"] == "reality":
+                  score += 50
+                  reasons.append("REALITY")
+
+              elif c["security"] == "tls":
+                  score += 10
+                  reasons.append("TLS")
+
+              if c["flow"] == "xtls-rprx-vision":
+                  score += 25
+                  reasons.append("VISION")
+
+              if c["type"] == "grpc":
+                  score += 22
+                  reasons.append("gRPC")
+
+              elif c["type"] in ("tcp", "raw"):
+                  score += 18
+                  reasons.append("TCP/RAW")
+
+              elif c["type"] == "ws":
+                  score += 5
+                  reasons.append("WS")
+
+              if c["port"] in GOOD_PORTS:
+                  score += 10
+                  reasons.append(f"PORT-{c['port']}")
+
+              if c["sni"] in PRIORITY_SNI:
+                  score += 8
+                  reasons.append("KNOWN-SNI")
+
+              if c["pbk"]:
+                  score += 3
+
+              if c["sid"]:
+                  score += 3
+
+              return score, reasons
+
+          # ==========================================================
+          # READ
+          # ==========================================================
+
+          items = []
+          seen = set()
+
+          for raw in SOURCE.read_text(
+              encoding="utf-8",
+              errors="ignore"
+          ).splitlines():
+
+              uri = raw.strip()
+
+              if not uri.startswith("vless://"):
+                  continue
+
+              if uri in seen:
+                  continue
+
+              seen.add(uri)
+
+              c = parse(uri)
+
+              if not c:
+                  continue
+
+              c["ips"] = resolve(c["host"])
+              c["net24"] = network24(c["ips"])
+
+              c["score"], c["reasons"] = score(c)
+
+              items.append(c)
+
+          # ==========================================================
+          # GROUP BY NETWORK /24
+          #
+          # Идея: не брать 20 почти одинаковых серверов из одной сети.
+          # Нам нужны максимально разные IP/ASN-кандидаты.
+          # ==========================================================
+
+          groups = defaultdict(list)
+
+          for c in items:
+              groups[c["net24"]].append(c)
+
+          for net in groups:
+              groups[net].sort(
+                  key=lambda x: x["score"],
+                  reverse=True
+              )
+
+          # Сортируем сети по лучшему кандидату
+          networks = sorted(
+              groups.keys(),
+              key=lambda net: groups[net][0]["score"],
+              reverse=True
+          )
+
+          # ==========================================================
+          # ROUND-ROBIN DIVERSIFICATION
+          # ==========================================================
+
+          queues = {
+              net: deque(groups[net])
+              for net in networks
+          }
+
+          selected = []
+          used_host = defaultdict(int)
+          used_net = defaultdict(int)
+
+          while len(selected) < BATCH_SIZE * MAX_BATCHES:
+
+              progress = False
+
+              for net in networks:
+
+                  if used_net[net] >= MAX_PER_24:
+                      continue
+
+                  q = queues[net]
+
+                  while q:
+
+                      c = q.popleft()
+
+                      if used_host[c["host"]] >= MAX_PER_HOST:
+                          continue
+
+                      selected.append(c)
+                      used_host[c["host"]] += 1
+                      used_net[net] += 1
+
+                      progress = True
+                      break
+
+                  if len(selected) >= BATCH_SIZE * MAX_BATCHES:
+                      break
+
+              if not progress:
+                  break
+
+          # ==========================================================
+          # BUILD BATCHES
+          # ==========================================================
+
+          batches = [
+              selected[i:i + BATCH_SIZE]
+              for i in range(
+                  0,
+                  len(selected),
+                  BATCH_SIZE
+              )
+          ]
+
+          report = [
+              f"Total VLESS source: {len(items)}",
+              f"Unique /24 groups: {len(groups)}",
+              f"Selected candidates: {len(selected)}",
+              f"Batches: {len(batches)}",
+              "",
+          ]
+
+          for number, batch in enumerate(
+              batches,
+              start=1
+          ):
+
+              filename = f"batch_{number:02d}.txt"
+
+              (OUT / filename).write_text(
+                  "\n".join(
+                      c["uri"]
+                      for c in batch
+                  ) + "\n",
+                  encoding="utf-8"
+              )
+
+              report.append(
+                  f"{filename}: {len(batch)} configs"
+              )
+
+              for idx, c in enumerate(
+                  batch,
+                  start=1
+              ):
+
+                  report.append(
+                      f"  {idx:02d}. "
+                      f"{c['host']}:{c['port']} | "
+                      f"net={c['net24']} | "
+                      f"SNI={c['sni'] or '-'} | "
+                      f"type={c['type'] or '-'} | "
+                      f"flow={c['flow'] or '-'} | "
+                      f"score={c['score']} | "
+                      f"{','.join(c['reasons'])}"
+                  )
+
+              report.append("")
+
+          (OUT / "report.txt").write_text(
+              "\n".join(report) + "\n",
+              encoding="utf-8"
+          )
+
+          # ==========================================================
+          # TEMPLATE FOR MANUAL RESULTS
+          # ==========================================================
+
+          results_template = [
+              "# Mark results manually",
+              "# Format:",
+              "# batch,number,result",
+              "# result = WORKS / UNSTABLE / FAIL",
+              "",
+          ]
+
+          for bnum, batch in enumerate(
+              batches,
+              start=1
+          ):
+              for idx, c in enumerate(
+                  batch,
+                  start=1
+              ):
+                  results_template.append(
+                      f"{bnum:02d},{idx:02d},"
+                  )
+
+          (OUT / "results_template.csv").write_text(
+              "\n".join(results_template) + "\n",
+              encoding="utf-8"
+          )
+
+          print("Done")
+          print("Source:", len(items))
+          print("Networks:", len(groups))
+          print("Selected:", len(selected))
+          print("Batches:", len(batches))
+
+      - name: Commit probe batches
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email \
+          "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add probe_batches
+
+          if git diff --cached --quiet; then
+            echo "No probe batch changes"
+          else
+            git commit -m "Build LTE whitelist probe batches"
+            git push
+          fi
