@@ -1,7 +1,7 @@
-Input unique VLESS: 469
-IP + SNI match: 1
-IP only: 15
-SNI only: 19
+Input unique VLESS: 467
+IP + SNI match: 0
+IP only: 13
+SNI only: 20
 Neither: 434
 
 Priority order:
