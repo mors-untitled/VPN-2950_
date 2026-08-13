@@ -1,3 +1,4 @@
+vless://271e3f7b-6afe-4104-b65b-afc2950f1638@apn.zyro-lab.com:8090?security=none&type=tcp&headerType=http&path=%2F&host=play.google.com#🇩🇪[www.v2nodes.com
 vless://ddd72e51-9224-43a2-b3a0-9c4170f78ed1@178.83.46.30:5794?&type=tcp&headerType=none&path=%2F#🇩🇪[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@84.235.168.64:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@141.148.245.162:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@152.70.59.205:62145?&type=tcp&heade
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@143.47.185.78:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@149.130.168.29:62145?&type=tcp&headerType=none&path=%2F#🇨🇴[www.v2nodes.com
 vless://9f0285ee-20ca-4953-bcdb-86a920652923@204.216.216.23:10086?encryption=none&type=tcp&headerType=none#🇮🇹[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@157.137.217.4:62145?&type=tcp&headerType=none&path=%2F#🇨🇴[www.v2nodes.com
