@@ -1,8 +1,8 @@
-Input unique VLESS: 459
+Input unique VLESS: 450
 IP + SNI match: 0
-IP only: 11
+IP only: 10
 SNI only: 19
-Neither: 429
+Neither: 421
 
 Priority order:
 1. 01_ip_and_sni.txt
