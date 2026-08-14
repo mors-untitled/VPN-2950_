@@ -1,3 +1,4 @@
+vless://b1e6a8df-effc-4b70-9132-4dca98085420@www.speedtest.net:8443?&security=tls&fp=chrome&sni=free-irancell.warzonmob.ir&type=ws&headerType=none&host=free-irancell.warzonmob.ir&path=%2F#🇬🇧[www.v2nodes.com
 vless://e83af88a-a884-48ba-b462-a1edccff15e7@50.7.197.2:8443?&security=tls&fp=firefox&alpn=http%2F1.1&sni=apkav-6.bosx.net&type=ws&headerType=none&path=%2Fapi%2Fconnect#🇬🇧[www.v2nodes.com
 vless://7967bf59-57e3-4cde-9898-527b0fe60022@141.193.213.20:8443?&security=tls&fp=chrome&sni=speed.dulacloud.store&type=ws&headerType=none&host=speed.dulacloud.store&path=/dula#🇸🇬[www.v2nodes.com
 vless://08f96221-9b7b-4e6f-8ffe-aee8b9c9b504@ov-canada1.09vpn.com:8443?encryption=none&type=ws&security=tls&path=%2Fvless%2F&host=ov-canada1.09vpn.com&sni=ov-canada1.09vpn.com&fp=chrome&insecure=0&allowInsecure=0#🏳[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://6de486c1-dbad-4540-8875-98c35e9cd173@46.8.228.91:47424?&type=tcp&headerT
 vless://271e3f7b-6afe-4104-b65b-afc2950f1638@apn.zyro-lab.com:8090?security=none&type=tcp&headerType=http&path=%2F&host=play.google.com#🇩🇪[www.v2nodes.com
 vless://ddd72e51-9224-43a2-b3a0-9c4170f78ed1@178.83.46.30:5794?&type=tcp&headerType=none&path=%2F#🇩🇪[www.v2nodes.com
 vless://9a9fe945246a431ebd051cb981464c8d@2.59.163.45:59992?type=tcp&headerType=none&path=/#🇵🇱[www.v2nodes.com
-vless://5109835e-f49b-4094-a069-3ad3ce240e9d@169.40.138.65:27254?security=none&encryption=none&headerType=none&type=tcp#🇩🇪[www.v2nodes.com
