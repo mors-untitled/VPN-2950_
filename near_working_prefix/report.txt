@@ -16,7 +16,7 @@ TOP 100:
  240 | 88.216.220.87:443 | IP=88.216.220.87 | SNI=api.noneok.com | type=grpc | security=reality | fp=firefox | REALITY,gRPC,PORT-443,FP-FIREFOX
  235 | 147.45.48.143:443 | IP=147.45.48.143 | SNI=id.vk.com | type=grpc | security=reality | fp=firefox | REALITY,gRPC,PORT-443,FP-FIREFOX
  230 | 45.151.101.103:443 | IP=45.151.101.103 | SNI=maps.apple.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC,PORT-443
- 225 | ns.o11111o.club:443 | IP=157.22.190.89,157.22.196.106,157.22.196.133 | SNI=id.vk.com | type=grpc | security=reality | fp=safari | REALITY,gRPC,PORT-443
+ 225 | ns.o11111o.club:443 | IP=157.22.196.133,157.22.190.89,157.22.196.106 | SNI=id.vk.com | type=grpc | security=reality | fp=safari | REALITY,gRPC,PORT-443
  200 | 95.85.251.116:59631 | IP=95.85.251.116 | SNI=google.com | type=grpc | security=reality | fp=firefox | REALITY,gRPC,FP-FIREFOX
  200 | 185.16.36.200:43439 | IP=185.16.36.200 | SNI=cdn-up.perecbass.ru | type=grpc | security=reality | fp=firefox | REALITY,gRPC,FP-FIREFOX
  200 | 193.233.74.57:7443 | IP=193.233.74.57 | SNI=www.telekom.de | type=grpc | security=reality | fp=firefox | REALITY,gRPC,FP-FIREFOX
@@ -38,7 +38,7 @@ TOP 100:
  185 | node21.mxvpn.dev:443 | IP=81.19.137.181 | SNI=node21.mxvpn.dev | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | nl-pg.killershop.shop:443 | IP=144.31.54.85 | SNI=serv.host | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 89.23.103.121:443 | IP=89.23.103.121 | SNI=www.debian.org | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
- 185 | de.smotri-shop.top:443 | IP=89.124.251.113,93.123.85.161,194.238.79.247 | SNI=www.ya.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
+ 185 | de.smotri-shop.top:443 | IP=89.124.251.113,194.238.79.247,93.123.85.161 | SNI=www.ya.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 194.238.79.235:443 | IP=194.238.79.235 | SNI=www.ya.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 93.123.85.86:443 | IP=93.123.85.86 | SNI=www.ya.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 144.31.65.68:443 | IP=144.31.65.68 | SNI=node18.mxvpn.dev | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
@@ -80,12 +80,12 @@ TOP 100:
  175 | 85.155.226.156:443 | IP=85.155.226.156 | SNI=getsavesafe.net | type=tcp | security=reality | fp=qq | REALITY,TCP/RAW,PORT-443
  175 | 85.155.226.108:443 | IP=85.155.226.108 | SNI=getsavesafe.net | type=tcp | security=reality | fp=qq | REALITY,TCP/RAW,PORT-443
  175 | 144.31.125.60:443 | IP=144.31.125.60 | SNI=www.intel.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.246.55,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.237.206:443 | IP=144.31.237.206 | SNI=www.sciencedirect.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.65.59:443 | IP=144.31.65.59 | SNI=node17.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 169.40.42.113:443 | IP=169.40.42.113 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.124.116.234:443 | IP=89.124.116.234 | SNI=www.googletagmanager.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.246.55,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 66.175.217.170:443 | IP=66.175.217.170 | SNI=www.amazon.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.195.111.15:443 | IP=45.195.111.15 | SNI=storage.yandex.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
