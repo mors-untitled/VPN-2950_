@@ -39,9 +39,9 @@ batch_02.txt: 20 configs
   11. 85.155.226.156:443 | net=85.155.226.0/24 | SNI=getsavesafe.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   12. 89.23.103.121:443 | net=89.23.103.0/24 | SNI=www.debian.org | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   13. 144.31.125.60:443 | net=144.31.125.0/24 | SNI=www.intel.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  14. de.smotri-shop.top:443 | net=194.238.79.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  15. 93.123.85.86:443 | net=93.123.85.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  16. nl.go-vpn.club:443 | net=144.124.246.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  14. de.smotri-shop.top:443 | net=93.123.85.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  15. 194.238.79.235:443 | net=194.238.79.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  16. nl.go-vpn.club:443 | net=144.124.249.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   17. 144.31.65.68:443 | net=144.31.65.0/24 | SNI=node18.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   18. 144.31.237.206:443 | net=144.31.237.0/24 | SNI=www.sciencedirect.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   19. 162.217.249.179:443 | net=162.217.249.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
@@ -119,7 +119,7 @@ batch_06.txt: 20 configs
   03. 45.151.101.103:443 | net=45.151.101.0/24 | SNI=maps.apple.com | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-443
   04. 87.120.126.63:8443 | net=87.120.126.0/24 | SNI=vpnforppl.top | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-8443
   05. 147.45.48.143:443 | net=147.45.48.0/24 | SNI=id.vk.com | type=grpc | flow=- | score=85 | REALITY,gRPC,PORT-443
-  06. ns.o11111o.club:443 | net=157.22.196.0/24 | SNI=id.vk.com | type=grpc | flow=- | score=85 | REALITY,gRPC,PORT-443
+  06. ns.o11111o.club:443 | net=157.22.190.0/24 | SNI=id.vk.com | type=grpc | flow=- | score=85 | REALITY,gRPC,PORT-443
   07. 45.155.52.231:443 | net=45.155.52.0/24 | SNI=ru2.skydrgn-online.online | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-443
   08. 91.103.140.243:443 | net=91.103.140.0/24 | SNI=www.amd.com | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-443
   09. 2.26.83.204:443 | net=2.26.83.0/24 | SNI=id.vk.ru | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-443
@@ -180,7 +180,7 @@ batch_08.txt: 20 configs
   20. 8.6.112.0:443 | net=8.6.112.0/24 | SNI=polshaov.ochmaybrooooo.online | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_09.txt: 20 configs
-  01. lt.mmhh.eu.cc:443 | net=104.16.7.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  01. lt.mmhh.eu.cc:443 | net=104.16.171.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   02. 140.248.186.45:443 | net=140.248.186.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   03. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   04. 64.176.44.23:443 | net=64.176.44.0/24 | SNI=0h3qt.oqwt.pl0.hh.vavava.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -195,7 +195,7 @@ batch_09.txt: 20 configs
   13. millionaire.levikogjgfdd.ir:443 | net=104.18.28.0/24 | SNI=rayan-007.foton.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. 172.67.161.136:443 | net=172.67.161.0/24 | SNI=bpb-panel-4e2c.sakwra939.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   15. 45.130.125.207:443 | net=45.130.125.0/24 | SNI=terazhediii.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. www.baipiao.eu.org:443 | net=172.67.179.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. www.baipiao.eu.org:443 | net=104.21.88.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   17. 104.16.248.48:443 | net=104.16.248.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   18. 162.159.44.195:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   19. 82.115.6.93:443 | net=82.115.6.0/24 | SNI=kuraakavaa-5l7.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -214,7 +214,7 @@ batch_10.txt: 20 configs
   10. 172.67.149.60:443 | net=172.67.149.0/24 | SNI=support.zoom.us.yxls.eu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   11. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. admin.jikebet.com:443 | net=172.67.178.0/24 | SNI=admin.jikebet.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. admin.jikebet.com:443 | net=104.21.67.0/24 | SNI=admin.jikebet.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. ytryurdj64bbb.localip.ir:443 | net=104.18.32.0/24 | SNI=ro-3.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   15. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   16. 104.16.92.229:8443 | net=104.16.92.0/24 | SNI=ssl.psntbt.com. | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
@@ -224,14 +224,14 @@ batch_10.txt: 20 configs
   20. 103.148.73.176:8443 | net=103.148.73.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
 
 batch_11.txt: 20 configs
-  01. www.speedtest.net:8443 | net=104.17.148.0/24 | SNI=free-irancell.warzonmob.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  01. www.speedtest.net:8443 | net=104.17.147.0/24 | SNI=free-irancell.warzonmob.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   02. 50.7.197.2:8443 | net=50.7.197.0/24 | SNI=apkav-6.bosx.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   03. 141.193.213.20:8443 | net=141.193.213.0/24 | SNI=speed.dulacloud.store | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   04. ov-canada1.09vpn.com:8443 | net=148.113.196.0/24 | SNI=ov-canada1.09vpn.com | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   05. 91.193.59.251:2053 | net=91.193.59.0/24 | SNI=vlso6.1d.mom | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
   06. 172.67.118.45:2053 | net=172.67.118.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
   07. 193.232.178.149:8443 | net=193.232.178.0/24 | SNI=edge.yzkvm.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  08. po.fastbrokencompony.com:2053 | net=172.67.191.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  08. po.fastbrokencompony.com:2053 | net=104.21.41.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
   09. 8.35.211.224:8443 | net=8.35.211.0/24 | SNI=pphmsubs.911388.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   10. ul-mexico1.09vpn.com:8443 | net=45.134.9.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   11. ako.pagate.top:443 | net=132.145.89.0/24 | SNI=ako.pagate.top | type=- | flow=xtls-rprx-vision-udp443 | score=20 | TLS,PORT-443
