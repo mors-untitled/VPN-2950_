@@ -21,29 +21,29 @@ batch_01.txt: 20 configs
   15. est.vrsvpn.com:443 | net=185.155.97.0/24 | SNI=web.max.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   16. 188.127.247.129:443 | net=188.127.247.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   17. 45.145.56.163:443 | net=45.145.56.0/24 | SNI=de2.spectrum.vu | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  18. de.smotri-shop.top:443 | net=89.124.251.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  19. 194.238.79.235:443 | net=194.238.79.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  20. 93.123.85.86:443 | net=93.123.85.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  18. de.smotri-shop.top:443 | net=194.238.79.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  19. 93.123.85.86:443 | net=93.123.85.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  20. xfr.saturn-cloud.net:443 | net=185.193.89.0/24 | SNI=xfr.saturn-cloud.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
 
 batch_02.txt: 20 configs
-  01. xfr.saturn-cloud.net:443 | net=185.193.89.0/24 | SNI=xfr.saturn-cloud.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  02. 169.40.42.15:443 | net=169.40.42.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  03. 185.82.219.152:443 | net=185.82.219.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  04. 159.195.46.178:443 | net=159.195.46.0/24 | SNI=4.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  05. 185.126.67.76:443 | net=185.126.67.0/24 | SNI=cdn-de-4.ai-apiroute.cc | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  06. 159.195.45.129:443 | net=159.195.45.0/24 | SNI=3.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  07. node20.mxvpn.dev:443 | net=77.239.123.0/24 | SNI=node20.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  08. 144.31.125.60:443 | net=144.31.125.0/24 | SNI=www.intel.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  09. node17.mxvpn.dev:443 | net=144.31.65.0/24 | SNI=node17.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  10. 89.105.208.121:443 | net=89.105.208.0/24 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  11. 162.217.249.179:443 | net=162.217.249.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  12. 198.105.112.56:443 | net=198.105.112.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  13. 45.43.92.151:443 | net=45.43.92.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  14. 45.67.136.50:443 | net=45.67.136.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  15. 78.17.208.22:443 | net=78.17.208.0/24 | SNI=fr05.skorostnet.space | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  16. 159.195.27.99:443 | net=159.195.27.0/24 | SNI=1.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  17. 144.124.246.55:443 | net=144.124.246.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  18. 89.124.116.234:443 | net=89.124.116.0/24 | SNI=www.googletagmanager.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  01. 169.40.42.15:443 | net=169.40.42.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  02. 185.82.219.152:443 | net=185.82.219.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  03. 159.195.46.178:443 | net=159.195.46.0/24 | SNI=4.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  04. 185.126.67.76:443 | net=185.126.67.0/24 | SNI=cdn-de-4.ai-apiroute.cc | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  05. 159.195.45.129:443 | net=159.195.45.0/24 | SNI=3.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  06. node20.mxvpn.dev:443 | net=77.239.123.0/24 | SNI=node20.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  07. 144.31.125.60:443 | net=144.31.125.0/24 | SNI=www.intel.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  08. node17.mxvpn.dev:443 | net=144.31.65.0/24 | SNI=node17.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  09. 89.105.208.121:443 | net=89.105.208.0/24 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  10. 162.217.249.179:443 | net=162.217.249.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  11. 198.105.112.56:443 | net=198.105.112.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  12. 45.43.92.151:443 | net=45.43.92.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  13. 45.67.136.50:443 | net=45.67.136.0/24 | SNI=www.ya.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  14. 78.17.208.22:443 | net=78.17.208.0/24 | SNI=fr05.skorostnet.space | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  15. 159.195.27.99:443 | net=159.195.27.0/24 | SNI=1.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  16. 144.124.246.55:443 | net=144.124.246.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  17. 89.124.116.234:443 | net=89.124.116.0/24 | SNI=www.googletagmanager.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  18. nl.go-vpn.club:443 | net=144.124.249.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   19. 216.152.147.28:443 | net=216.152.147.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   20. 139.64.166.55:443 | net=139.64.166.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
 
@@ -139,7 +139,7 @@ batch_07.txt: 20 configs
   01. 111.88.143.139:51940 | net=111.88.143.0/24 | SNI=yahoo.com | type=grpc | flow=- | score=78 | REALITY,gRPC
   02. 185.79.138.71:448 | net=185.79.138.0/24 | SNI=www.samsung.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   03. 91.197.3.43:52463 | net=91.197.3.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  04. d07719df22c9fbbf.mbcloudynias.ir:3389 | net=91.107.186.0/24 | SNI=play.google.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  04. d07719df22c9fbbf.mbcloudynias.ir:3389 | net=91.107.146.0/24 | SNI=play.google.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   05. 77.246.109.191:34045 | net=77.246.109.0/24 | SNI=visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   06. 64.23.143.23:34045 | net=64.23.143.0/24 | SNI=visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   07. 194.55.189.249:40443 | net=194.55.189.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
@@ -192,10 +192,10 @@ batch_09.txt: 20 configs
   10. 104.26.3.138:443 | net=104.26.3.0/24 | SNI=vltj.qzz.io | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   11. 104.17.28.89:443 | net=104.17.28.0/24 | SNI=workspace.evan00.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. 104.16.72.70:443 | net=104.16.72.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. yd.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. 162.159.44.195:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. 104.18.95.26:443 | net=104.18.95.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. www.visa.cn:443 | net=162.159.153.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. yd.mmhh.eu.cc:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. 104.18.95.26:443 | net=104.18.95.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. dx.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. www.visa.cn:443 | net=162.159.152.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   17. lt.mmhh.eu.cc:443 | net=104.16.96.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   18. 104.17.22.240:443 | net=104.17.22.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   19. 172.67.149.60:443 | net=172.67.149.0/24 | SNI=support.zoom.us.yxls.eu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -210,9 +210,9 @@ batch_10.txt: 20 configs
   06. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   07. 149.202.58.99:443 | net=149.202.58.0/24 | SNI=bab-6.site | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   08. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. proxyip.hk.cmliussss.net:443 | net=91.110.209.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. proxyip.hk.cmliussss.net:443 | net=202.61.87.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   10. 188.114.97.6:443 | net=188.114.97.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. admin.jikebet.com:443 | net=104.21.67.0/24 | SNI=admin.jikebet.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. admin.jikebet.com:443 | net=172.67.178.0/24 | SNI=admin.jikebet.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. chat.openai.com:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 202.37.33.80:443 | net=202.37.33.0/24 | SNI=support.zoom.us.yxls.eu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. 185.109.48.13:2053 | net=185.109.48.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
@@ -220,7 +220,7 @@ batch_10.txt: 20 configs
   16. 91.193.58.219:2053 | net=91.193.58.0/24 | SNI=vlso4.1d.mom | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
   17. xmm5.130209.xyz:8443 | net=104.19.149.0/24 | SNI=hongkong.11459178.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   18. 141.193.213.20:8443 | net=141.193.213.0/24 | SNI=speed.dulacloud.store | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  19. www.speedtest.net:8443 | net=104.17.147.0/24 | SNI=free-irancell.warzonmob.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  19. www.speedtest.net:8443 | net=104.17.148.0/24 | SNI=free-irancell.warzonmob.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   20. ov-canada1.09vpn.com:8443 | net=148.113.196.0/24 | SNI=ov-canada1.09vpn.com | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
 
 batch_11.txt: 20 configs
