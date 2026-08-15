@@ -1,3 +1,4 @@
+vless://7b102311-43fd-4e8f-877e-8090623c101d@proxyip.hk.cmliussss.net:443?sni=vp10.pages.dev&type=ws&host=vp10.pages.dev&path=/fp=chrome&security=tls#🇭🇰[www.v2nodes.com
 vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@172.66.44.97:443?path=%2Fsg%3Fed&security=tls&encryption=none&insecure=0&host=josni.hoyes.cloudns.ch&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=josni.hoyes.cloudns.ch#🇸🇬[www.v2nodes.com
 vless://c0f16ee2-a909-4890-ab1c-96489230658a@admin.jikebet.com:443?encryption=none&host=admin.jikebet.com&path=%2Fvless&security=tls&sni=admin.jikebet.com&type=ws#🇬🇧[www.v2nodes.com
 vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@208.103.161.32:443?path=%2Fsg-melbi_%2F&security=tls&encryption=none&insecure=0&host=josni.hoyes.cloudns.ch&ech=ip.gs%2Budp%3A%2F%2F8.8.8.8&type=ws&allowInsecure=0&sni=josni.hoyes.cloudns.ch#🇸🇬[www.v2nodes.com
@@ -6,6 +7,7 @@ vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.79.73:443?path=musiclovers85
 vless://29fb68bb-ff05-4fd4-8393-cc6c05d81a79@purple-butterfly-8496.erfannull36.workers.dev:443?ed=2560&eh=Sec-WebSocket-Protocol&encryption=none&path=%2F&security=tls&type=ws#🇸🇬[www.v2nodes.com
 vless://50414e45-4c5f-5a45-5553-4d64f1370eeb@88.216.69.144:443?encryption=none&security=tls&sni=r5zenrelur2s.pqzdileiu8es.workers.dev&fp=ios&insecure=0&allowInsecure=0&type=ws&host=r5zenrelur2s.pqzdileiu8es.workers.dev&path=%2Fstream%2FPANEL_ZEUS%2F4d64f1370eeb%2Floc-0#🇹🇷[www.v2nodes.com
 vless://c7e9c591-2764-423a-afca-efbd010fd396@185.109.48.13:2053?&security=tls&fp=chrome&sni=forfreeuse.rtqa.ru&type=ws&headerType=none&host=forfreeuse.rtqa.ru&path=%2F#🇫🇮[www.v2nodes.com
+vless://d361072e-9e0e-4e2d-8ec7-2a4189b5b23a@chatgpt.com:2053?encryption=none&fp=chrome&host=ov.iran-servers.shop&path=/J5aLQOY1R9ONWYCM&security=tls&sni=ov.iran-servers.shop&type=ws#🇫🇷[www.v2nodes.com
 vless://7967bf59-57e3-4cde-9898-527b0fe60022@141.193.213.20:8443?&security=tls&fp=chrome&sni=speed.dulacloud.store&type=ws&headerType=none&host=speed.dulacloud.store&path=/dula#🇸🇬[www.v2nodes.com
 vless://08f96221-9b7b-4e6f-8ffe-aee8b9c9b504@ov-canada1.09vpn.com:8443?encryption=none&type=ws&security=tls&path=%2Fvless%2F&host=ov-canada1.09vpn.com&sni=ov-canada1.09vpn.com&fp=chrome&insecure=0&allowInsecure=0#🏳[www.v2nodes.com
 vless://f265b49a-70a3-407a-b17b-e45dfb9f255c@103.180.20.228:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#🇭🇰[www.v2nodes.com
@@ -16,5 +18,3 @@ vless://b1e6a8df-effc-4b70-9132-4dca98085420@www.speedtest.net:8443?encryption=n
 vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@xmm5.130209.xyz:8443?&security=tls&fp=edge&sni=hongkong.11459178.xyz&type=ws&headerType=none&host=hongkong.11459178.xyz&path=%2Fcdn%2Fpackages%2Fruntime-core.tar.gz#🇭🇰[www.v2nodes.com
 vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@www.wto.org:2053?&security=tls&fp=edge&sni=usa.105794.xyz&type=ws&headerType=none&host=usa.105794.xyz&path=%2Fdownload%2Fv3%2Finstaller-x64.bin#🇺🇸[www.v2nodes.com
 vless://da4747a6-be0d-4c1b-90f4-d82ec3012be2@172.67.118.45:2053?type=ws&security=tls&sni=music1000.melobitmusic1.ir&path=/&host=music1000.melobitmusic1.ir#🇵🇱[www.v2nodes.com
-vless://bba95b1f-f48c-454b-897b-a6c6bc307df1@193.232.178.149:8443?allowInsecure=1&sni=edge.yzkvm.top&type=ws&host=edge.yzkvm.top&path=/fp=chrome&security=tls#🇸🇪[www.v2nodes.com
-vless://2c029086-e4b3-4f22-82d8-b84dd70f243c@8.35.211.224:8443?allowInsecure=1&sni=pphmsubs.911388.xyz&type=ws&host=pphmsubs.911388.xyz&path=/fp=chrome&security=tls#🇸🇬[www.v2nodes.com
