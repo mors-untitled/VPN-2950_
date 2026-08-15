@@ -39,7 +39,7 @@ batch_02.txt: 20 configs
   11. 78.17.208.22:443 | net=78.17.208.0/24 | SNI=fr05.skorostnet.space | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   12. 144.31.125.60:443 | net=144.31.125.0/24 | SNI=www.intel.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   13. 89.124.116.234:443 | net=89.124.116.0/24 | SNI=www.googletagmanager.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  14. nl.go-vpn.club:443 | net=144.124.249.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  14. nl.go-vpn.club:443 | net=144.124.248.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   15. free-amsterdam-node-1.cloudwidecdn.com:443 | net=86.54.28.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   16. 144.31.237.206:443 | net=144.31.237.0/24 | SNI=www.sciencedirect.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   17. 144.124.246.55:443 | net=144.124.246.0/24 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
@@ -136,7 +136,7 @@ batch_06.txt: 20 configs
   20. 91.197.3.43:52463 | net=91.197.3.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
 
 batch_07.txt: 20 configs
-  01. d07719df22c9fbbf.mbcloudynias.ir:3389 | net=91.107.146.0/24 | SNI=play.google.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  01. d07719df22c9fbbf.mbcloudynias.ir:3389 | net=91.107.186.0/24 | SNI=play.google.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   02. 77.246.109.191:34045 | net=77.246.109.0/24 | SNI=visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   03. 70.39.178.231:46197 | net=70.39.178.0/24 | SNI=updates.cdn-apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   04. 194.55.189.249:40443 | net=194.55.189.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
@@ -168,7 +168,7 @@ batch_08.txt: 20 configs
   08. speedtest.org:443 | net=104.26.14.0/24 | SNI=lucxi.lightorbitlab-kiloilm.sbs | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. 94.159.97.247:443 | net=94.159.97.0/24 | SNI=vp58.cc.cd | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   10. 45.130.125.207:443 | net=45.130.125.0/24 | SNI=terazhediii.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. cf-vless-4cf55824.aimall.fr:443 | net=104.21.46.0/24 | SNI=cf-vless-4cf55824.aimall.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. cf-vless-4cf55824.aimall.fr:443 | net=172.67.222.0/24 | SNI=cf-vless-4cf55824.aimall.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. 104.17.22.240:443 | net=104.17.22.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 104.18.34.124:443 | net=104.18.34.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. 177.3.208.169:443 | net=177.3.208.0/24 | SNI=titandarkness.mooo.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -176,7 +176,7 @@ batch_08.txt: 20 configs
   16. 18.244.214.36:443 | net=18.244.214.0/24 | SNI=d1yxsk0zprgivr.cloudfront.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   17. 104.16.72.70:443 | net=104.16.72.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   18. cf-ak-tw01.ziyoufly.xyz:443 | net=104.21.50.0/24 | SNI=cf-ak-tw01.ziyoufly.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. www.visa.cn:443 | net=162.159.153.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. www.visa.cn:443 | net=162.159.152.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   20. 139.64.235.123:443 | net=139.64.235.0/24 | SNI=notls.lukongtou.eu.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_09.txt: 20 configs
@@ -187,19 +187,19 @@ batch_09.txt: 20 configs
   05. 104.17.182.11:443 | net=104.17.182.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   06. 172.64.150.28:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   07. 172.66.1.143:443 | net=172.66.1.0/24 | SNI=rayan-007.foton.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. adf.ly:443 | net=172.66.40.0/24 | SNI=rayan-007.parvin.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. adf.ly:443 | net=172.66.43.0/24 | SNI=rayan-007.parvin.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. 162.159.44.195:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   10. 104.16.248.48:443 | net=104.16.248.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. lt.mmhh.eu.cc:443 | net=104.16.171.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. lt.mmhh.eu.cc:443 | net=104.16.96.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. 104.21.78.9:443 | net=104.21.78.0/24 | SNI=summer-meadow-af5b.woowoorrrkk.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 108.162.198.188:443 | net=108.162.198.0/24 | SNI=2026081000.yja.de5.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   15. 60.248.219.78:443 | net=60.248.219.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   16. 149.202.58.99:443 | net=149.202.58.0/24 | SNI=bab-6.site | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   17. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  18. proxyip.hk.cmliussss.net:443 | net=103.27.77.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. proxyip.hk.cmliussss.net:443 | net=210.3.205.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   19. admin.jikebet.com:443 | net=104.21.67.0/24 | SNI=admin.jikebet.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. russia.com:443 | net=104.26.4.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. russia.com:443 | net=104.26.5.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_10.txt: 20 configs
   01. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
