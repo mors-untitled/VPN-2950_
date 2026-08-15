@@ -54,7 +54,7 @@ TOP 100:
  175 | 169.40.42.133:443 | IP=169.40.42.133 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.145.56.163:443 | IP=45.145.56.163 | SNI=de2.spectrum.vu | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.45.129:443 | IP=159.195.45.129 | SNI=3.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.124.116.234:443 | IP=89.124.116.234 | SNI=www.googletagmanager.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 85.155.226.108:443 | IP=85.155.226.108 | SNI=getsavesafe.net | type=tcp | security=reality | fp=qq | REALITY,TCP/RAW,PORT-443
  175 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
