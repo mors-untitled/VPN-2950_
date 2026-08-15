@@ -1,3 +1,4 @@
+vless://08f96221-9b7b-4e6f-8ffe-aee8b9c9b504@ov-canada1.09vpn.com:8443?encryption=none&type=ws&security=tls&path=%2Fvless%2F&host=ov-canada1.09vpn.com&sni=ov-canada1.09vpn.com&fp=chrome&insecure=0&allowInsecure=0#🏳[www.v2nodes.com
 vless://f265b49a-70a3-407a-b17b-e45dfb9f255c@103.180.20.228:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#🇭🇰[www.v2nodes.com
 vless://f265b49a-70a3-407a-b17b-e45dfb9f255c@103.148.73.176:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#🇭🇰[www.v2nodes.com
 vless://916e3030-6eac-418b-9402-7508ca7d6280@172.64.145.158:8443?&security=tls&fp=chrome&sni=us-akile.nanniang.top&type=ws&headerType=none&host=us-akile.nanniang.top&path=%2F#🇺🇸[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://e4514801-0d5a-42ba-869f-39bd605aef9e@35.158.7.204:22222?&type=tcp&header
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@52.59.99.227:22222?&type=tcp&headerType=none&path=%2F#🇩🇪[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@84.235.168.64:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@141.148.245.162:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@152.70.59.205:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
