@@ -12,7 +12,7 @@ TOP 100:
  147 | 95.85.224.51:443 | IP=95.85.224.51 | SNI=max.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443,SNI-MAX
  147 | nl.n.belka.network:443 | IP=81.31.210.76 | SNI=max.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443,SNI-MAX
  137 | 185.40.152.85:443 | IP=185.40.152.85 | SNI=ads.x5.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443,KNOWN-SNI
- 127 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | email.swiftraci.org:443 | IP=107.181.147.22 | SNI=www.microsoft.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | fin3.o4ka-internet.com:443 | IP=132.243.223.144 | SNI=fin3.o4ka-internet.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 132.243.223.88:443 | IP=132.243.223.88 | SNI=fin2.freeinternat.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
