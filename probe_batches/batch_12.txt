@@ -1,6 +1,3 @@
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@157.137.225.34:62145?&type=tcp&headerType=none&path=%2F#🇨🇴[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@157.137.222.20:62145?&type=tcp&headerType=none&path=%2F#🇨🇴[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@157.137.237.218:62145?&type=tcp&headerType=none&path=%2F#🇨🇴[www.v2nodes.com
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@63.187.167.167:22222?encryption=none&security=none&type=tcp#🇩🇪[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@157.137.224.224:62145?&type=tcp&headerType=none&path=%2F#🇨🇴[www.v2nodes.com
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@3.74.196.166:22223?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&encryption=none&security=none&type=tcp#🇩🇪[www.v2nodes.com
@@ -18,3 +15,6 @@ vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@149.130.190.130:62145?&type=tcp&hea
 vless://bc155a59-a4db-45e7-addf-db634b79757b@103.118.252.45:13131?security=none&encryption=none&headerType=none&type=tcp#🇭🇰[www.v2nodes.com
 vless://5ed7b151-b781-4dba-800d-e3f824f1416f@193.124.204.145:49853?security=&encryption=none&headerType=none&type=tcp#🏳[www.v2nodes.com
 vless://9d01e9f2-1569-48cd-beb3-36f706f5ad5b@45.146.131.154:8452?type=tcp&amp;security=reality&amp;encryption=none&amp;flow=xtls-rprx-vision&amp;fp=firefox&amp;pbk=neW65LaKi88zH-X9gRQPhl5YqQLz9E4IrVnOpS4BnkU&amp;sid=45b10e93bc618c2c&amp;sni=www.cloudflare.com#🇰🇿[www.v2nodes.com
+vless://ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b@169.197.113.179:20190?encryption=none&security=none&type=tcp#🇬🇧[www.v2nodes.com
+vless://23a9b46e-9443-4268-81c5-399929919ab0@155.103.69.195:48711?encryption=none&type=tcp&headerType=http&path=%2F&host=snapp.ir#🏳[www.v2nodes.com
+vless://4e7eb9d5-022a-4b0a-ba37-2d1be458947b@31.77.203.95:443?encryption=none&path=/&security=none&type=ws#🏳[www.v2nodes.com
