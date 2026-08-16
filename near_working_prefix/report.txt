@@ -64,8 +64,8 @@ TOP 100:
  175 | node20.mxvpn.dev:443 | IP=77.239.123.224 | SNI=node20.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.77.196.201:443 | IP=31.77.196.201 | SNI=www.cloudflare.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 78.17.208.22:443 | IP=78.17.208.22 | SNI=fr05.skorostnet.space | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | xfr.saturn-cloud.net:443 | IP=185.193.89.47 | SNI=xfr.saturn-cloud.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.125.60:443 | IP=144.31.125.60 | SNI=www.intel.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
