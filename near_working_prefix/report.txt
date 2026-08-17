@@ -61,7 +61,7 @@ TOP 100:
  175 | 144.31.226.177:443 | IP=144.31.226.177 | SNI=node15.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.46.178:443 | IP=159.195.46.178 | SNI=4.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.45.129:443 | IP=159.195.45.129 | SNI=3.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node16.mxvpn.dev:443 | IP=144.31.226.178 | SNI=node16.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.219.161:443 | IP=144.31.219.161 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | de.n.belka.network:443 | IP=159.195.199.171,159.195.201.146 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -73,7 +73,7 @@ TOP 100:
  175 | 144.124.238.87:443 | IP=144.124.238.87 | SNI=www.cisco.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | free-amsterdam-node-1.cloudwidecdn.com:443 | IP=86.54.28.75 | SNI=www.apple.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node20.mxvpn.dev:443 | IP=77.239.123.224 | SNI=node20.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 212.118.40.187:443 | IP=212.118.40.187 | SNI=www.cisco.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.65.68:443 | IP=144.31.65.68 | SNI=node18.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
