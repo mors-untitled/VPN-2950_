@@ -378,7 +378,6 @@ vless://e4514801-0d5a-42ba-869f-39bd605aef9e@3.79.218.80:22222?encryption=none&a
 vless://dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51@104.16.72.41:80?path=%2Fhttp&amp;security=none&amp;encryption=none&amp;host=de.vpnbase.net&amp;type=ws#🇩🇪[www.v2nodes.com
 vless://d2733ae6-44e7-4b14-8c2d-3f5bef74cdec@144.31.157.104:20017?security=&amp;encryption=none&amp;host=play.google.com&amp;headerType=http&amp;type=tcp#🇩🇪[www.v2nodes.com
 vless://6620ef58-9c62-43fe-9596-ff862b200958@200.165.228.47:4100?&type=ws&headerType=none&host=live.ok.ru&path=%2Fv1#🇩🇪[www.v2nodes.com
-vless://7d3963b5-4029-4878-a251-2437deaebcd7@apn.zyro-lab.com:1324?security=none&type=ws&headerType=&path=?ed=2560&host=api16-access-wf-sg.pangle.io#🇩🇪[www.v2nodes.com
 vless://bba95b1f-f48c-454b-897b-a6c6bc307df1@46.101.253.244:2083?sni=edge.yzkvm.top&type=ws&host=edge.yzkvm.top&path=/fp=chrome&security=tls#🇩🇪[www.v2nodes.com
 vless://eaf76557-2219-4799-8171-d7020adfefd0@103.133.1.160:80?encryption=none&security=none&type=ws&host=soft-shadow-1e33.xicav73335.workers.dev&path=/ws#🇳🇱[www.v2nodes.com
 vless://c7333a4e-b8c9-44d4-aee6-f73bfe203902@france3.spaidan.ir:35974?path=/&security=&encryption=none&type=ws#🇳🇱[www.v2nodes.com
