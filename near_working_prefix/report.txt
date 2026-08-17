@@ -75,8 +75,8 @@ TOP 100:
  175 | 95.85.247.155:443 | IP=95.85.247.155 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.246.55,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.246.55,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 66.175.217.170:443 | IP=66.175.217.170 | SNI=www.amazon.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.91.52.125:443 | IP=45.91.52.125 | SNI=www.cloudflare.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.90.56.231:443 | IP=45.90.56.231 | SNI=www.cloudflare.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
