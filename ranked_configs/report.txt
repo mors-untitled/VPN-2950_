@@ -49,9 +49,9 @@ TOP 100:
  127 | 95.85.247.155:443 | IP=95.85.247.155 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.246.55,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.125:443 | IP=89.105.208.125 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.246.55,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.65.68:443 | IP=144.31.65.68 | SNI=node18.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 66.175.217.170:443 | IP=66.175.217.170 | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 45.91.52.125:443 | IP=45.91.52.125 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
