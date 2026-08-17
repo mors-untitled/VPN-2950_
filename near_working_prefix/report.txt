@@ -47,10 +47,10 @@ TOP 100:
  175 | 144.31.125.60:443 | IP=144.31.125.60 | SNI=www.intel.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.145.56.163:443 | IP=45.145.56.163 | SNI=de2.spectrum.vu | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | staging.lastilhame.monster:443 | IP=107.181.151.241 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | fin3.o4ka-internet.com:443 | IP=132.243.223.144 | SNI=fin3.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | fin3.o4ka-internet.com:443 | IP=132.243.223.82 | SNI=fin3.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | email.swiftraci.org:443 | IP=107.181.147.22 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node16.mxvpn.dev:443 | IP=144.31.226.178 | SNI=node16.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | pol4.o4ka-internet.com:443 | IP=95.85.254.114 | SNI=pol4.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | pol4.o4ka-internet.com:443 | IP=95.85.254.245 | SNI=pol4.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | est.vrsvpn.com:443 | IP=185.155.97.241 | SNI=web.max.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
