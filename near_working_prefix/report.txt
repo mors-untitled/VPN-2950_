@@ -25,7 +25,7 @@ TOP 100:
  190 | 77.110.115.8:25565 | IP=77.110.115.8 | SNI=yandex.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 111.88.143.139:51940 | IP=111.88.143.139 | SNI=yahoo.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | nl.n.belka.network:443 | IP=81.31.210.76 | SNI=max.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
- 185 | 511.cdnconn.com:10443 | IP=185.147.26.45,185.147.26.53 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
+ 185 | 511.cdnconn.com:10443 | IP=185.147.26.53,185.147.26.45 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | 132.243.223.88:443 | IP=132.243.223.88 | SNI=fin2.freeinternat.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 185.221.163.211:443 | IP=185.221.163.211 | SNI=fin1.panel11.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 185.28.47.111:443 | IP=185.28.47.111 | SNI=lat.o4ka-internet.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
@@ -66,7 +66,7 @@ TOP 100:
  175 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.91.52.125:443 | IP=45.91.52.125 | SNI=www.cloudflare.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.246.55,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | free-amsterdam-node-1.cloudwidecdn.com:443 | IP=86.54.28.75 | SNI=www.apple.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.124.116.234:443 | IP=89.124.116.234 | SNI=www.googletagmanager.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 95.85.247.155:443 | IP=95.85.247.155 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
