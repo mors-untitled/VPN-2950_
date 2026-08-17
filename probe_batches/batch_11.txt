@@ -1,3 +1,5 @@
+vless://1ef571c9-b9f0-48bb-a6d6-866c98c80eb9@213.176.73.235:443?sni=note.magazinetut.online&flow=xtls-rprx-vision-udp443&fp=firefox&security=tls#🇫🇷[www.v2nodes.com
+vless://53c76647-14d1-4df5-99cb-be99ad2e6bd9@fr15.mechvpn.online:443?flow=xtls-rprx-vision-udp443&fp=chrome&security=tls#🇫🇷[www.v2nodes.com
 vless://53c76647-14d1-4df5-99cb-be99ad2e6bd9@194.24.161.133:443?sni=fr133.mechvpn.online&flow=xtls-rprx-vision-udp443&fp=firefox&security=tls#🇫🇷[www.v2nodes.com
 vless://53c76647-14d1-4df5-99cb-be99ad2e6bd9@82.38.4.126:443?sni=de126.mechvpn.online&flow=xtls-rprx-vision-udp443&fp=firefox&security=tls#🇩🇪[www.v2nodes.com
 vless://788312f9-b95e-46da-9a39-623d798de761@164.37.100.59:443?security=tls&amp;encryption=none&amp;insecure=0&amp;type=grpc&amp;serviceName=rpc.v1.SyncService&amp;allowInsecure=0&amp;sni=edge1.numberoneok.com#🇬🇧[www.v2nodes.com
@@ -16,5 +18,3 @@ vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@158.178.153.121:62145?&type=tcp&hea
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@18.157.224.206:22224?&type=tcp&headerType=none&path=%2F#🇩🇪[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@143.47.188.131:62145?encryption=none&security=none&type=tcp#🇳🇱[www.v2nodes.com
 vless://caec0d8d-ab2f-4247-b97d-7fb1a34ab195@182.16.61.2:45647?&type=tcp&headerType=none&path=/#🇺🇸[www.v2nodes.com
-vless://431fe973-a43a-4fac-bf83-2a772e0d0625@220.130.75.247:10000?encryption=none&security=none&type=tcp&headerType=none#🇹🇼[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@157.137.213.155:62145?&type=tcp&headerType=none&path=%2F#🇨🇴[www.v2nodes.com
