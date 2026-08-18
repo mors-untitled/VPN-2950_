@@ -13,7 +13,7 @@ TOP 100:
  147 | nl.n.belka.network:443 | IP=81.31.210.76 | SNI=max.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443,SNI-MAX
  127 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 85.155.226.140:443 | IP=85.155.226.140 | SNI=getsavesafe.net | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | savesafe.co:443 | IP=162.35.231.75,162.35.231.68,162.35.231.70,162.35.231.77,162.35.231.69,162.35.231.67,162.35.231.66,162.35.231.76 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | savesafe.co:443 | IP=162.35.231.68,162.35.231.70,162.35.231.75,162.35.231.67,162.35.231.78,162.35.231.69,162.35.231.76,162.35.231.77,162.35.231.74,162.35.231.71,162.35.231.79,162.35.231.66 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 159.195.22.155:443 | IP=159.195.22.155 | SNI=2.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | email.swiftraci.org:443 | IP=107.181.147.22 | SNI=www.microsoft.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 132.243.223.88:443 | IP=132.243.223.88 | SNI=fin2.freeinternat.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
@@ -52,7 +52,7 @@ TOP 100:
  127 | 2.26.231.40:443 | IP=2.26.231.40 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 77.239.123.219:443 | IP=77.239.123.219 | SNI=node19.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 103.27.157.209:443 | IP=103.27.157.209 | SNI=stackoverflow.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.246.55,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.65.59:443 | IP=144.31.65.59 | SNI=node17.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.125:443 | IP=89.105.208.125 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.124.238.87:443 | IP=144.124.238.87 | SNI=www.cisco.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
@@ -99,7 +99,7 @@ TOP 100:
  122 | 47.251.25.74:443 | IP=47.251.25.74 | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  122 | nl-04.vacvps.com:443 | IP=31.77.149.13 | SNI=nl-04.vacvps.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  122 | 193.233.126.97:443 | IP=193.233.126.97 | SNI=pingless.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 122 | direct-nl.bachidze.com:443 | IP=195.189.98.250 | SNI=direct-nl.bachidze.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 122 | direct-nl.bachidze.com:443 | IP=- | SNI=direct-nl.bachidze.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  122 | 194.150.166.12:443 | IP=194.150.166.12 | SNI=www.avito.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  122 | 47.253.226.114:443 | IP=47.253.226.114 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  107 | 51.158.206.29:23576 | IP=51.158.206.29 | SNI=fuck.rkn | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION
