@@ -13,7 +13,7 @@ TOP 100:
  147 | nl.n.belka.network:443 | IP=81.31.210.76 | SNI=max.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443,SNI-MAX
  127 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 85.155.226.140:443 | IP=85.155.226.140 | SNI=getsavesafe.net | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | savesafe.co:443 | IP=162.35.231.66,162.35.231.67,162.35.231.70,162.35.231.69,162.35.231.68 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | savesafe.co:443 | IP=162.35.231.75,162.35.231.68,162.35.231.70,162.35.231.77,162.35.231.69,162.35.231.67,162.35.231.66,162.35.231.76 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 159.195.22.155:443 | IP=159.195.22.155 | SNI=2.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | email.swiftraci.org:443 | IP=107.181.147.22 | SNI=www.microsoft.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 132.243.223.88:443 | IP=132.243.223.88 | SNI=fin2.freeinternat.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
@@ -52,7 +52,7 @@ TOP 100:
  127 | 2.26.231.40:443 | IP=2.26.231.40 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 77.239.123.219:443 | IP=77.239.123.219 | SNI=node19.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 103.27.157.209:443 | IP=103.27.157.209 | SNI=stackoverflow.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.65.59:443 | IP=144.31.65.59 | SNI=node17.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.125:443 | IP=89.105.208.125 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.124.238.87:443 | IP=144.124.238.87 | SNI=www.cisco.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
