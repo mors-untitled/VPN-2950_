@@ -1,7 +1,7 @@
 Whitelist networks: 3
 Public source seeds: 7
 Pages visited: 388
-Unique public VLESS found: 71
+Unique public VLESS found: 68
 Whitelist endpoint matches: 0
 REALITY matches: 0
 REALITY + gRPC: 0
