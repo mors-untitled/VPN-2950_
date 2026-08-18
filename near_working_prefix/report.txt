@@ -46,7 +46,7 @@ TOP 100:
  175 | nl.n.belka.network:443 | IP=81.31.210.76 | SNI=max.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | fin1.panel11.ru:443 | IP=185.221.163.211 | SNI=fin1.panel11.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.27.99:443 | IP=159.195.27.99 | SNI=1.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | fi1.levikogjgfdd.ir:443 | IP=132.243.223.88 | SNI=fin2.freeinternat.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | fi1.levikogjgfdd.ir:443 | IP=10.10.34.36 | SNI=fin2.freeinternat.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | staging.lastilhame.monster:443 | IP=107.181.151.241 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | email.swiftraci.org:443 | IP=107.181.147.22 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node16.mxvpn.dev:443 | IP=144.31.226.178 | SNI=node16.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -67,7 +67,7 @@ TOP 100:
  175 | fin3.o4ka-internet.com:443 | IP=132.243.223.82 | SNI=fin3.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | pol4.o4ka-internet.com:443 | IP=95.85.254.245 | SNI=pol4.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 81.19.137.181:443 | IP=81.19.137.181 | SNI=node21.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | savesafe.co:443 | IP=162.35.231.66,162.35.231.77,162.35.231.68,162.35.231.67,162.35.231.76,162.35.231.70,162.35.231.79,162.35.231.71,162.35.231.75,162.35.231.78,162.35.231.69,162.35.231.74 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | savesafe.co:443 | IP=162.35.231.72,162.35.231.109,162.35.231.111,162.35.231.114,162.35.231.115,162.35.231.110,162.35.231.112,162.35.231.107,162.35.231.113,162.35.231.108,162.35.231.105,162.35.231.106 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.46.178:443 | IP=159.195.46.178 | SNI=4.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 103.27.157.209:443 | IP=103.27.157.209 | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.125.60:443 | IP=144.31.125.60 | SNI=www.intel.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -83,7 +83,7 @@ TOP 100:
  175 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.65.59:443 | IP=144.31.65.59 | SNI=node17.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.124.238.87:443 | IP=144.124.238.87 | SNI=www.cisco.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 169.40.42.184:443 | IP=169.40.42.184 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.124.116.234:443 | IP=89.124.116.234 | SNI=www.googletagmanager.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 85.155.226.27:443 | IP=85.155.226.27 | SNI=getsavesafe.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
