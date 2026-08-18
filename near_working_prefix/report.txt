@@ -26,7 +26,7 @@ TOP 100:
  190 | 77.110.115.8:25565 | IP=77.110.115.8 | SNI=yandex.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 176.109.106.34:9888 | IP=176.109.106.34 | SNI=dl.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 81.208.170.142:1500 | IP=81.208.170.142 | SNI=www.ebay.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
- 185 | 511.cdnconn.com:10443 | IP=185.147.26.53,185.147.26.45 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
+ 185 | 511.cdnconn.com:10443 | IP=185.147.26.45,185.147.26.53 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | 185.221.163.211:443 | IP=185.221.163.211 | SNI=fin1.panel11.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 185.28.47.111:443 | IP=185.28.47.111 | SNI=lat.o4ka-internet.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 81.31.210.138:443 | IP=81.31.210.138 | SNI=nl1.murhost.network | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
@@ -73,7 +73,7 @@ TOP 100:
  175 | node20.mxvpn.dev:443 | IP=77.239.123.224 | SNI=node20.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.219.161:443 | IP=144.31.219.161 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 86.54.28.75:443 | IP=86.54.28.75 | SNI=www.apple.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.124.235.67:443 | IP=144.124.235.67 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 2.26.231.40:443 | IP=2.26.231.40 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.237.215:443 | IP=144.31.237.215 | SNI=www.sciencedirect.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -84,7 +84,7 @@ TOP 100:
  175 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 95.85.247.155:443 | IP=95.85.247.155 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.65.59:443 | IP=144.31.65.59 | SNI=node17.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 85.155.226.78:443 | IP=85.155.226.78 | SNI=getsavesafe.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
