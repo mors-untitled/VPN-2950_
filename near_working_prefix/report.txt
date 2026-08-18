@@ -24,7 +24,7 @@ TOP 100:
  190 | 77.110.115.8:25565 | IP=77.110.115.8 | SNI=yandex.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 176.109.106.34:9888 | IP=176.109.106.34 | SNI=dl.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 81.208.170.142:1500 | IP=81.208.170.142 | SNI=www.ebay.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
- 185 | 511.cdnconn.com:10443 | IP=185.147.26.44,45.139.25.252 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
+ 185 | 511.cdnconn.com:10443 | IP=45.139.25.252,185.147.26.44 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | 185.28.47.111:443 | IP=185.28.47.111 | SNI=lat.o4ka-internet.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 64.188.112.82:443 | IP=64.188.112.82 | SNI=nodefulcrum.mooo.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 144.124.246.55:443 | IP=144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
@@ -67,7 +67,7 @@ TOP 100:
  175 | fin3.o4ka-internet.com:443 | IP=132.243.223.82 | SNI=fin3.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | pol4.o4ka-internet.com:443 | IP=95.85.254.245 | SNI=pol4.o4ka-internet.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 81.19.137.181:443 | IP=81.19.137.181 | SNI=node21.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | savesafe.co:443 | IP=162.35.231.74,162.35.231.70,162.35.231.67,162.35.231.76,162.35.231.66,162.35.231.75,162.35.231.77,162.35.231.68,162.35.231.71,162.35.231.78,162.35.231.79,162.35.231.69 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | savesafe.co:443 | IP=162.35.231.66,162.35.231.77,162.35.231.68,162.35.231.67,162.35.231.76,162.35.231.70,162.35.231.79,162.35.231.71,162.35.231.75,162.35.231.78,162.35.231.69,162.35.231.74 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.46.178:443 | IP=159.195.46.178 | SNI=4.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 103.27.157.209:443 | IP=103.27.157.209 | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.125.60:443 | IP=144.31.125.60 | SNI=www.intel.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
