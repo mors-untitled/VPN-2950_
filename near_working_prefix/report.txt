@@ -24,7 +24,7 @@ TOP 100:
  190 | 77.110.115.8:25565 | IP=77.110.115.8 | SNI=yandex.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 176.109.106.34:9888 | IP=176.109.106.34 | SNI=dl.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 81.208.170.142:1500 | IP=81.208.170.142 | SNI=www.ebay.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
- 185 | 511.cdnconn.com:10443 | IP=185.147.26.45,185.147.26.53 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
+ 185 | 511.cdnconn.com:10443 | IP=45.139.25.252,185.147.26.44 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | 132.243.223.88:443 | IP=132.243.223.88 | SNI=fin2.freeinternat.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 185.28.47.111:443 | IP=185.28.47.111 | SNI=lat.o4ka-internet.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
@@ -42,12 +42,12 @@ TOP 100:
  185 | 62.233.43.86:9898 | IP=62.233.43.86 | SNI=dl.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | 37.18.14.33:2096 | IP=37.18.14.33 | SNI=id.vk.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | 78.159.245.75:9002 | IP=78.159.245.75 | SNI=api-maps.yandex.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
- 180 | direct-nl.bachidze.com:443 | IP=195.189.98.250 | SNI=direct-nl.bachidze.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
+ 180 | direct-nl.bachidze.com:443 | IP=- | SNI=direct-nl.bachidze.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  175 | 95.85.224.51:443 | IP=95.85.224.51 | SNI=max.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | nl.n.belka.network:443 | IP=81.31.210.76 | SNI=max.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 85.155.226.140:443 | IP=85.155.226.140 | SNI=getsavesafe.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | savesafe.co:443 | IP=162.35.231.77,162.35.231.76,162.35.231.66,162.35.231.75,162.35.231.68,162.35.231.67,162.35.231.70,162.35.231.69 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | savesafe.co:443 | IP=162.35.231.67,162.35.231.68,162.35.231.70,162.35.231.74,162.35.231.78,162.35.231.69,162.35.231.77,162.35.231.76,162.35.231.71,162.35.231.79,162.35.231.66,162.35.231.75 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.22.155:443 | IP=159.195.22.155 | SNI=2.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | email.swiftraci.org:443 | IP=107.181.147.22 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node16.mxvpn.dev:443 | IP=144.31.226.178 | SNI=node16.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -81,7 +81,7 @@ TOP 100:
  175 | 2.26.231.40:443 | IP=2.26.231.40 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 77.239.123.219:443 | IP=77.239.123.219 | SNI=node19.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 103.27.157.209:443 | IP=103.27.157.209 | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.65.59:443 | IP=144.31.65.59 | SNI=node17.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.124.238.87:443 | IP=144.124.238.87 | SNI=www.cisco.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 85.155.226.78:443 | IP=85.155.226.78 | SNI=getsavesafe.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
