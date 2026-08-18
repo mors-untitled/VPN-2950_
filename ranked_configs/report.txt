@@ -35,7 +35,7 @@ TOP 100:
  127 | fin3.o4ka-internet.com:443 | IP=132.243.223.82 | SNI=fin3.o4ka-internet.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | pol4.o4ka-internet.com:443 | IP=95.85.254.245 | SNI=pol4.o4ka-internet.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 81.19.137.181:443 | IP=81.19.137.181 | SNI=node21.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | savesafe.co:443 | IP=162.35.231.76,162.35.231.69,162.35.231.78,162.35.231.74,162.35.231.79,162.35.231.68,162.35.231.67,162.35.231.71,162.35.231.70,162.35.231.77,162.35.231.66,162.35.231.75 | SNI=- | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | savesafe.co:443 | IP=162.35.231.76,162.35.231.75,162.35.231.78,162.35.231.74,162.35.231.66,162.35.231.71,162.35.231.69,162.35.231.68,162.35.231.70,162.35.231.77,162.35.231.79,162.35.231.67 | SNI=- | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 159.195.46.178:443 | IP=159.195.46.178 | SNI=4.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 64.188.112.82:443 | IP=64.188.112.82 | SNI=nodefulcrum.mooo.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 103.27.157.209:443 | IP=103.27.157.209 | SNI=stackoverflow.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
