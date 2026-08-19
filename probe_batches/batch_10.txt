@@ -7,6 +7,7 @@ vless://8c00ea88-31f7-445a-8f74-f6e7f03a1553@82.115.6.93:443?ed=2048&eh=Sec-WebS
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.28:443?path=%2Ffp&security=tls&encryption=none&insecure=0&host=hhlfy.twiladaphne.ndjp.net&fp=chrome&type=ws&allowInsecure=0&sni=hhlfy.twiladaphne.ndjp.net#🇸🇬[www.v2nodes.com
 vless://1078d418-b4e0-4668-9018-dc90c2042d61@104.17.28.89:443?security=tls&type=ws&path=/&host=workspace.evan00.dpdns.org&packetEncoding=xudp&sni=workspace.evan00.dpdns.org&fp=chrome#🇸🇬[www.v2nodes.com
 vless://6705ddbd-04cf-40f6-99b9-36846b08c2a9@31.57.190.9:443?&security=tls&fp=chrome&sni=kjgdksgghre466.pages.dev&type=ws&headerType=none&host=kjgdksgghre466.pages.dev&path=%2F#🇪🇸[www.v2nodes.com
+vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@one-for-all.levikogjgfdd.ir:443?&security=tls&fp=chrome&sni=hhlfy.twiladaphne.ndjp.net&type=ws&headerType=none&host=hhlfy.twiladaphne.ndjp.net&path=%2Fsg-melbi#🇸🇬[www.v2nodes.com
 vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?&security=tls&fp=chrome&sni=129.121.95.159&type=ws&headerType=none&host=129.121.95.159&path=%2Fconnect#🇬🇧[www.v2nodes.com
 vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?&security=tls&fp=qq&sni=gb1.wba-pn.ru&type=ws&headerType=none&host=gb1.wba-pn.ru&path=%2F#🇬🇧[www.v2nodes.com
 vless://1078d418-b4e0-4668-9018-dc90c2042d61@172.67.118.45:443?type=ws&security=tls&sni=workspace.evan00.dpdns.org&fp=chrome&path=%2F&host=workspace.evan00.dpdns.org#🇸🇬[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.18.34.124:443?&security=tls&fp=
 vless://13da3f61-36bc-4f4f-9b49-4152de570bd3@172.67.161.109:443?&security=tls&fp=chrome&alpn=http%2F1.1&sni=1-m14.aYUTTHAYa-1.KdNs.Fr&type=ws&headerType=none&host=1-m14.aYUTthaya-1.kdns.fr&path=%2FawsDCktnglce5OhBQMBK8JLBwh2V#🏳[www.v2nodes.com
 vless://c0f16ee2-a909-4890-ab1c-96489230658a@104.21.67.41:443?type=ws&security=tls&sni=admin.jikebet.com&host=admin.jikebet.com&path=%2Fvless&fp=chrome#🇬🇧[www.v2nodes.com
 vless://d2d0f796-edb0-427a-af32-ae360679f9e7@millionaire.levikogjgfdd.ir:443?path=%2F&security=tls&encryption=none&host=rAyAn-007.fOtOn.dPdNs.oRg&fp=chrome&type=ws&sni=rAyAn-007.fOtOn.dPdNs.oRg#🇯🇵[www.v2nodes.com
-vless://1bc380b1-cff7-446f-b13f-5c0ad29fc75a@16.176.42.97:443?&security=tls&fp=chrome&sni=zero.csmaster.ggff.net&type=ws&headerType=none&host=zero.csmaster.ggff.net&path=%2F#🇸🇬[www.v2nodes.com
