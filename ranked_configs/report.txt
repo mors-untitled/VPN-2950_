@@ -56,7 +56,7 @@ TOP 100:
  127 | 45.195.111.15:443 | IP=45.195.111.15 | SNI=storage.yandex.net | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | de.n.belka.network:443 | IP=159.195.199.171,159.195.201.146 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 159.195.46.178:443 | IP=159.195.46.178 | SNI=4.oncloudnineservicestreang.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | savesafe.co:443 | IP=162.35.231.137,162.35.231.143,162.35.231.52,162.35.231.140,162.35.231.61,162.35.231.138,162.35.231.145,162.35.231.139,162.35.231.141,162.35.231.142 | SNI=- | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | savesafe.co:443 | IP=162.35.231.137,162.35.231.140,162.35.231.143,162.35.231.52,162.35.231.142,162.35.231.145,162.35.231.139,162.35.231.141,162.35.231.138,162.35.231.61 | SNI=- | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 95.85.247.155:443 | IP=95.85.247.155 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 64.188.77.13:443 | IP=64.188.77.13 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
