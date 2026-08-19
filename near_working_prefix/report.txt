@@ -95,7 +95,7 @@ TOP 100:
  175 | node16.mxvpn.dev:443 | IP=144.31.226.178 | SNI=node16.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | server.slavkiti.monster:443 | IP=107.181.151.39 | SNI=www.mozilla.org | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.27.99:443 | IP=159.195.27.99 | SNI=1.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | savesafe.co:443 | IP=162.35.231.142,162.35.231.139,162.35.231.52,162.35.231.138,162.35.231.145,162.35.231.143,162.35.231.137,162.35.231.141,162.35.231.140,162.35.231.61 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | savesafe.co:443 | IP=162.35.231.145,162.35.231.140,162.35.231.138,162.35.231.139,162.35.231.137,162.35.231.143,162.35.231.61,162.35.231.52,162.35.231.141,162.35.231.142 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 77.239.123.219:443 | IP=77.239.123.219 | SNI=node19.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.124.246.55:443 | IP=144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.65.59:443 | IP=144.31.65.59 | SNI=node17.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
