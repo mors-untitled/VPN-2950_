@@ -1,5 +1,3 @@
-vless://767b6340-96dc-4aa0-8013-a8af7513d920@172.67.75.194:8443?&security=tls&fp=chrome&sni=c7dabe95.proxy-978.pages.dev&type=ws&headerType=none&host=c7dabe95.proxy-978.pages.dev&path=%2F#🇸🇬[www.v2nodes.com
-vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@xmm5.130209.xyz:8443?&security=tls&fp=edge&sni=hongkong.11459178.xyz&type=ws&headerType=none&host=hongkong.11459178.xyz&path=%2Fcdn%2Fpackages%2Fruntime-core.tar.gz#🇭🇰[www.v2nodes.com
 vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@www.wto.org:2053?fp=edge&host=usa.105794.xyz&path=%2Fdownload%2Fv3%2Finstaller-x64.bin&security=tls&sni=usa.105794.xyz&type=ws#🇺🇸[www.v2nodes.com
 vless://2e67eff4-02ac-4a13-b695-4452465df6a1@172.67.193.74:8443?&security=tls&fp=random&sni=testcf.motherfuck.dpdns.org&type=ws&headerType=none&host=testcf.motherfuck.dpdns.org&path=%2F%3Fed%3D2560#🇸🇬[www.v2nodes.com
 vless://bba95b1f-f48c-454b-897b-a6c6bc307df1@193.232.178.149:8443?allowInsecure=1&sni=edge.yzkvm.top&type=ws&host=edge.yzkvm.top&path=/fp=chrome&security=tls#🇸🇪[www.v2nodes.com
@@ -18,3 +16,5 @@ vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@84.235.170.175:62145?&type=tcp&head
 vless://7c49a866-4f78-4dd0-bb4a-430e75d4ee70@37.252.20.41:204?&type=tcp&headerType=none&path=/#🇳🇱[www.v2nodes.com
 vless://fa4babae-cea3-49b1-9d6f-342495a46ea9@201.24.49.62:3?&type=tcp&headerType=none&path=%2F#🇫🇷[www.v2nodes.com
 vless://e4514801-0d5a-42ba-869f-39bd605aef9e@63.187.235.95:22222?&type=tcp&headerType=none&path=%2F#🇩🇪[www.v2nodes.com
+vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@84.235.171.188:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
+vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@193.123.58.85:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
