@@ -142,7 +142,7 @@ batch_07.txt: 20 configs
   04. it.morinsq.su:443 | net=31.77.201.0/24 | SNI=it.morinsq.su | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-443
   05. 51.77.217.70:2053 | net=51.77.217.0/24 | SNI=www.apple.com | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-2053
   06. 46.250.240.80:2053 | net=46.250.240.0/24 | SNI=www.cloudflare.com | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-2053
-  07. 511.cdnconn.com:10443 | net=45.139.25.0/24 | SNI=max.ru | type=grpc | flow=- | score=83 | REALITY,gRPC,KNOWN-SNI
+  07. 511.cdnconn.com:10443 | net=185.147.26.0/24 | SNI=max.ru | type=grpc | flow=- | score=83 | REALITY,gRPC,KNOWN-SNI
   08. 194.58.95.183:9871 | net=194.58.95.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
   09. 185.141.227.153:9002 | net=185.141.227.0/24 | SNI=api-maps.yandex.ru | type=grpc | flow=- | score=78 | REALITY,gRPC
   10. 176.108.240.241:9894 | net=176.108.240.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
@@ -215,7 +215,7 @@ batch_10.txt: 20 configs
   11. 129.121.95.159:443 | net=129.121.95.0/24 | SNI=129.121.95.159 | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. gb1.wba-pn.ru:443 | net=45.150.66.0/24 | SNI=gb1.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=workspace.evan00.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. proxyip.hk.cmliussss.net:443 | net=91.110.182.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. proxyip.hk.cmliussss.net:443 | net=91.110.209.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   15. 104.21.31.99:443 | net=104.21.31.0/24 | SNI=6-m23.daegu2031.ccwu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   16. dx.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   17. 104.18.34.124:443 | net=104.18.34.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -248,7 +248,7 @@ batch_11.txt: 20 configs
 batch_12.txt: 20 configs
   01. 172.67.75.194:8443 | net=172.67.75.0/24 | SNI=c7dabe95.proxy-978.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   02. xmm5.130209.xyz:8443 | net=104.19.149.0/24 | SNI=hongkong.11459178.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  03. www.wto.org:2053 | net=172.64.146.0/24 | SNI=usa.105794.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  03. www.wto.org:2053 | net=104.18.41.0/24 | SNI=usa.105794.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
   04. 172.67.193.74:8443 | net=172.67.193.0/24 | SNI=testcf.motherfuck.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   05. 193.232.178.149:8443 | net=193.232.178.0/24 | SNI=edge.yzkvm.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   06. ul-mexico1.09vpn.com:8443 | net=45.134.9.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
