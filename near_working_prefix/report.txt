@@ -26,7 +26,7 @@ TOP 100:
  190 | 176.109.106.34:9888 | IP=176.109.106.34 | SNI=dl.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 77.110.115.8:25565 | IP=77.110.115.8 | SNI=yandex.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 91.224.87.22:9882 | IP=91.224.87.22 | SNI=dl.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
- 185 | 511.cdnconn.com:10443 | IP=185.147.26.44,45.139.25.252 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
+ 185 | 511.cdnconn.com:10443 | IP=45.139.25.252,185.147.26.44 | SNI=max.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  185 | 185.221.163.211:443 | IP=185.221.163.211 | SNI=fin1.panel11.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 31.76.3.54:443 | IP=31.76.3.54 | SNI=nordic.cendora.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
@@ -78,9 +78,9 @@ TOP 100:
  175 | node20.mxvpn.dev:443 | IP=77.239.123.224 | SNI=node20.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.124.246.55:443 | IP=144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.124.238.87:443 | IP=144.124.238.87 | SNI=www.cisco.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.45.129:443 | IP=159.195.45.129 | SNI=3.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | savesafe.co:443 | IP=162.35.231.132,162.35.231.124,162.35.231.134,162.35.231.123,162.35.231.130,162.35.231.135,162.35.231.125,162.35.231.127,162.35.231.128,162.35.231.129,162.35.231.126,162.35.231.131 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | savesafe.co:443 | IP=162.35.231.126,162.35.231.132,162.35.231.135,162.35.231.130,162.35.231.128,162.35.231.129,162.35.231.124,162.35.231.125,162.35.231.134,162.35.231.131,162.35.231.127,162.35.231.123 | SNI=- | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 77.239.123.219:443 | IP=77.239.123.219 | SNI=node19.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 103.27.157.209:443 | IP=103.27.157.209 | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 86.54.28.75:443 | IP=86.54.28.75 | SNI=www.apple.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
