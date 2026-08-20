@@ -88,7 +88,7 @@ TOP 100:
  175 | 31.76.83.114:443 | IP=31.76.83.114 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 188.127.247.129:443 | IP=188.127.247.129 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.27.99:443 | IP=159.195.27.99 | SNI=1.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.248.186,144.124.249.252,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | email.swiftraci.org:443 | IP=107.181.147.22 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 94.183.157.249:443 | IP=94.183.157.249 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | pol3.freeinternat.com:443 | IP=83.168.108.179 | SNI=pol3.freeinternat.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
