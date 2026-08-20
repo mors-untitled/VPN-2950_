@@ -1,3 +1,4 @@
+vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@159.112.235.52:443?security=tls&type=ws&path=/musiclovers85?ed=512&host=josni.hoyes.cloudns.ch&packetEncoding=xudp&sni=josni.hoyes.cloudns.ch&fp=chrome#🇸🇬[www.v2nodes.com
 vless://8525fe74-67e6-4a55-8a26-95f227bd1384@164.90.217.130:443?path=/&security=tls&encryption=none&insecure=0&host=white-forest-2c01.alvlirm222.workers.dev&fp=chrome&type=ws&allowInsecure=0&sni=white-forest-2c01.alvlirm222.workers.dev#🇩🇪[www.v2nodes.com
 vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?path=/&security=tls&encryption=none&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=gb1.wba-pn.ru#🇬🇧[www.v2nodes.com
 vless://50414e45-4c5f-5a45-5553-ef859652a80e@104.20.17.127:443?security=tls&type=ws&path=/stream/TrexBridge/ef859652a80e&host=trex-panel-nubj0s.samifakor.workers.dev&packetEncoding=xudp&sni=trex-panel-nubj0s.samifakor.workers.dev&fp=chrome&encryption=none#🇩🇪[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?path=/connect&se
 vless://6680846a-8a57-4dfd-9a0e-63209cfc8535@170.114.46.6:443?path=/sg-amz&security=tls&encryption=none&insecure=0&host=support.zoom.us.yxls.eu.cc&fp=chrome&type=ws&allowInsecure=0&sni=support.zoom.us.yxls.eu.cc#🇸🇬[www.v2nodes.com
 vless://7b102311-43fd-4e8f-877e-8090623c101d@proxyip.hk.cmliussss.net:443?security=tls&type=ws&path=/&host=vp10.pages.dev&packetEncoding=none&sni=vp10.pages.dev&fp=chrome#🇭🇰[www.v2nodes.com
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@dx.mmhh.eu.cc:443?security=tls&type=ws&path=/fp=chrome&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net&fp=chrome&encryption=none#🇯🇵[www.v2nodes.com
-vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.6.70:443?security=tls&type=ws&path=/musiclovers85?ed=512&host=josni.hoyes.cloudns.ch&packetEncoding=xudp&sni=josni.hoyes.cloudns.ch&fp=chrome&encryption=none#🇸🇬[www.v2nodes.com
