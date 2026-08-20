@@ -1,5 +1,5 @@
-vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@188.114.99.0:443?security=tls&type=ws&path=/sg-melbi&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net&fp=chrome#🇸🇬[www.v2nodes.com
 vless://1bc380b1-cff7-446f-b13f-5c0ad29fc75a@16.176.42.97:443?&security=tls&fp=chrome&sni=zero.csmaster.ggff.net&type=ws&headerType=none&host=zero.csmaster.ggff.net&path=%2F#🇸🇬[www.v2nodes.com
+vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@188.114.97.3:443?&security=tls&fp=chrome&sni=hhlfy.twiladaphne.ndjp.net&type=ws&headerType=none&host=hhlfy.twiladaphne.ndjp.net&path=%2Fsg-melbi#🇸🇬[www.v2nodes.com
 vless://85819b3c-fe18-40bb-bd9a-f3cd194a8d28@43.167.239.81:443?&security=tls&fp=chrome&sni=43.167.239.81&type=ws&headerType=none&host=43.167.239.81&path=%2Fws#🇯🇵[www.v2nodes.com
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.18.34.124:443?security=tls&type=ws&path=/&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net&fp=chrome&encryption=none#🇸🇬[www.v2nodes.com
 vless://13da3f61-36bc-4f4f-9b49-4152de570bd3@172.67.161.109:443?&security=tls&fp=chrome&alpn=http%2F1.1&sni=1-m14.aYUTTHAYa-1.KdNs.Fr&type=ws&headerType=none&host=1-m14.aYUTthaya-1.kdns.fr&path=%2FawsDCktnglce5OhBQMBK8JLBwh2V#🏳[www.v2nodes.com
