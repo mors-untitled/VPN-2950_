@@ -98,7 +98,7 @@ TOP 100:
  175 | pol3.freeinternat.com:443 | IP=83.168.108.179 | SNI=pol3.freeinternat.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.200.250.160:443 | IP=31.200.250.160 | SNI=api.max.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 159.195.46.178:443 | IP=159.195.46.178 | SNI=4.oncloudnineservicestreang.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 103.109.234.166:443 | IP=103.109.234.166 | SNI=dep.opngtr.nl | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 178.162.253.64:443 | IP=178.162.253.64 | SNI=de.servers.gracevpnbuy.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -107,7 +107,7 @@ TOP 100:
  175 | 185.91.54.83:443 | IP=185.91.54.83 | SNI=eda.x5.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 43.224.150.71:443 | IP=43.224.150.71 | SNI=www.bing.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.249.252,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.248.186,144.124.246.55 | SNI=gateway.icloud.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 193.124.45.154:443 | IP=193.124.45.154 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 158.69.112.254:443 | IP=158.69.112.254 | SNI=www.speedtest.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.4.103:443 | IP=31.76.4.103 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
