@@ -1,5 +1,5 @@
 Total VLESS source: 425
-Unique /24 groups: 322
+Unique /24 groups: 321
 Selected candidates: 240
 Batches: 12
 
@@ -211,8 +211,8 @@ batch_10.txt: 20 configs
   07. 104.20.17.127:443 | net=104.20.17.0/24 | SNI=trex-panel-nubj0s.samifakor.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   08. 82.115.6.93:443 | net=82.115.6.0/24 | SNI=kuraakavaa-5l7.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. 164.90.217.130:443 | net=164.90.217.0/24 | SNI=white-forest-2c01.alvlirm222.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. proxyip.hk.cmliussss.net:443 | net=38.175.199.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. www.visa.cn:443 | net=123.138.202.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. proxyip.hk.cmliussss.net:443 | net=156.224.76.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. www.visa.cn:443 | net=111.124.70.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. cfd.130209.xyz:443 | net=104.18.3.0/24 | SNI=ukraine.142568.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 104.16.6.70:443 | net=104.16.6.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. dx.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -233,12 +233,12 @@ batch_11.txt: 20 configs
   07. 31.76.53.16.fwqfw783rg2dad.website:443 | net=31.76.53.0/24 | SNI=31.76.53.16.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   08. it2ws.wba-pn.ru:443 | net=45.155.68.0/24 | SNI=it2ws.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. 151.101.56.7:443 | net=151.101.56.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. japan.com:443 | net=172.67.70.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. japan.com:443 | net=104.26.5.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   11. 162.159.44.195:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. 104.16.89.120:443 | net=104.16.89.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 213.183.61.100:2053 | net=213.183.61.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
   14. music1000.melobitmusic1.ir:2053 | net=104.21.35.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  15. fast.nanniang.top:8443 | net=104.18.35.0/24 | SNI=aq.nanniang.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  15. fast.nanniang.top:8443 | net=104.18.42.0/24 | SNI=aq.nanniang.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   16. speedtest.org:8443 | net=104.26.14.0/24 | SNI=ssl.miloi8dmz.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   17. 185.112.249.201:8443 | net=185.112.249.0/24 | SNI=web-socket.tgdaosheng.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
   18. xmm5.130209.xyz:8443 | net=104.19.149.0/24 | SNI=hongkong.11459178.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
