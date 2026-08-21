@@ -63,7 +63,7 @@ TOP 100:
  127 | de2.techdatacloud.org:443 | IP=159.195.216.59 | SNI=cloud.mail.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | de3.techdatacloud.org:443 | IP=138.124.39.147 | SNI=cloud.mail.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 64.188.112.82:443 | IP=64.188.112.82 | SNI=nodefulcrum.mooo.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.246.55,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.237.57:443 | IP=144.31.237.57 | SNI=edge-nl.mystatic-cdn.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.134.196:443 | IP=144.31.134.196 | SNI=dzen.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
@@ -72,7 +72,7 @@ TOP 100:
  127 | 50.7.41.142:443 | IP=50.7.41.142 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 184.107.141.174:443 | IP=184.107.141.174 | SNI=ca.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | de.n.belka.network:443 | IP=159.195.199.171,159.195.201.146 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | nl.go-vpn.club:443 | IP=144.124.246.55,144.124.248.186,144.124.249.252 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | nl.go-vpn.club:443 | IP=144.124.249.252,144.124.246.55,144.124.248.186 | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 185.91.54.83:443 | IP=185.91.54.83 | SNI=eda.x5.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 178.162.253.64:443 | IP=178.162.253.64 | SNI=de.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
