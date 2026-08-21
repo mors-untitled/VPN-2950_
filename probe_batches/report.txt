@@ -1,5 +1,5 @@
 Total VLESS source: 439
-Unique /24 groups: 325
+Unique /24 groups: 327
 Selected candidates: 240
 Batches: 12
 
@@ -198,7 +198,7 @@ batch_09.txt: 20 configs
   16. 139.28.241.77:443 | net=139.28.241.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
   17. 134.122.154.210:443 | net=134.122.154.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
   18. 87.120.84.32:33843 | net=87.120.84.0/24 | SNI=deproxy2.lckdwn.ru | type=tcp | flow=- | score=28 | TLS,TCP/RAW
-  19. one-for-all.levikogjgfdd.ir:443 | net=188.114.97.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. one-for-all.levikogjgfdd.ir:443 | net=104.21.74.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   20. 104.16.75.251:443 | net=104.16.75.0/24 | SNI=germany-2.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_10.txt: 20 configs
@@ -212,7 +212,7 @@ batch_10.txt: 20 configs
   08. 199.232.78.159:443 | net=199.232.78.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. 69.46.46.123:443 | net=69.46.46.0/24 | SNI=x4g-production-f282.up.railway.app | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   10. 185.178.208.140:443 | net=185.178.208.0/24 | SNI=cdn.sw-api-dev.begmatov.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. proxyip.hk.cmliussss.net:443 | net=219.76.13.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. proxyip.hk.cmliussss.net:443 | net=209.9.200.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. 104.20.17.127:443 | net=104.20.17.0/24 | SNI=trex-panel-nubj0s.samifakor.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 82.115.6.93:443 | net=82.115.6.0/24 | SNI=kuraakavaa-5l7.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. 185.243.10.109:443 | net=185.243.10.0/24 | SNI=hys40.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -224,7 +224,7 @@ batch_10.txt: 20 configs
   20. millionaire.levikogjgfdd.ir:443 | net=104.18.28.0/24 | SNI=rayan-007.foton.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_11.txt: 20 configs
-  01. www.visa.cn:443 | net=42.236.124.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  01. www.visa.cn:443 | net=180.130.114.0/24 | SNI=tl.520783.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   02. cfd.130209.xyz:443 | net=104.18.2.0/24 | SNI=ukraine.142568.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   03. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   04. 172.67.161.109:443 | net=172.67.161.0/24 | SNI=1-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -240,30 +240,30 @@ batch_11.txt: 20 configs
   14. 104.16.80.73:443 | net=104.16.80.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   15. ytryurdj64bbb.localip.ir:443 | net=104.18.32.0/24 | SNI=ro-3.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   16. 104.16.6.70:443 | net=104.16.6.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  17. it2ws.wba-pn.ru:443 | net=45.155.68.0/24 | SNI=it2ws.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  18. 31.76.53.16.fwqfw783rg2dad.website:443 | net=31.76.53.0/24 | SNI=31.76.53.16.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. 151.101.56.7:443 | net=151.101.56.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. japan.com:443 | net=104.26.4.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. 188.114.97.6:443 | net=188.114.97.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. it2ws.wba-pn.ru:443 | net=45.155.68.0/24 | SNI=it2ws.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. 31.76.53.16.fwqfw783rg2dad.website:443 | net=31.76.53.0/24 | SNI=31.76.53.16.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. 151.101.56.7:443 | net=151.101.56.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_12.txt: 20 configs
-  01. singapore.com:443 | net=104.26.12.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  02. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  03. ipw.ygdfw.com:443 | net=104.25.233.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  04. 188.241.241.28:2053 | net=188.241.241.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  05. fast.nanniang.top:8443 | net=104.18.43.0/24 | SNI=aq.nanniang.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  06. 185.112.249.201:8443 | net=185.112.249.0/24 | SNI=web-socket.tgdaosheng.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  07. speedtest.org:8443 | net=104.26.15.0/24 | SNI=ssl.miloi8dmz.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  08. po.fastbrokencompony.com:2053 | net=172.67.191.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  09. 141.193.213.21:8443 | net=141.193.213.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  10. fr15.mechvpn.online:443 | net=91.239.208.0/24 | SNI=- | type=- | flow=xtls-rprx-vision-udp443 | score=20 | TLS,PORT-443
-  11. translate.magazinetut.online:443 | net=31.76.84.0/24 | SNI=translate.magazinetut.online | type=- | flow=xtls-rprx-vision-udp443 | score=20 | TLS,PORT-443
-  12. neth6.lckdwn.ru:8443 | net=177.3.212.0/24 | SNI=- | type=- | flow=- | score=20 | TLS,PORT-8443
-  13. 164.92.230.180:8880 | net=164.92.230.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  14. 139.180.198.220:52143 | net=139.180.198.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  15. 144.31.157.104:20017 | net=144.31.157.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  16. 138.124.29.81:57020 | net=138.124.29.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  17. 164.68.127.108:24144 | net=164.68.127.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  18. 220.130.75.247:10000 | net=220.130.75.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  19. 104.248.251.106:8880 | net=104.248.251.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  20. 64.226.117.146:8880 | net=64.226.117.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  01. japan.com:443 | net=104.26.5.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  02. russia.com:443 | net=172.67.71.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. singapore.com:443 | net=172.67.75.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  04. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. ipw.ygdfw.com:443 | net=104.25.114.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. 188.241.241.28:2053 | net=188.241.241.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  07. fast.nanniang.top:8443 | net=104.18.35.0/24 | SNI=aq.nanniang.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  08. 185.112.249.201:8443 | net=185.112.249.0/24 | SNI=web-socket.tgdaosheng.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  09. speedtest.org:8443 | net=104.26.15.0/24 | SNI=ssl.miloi8dmz.top | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  10. po.fastbrokencompony.com:2053 | net=104.21.41.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  11. 141.193.213.21:8443 | net=141.193.213.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  12. fr15.mechvpn.online:443 | net=91.239.208.0/24 | SNI=- | type=- | flow=xtls-rprx-vision-udp443 | score=20 | TLS,PORT-443
+  13. translate.magazinetut.online:443 | net=31.76.84.0/24 | SNI=translate.magazinetut.online | type=- | flow=xtls-rprx-vision-udp443 | score=20 | TLS,PORT-443
+  14. neth6.lckdwn.ru:8443 | net=177.3.212.0/24 | SNI=- | type=- | flow=- | score=20 | TLS,PORT-8443
+  15. 164.92.230.180:8880 | net=164.92.230.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  16. 139.180.198.220:52143 | net=139.180.198.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  17. 144.31.157.104:20017 | net=144.31.157.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  18. 138.124.29.81:57020 | net=138.124.29.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  19. 164.68.127.108:24144 | net=164.68.127.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  20. 220.130.75.247:10000 | net=220.130.75.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
 
