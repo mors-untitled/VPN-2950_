@@ -25,7 +25,7 @@ TOP 100:
  127 | 150.241.73.137:443 | IP=150.241.73.137 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 2.26.124.49:443 | IP=2.26.124.49 | SNI=www.rumedia-cdn.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 31.76.3.54:443 | IP=31.76.3.54 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | se1.se-cdn.ru:443 | IP=132.243.231.171,132.243.231.166,31.207.7.218,132.243.231.172,132.243.231.177,132.243.231.169,132.243.231.175,132.243.231.164,132.243.231.181,31.207.7.219,132.243.231.168 | SNI=se1.se-cdn.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | se1.se-cdn.ru:443 | IP=31.207.7.219,132.243.231.166,132.243.231.181,132.243.231.177,132.243.231.172,132.243.231.171,31.207.7.218,132.243.231.175,132.243.231.168,132.243.231.164,132.243.231.169 | SNI=se1.se-cdn.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 132.243.231.94:443 | IP=132.243.231.94 | SNI=se1.se-cdn.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 150.241.72.5:443 | IP=150.241.72.5 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 31.76.70.32:443 | IP=31.76.70.32 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
@@ -62,7 +62,7 @@ TOP 100:
  127 | 162.128.181.182:443 | IP=162.128.181.182 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 195.184.247.223:443 | IP=195.184.247.223 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 195.184.247.222:443 | IP=195.184.247.222 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | savesafe.co:443 | IP=162.35.231.137,162.35.231.141,162.35.231.140,162.35.231.142,162.35.231.138,162.35.231.145,162.35.231.52,162.35.231.143,162.35.231.139,162.35.231.61 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | savesafe.co:443 | IP=162.35.231.142,162.35.231.61,162.35.231.137,162.35.231.143,162.35.231.141,162.35.231.140,162.35.231.52,162.35.231.138,162.35.231.139,162.35.231.145 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 103.109.234.166:443 | IP=103.109.234.166 | SNI=dep.opngtr.nl | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | nl.go-vpn.club:443 | IP=- | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | nl.go-vpn.club:443 | IP=- | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
