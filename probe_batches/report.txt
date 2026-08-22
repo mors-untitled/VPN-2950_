@@ -1,5 +1,5 @@
 Total VLESS source: 463
-Unique /24 groups: 357
+Unique /24 groups: 358
 Selected candidates: 240
 Batches: 12
 
@@ -27,7 +27,7 @@ batch_01.txt: 20 configs
 
 batch_02.txt: 20 configs
   01. 152.53.114.186:443 | net=152.53.114.0/24 | SNI=as.tunnelx.space | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  02. ee.cdn-global.pro:443 | net=132.243.65.0/24 | SNI=ee.cdn-global.pro | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  02. ee.cdn-global.pro:443 | net=217.9.12.0/24 | SNI=ee.cdn-global.pro | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   03. 31.76.70.31:443 | net=31.76.70.0/24 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   04. 31.76.83.114:443 | net=31.76.83.0/24 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   05. 188.127.247.129:443 | net=188.127.247.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
@@ -211,7 +211,7 @@ batch_10.txt: 20 configs
   07. 60.248.219.52:443 | net=60.248.219.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   08. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. www.zsu.gov.ua:443 | net=172.65.90.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. proxyip.hk.cmliussss.net:443 | net=209.33.160.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. proxyip.hk.cmliussss.net:443 | net=8.218.22.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   11. 199.232.78.160:443 | net=199.232.78.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. spider-panel-production-19f9.up.railway.app:443 | net=69.46.46.0/24 | SNI=spider-panel-production-19f9.up.railway.app | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 144.31.82.201.fwqfw783rg2dad.website:443 | net=144.31.82.0/24 | SNI=144.31.82.201.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -230,40 +230,40 @@ batch_11.txt: 20 configs
   04. 5hsytrdbbvcrxokk.localip.ir:443 | net=104.18.32.0/24 | SNI=nl-10.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   05. 185.193.30.94:443 | net=185.193.30.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   06. dx.mmhh.eu.cc:443 | net=162.159.12.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. free.server11peekconfig.workers.dev:443 | net=172.67.153.0/24 | SNI=free.server11peekconfig.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev:443 | net=104.21.70.0/24 | SNI=05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. flat-night-edd0.hosein9saleazhuongooyeh87.workers.dev:443 | net=172.67.219.0/24 | SNI=flat-night-edd0.hosein9saleazhuongooyeh87.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. 104.21.31.99:443 | net=104.21.31.0/24 | SNI=6-m23.daegu2031.ccwu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. 104.16.89.120:443 | net=104.16.89.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. 104.16.6.70:443 | net=104.16.6.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. 188.114.97.3:443 | net=188.114.97.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. paid.sshehi.ggff.net:443 | net=152.42.221.0/24 | SNI=aka.ms | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. 52.84.199.28:443 | net=52.84.199.0/24 | SNI=d1yxsk0zprgivr.cloudfront.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. millionaire.levikogjgfdd.ir:443 | net=104.18.28.0/24 | SNI=rayan-007.foton.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  17. 31.76.65.234.fwqfw783rg2dad.website:443 | net=31.76.65.0/24 | SNI=31.76.65.234.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  18. 104.16.251.148:443 | net=104.16.251.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. 198.62.62.171:443 | net=198.62.62.0/24 | SNI=639222734213747055.forester-homaxe.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. 43.167.239.81:443 | net=43.167.239.0/24 | SNI=43.167.239.81 | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. free.server11peekconfig.workers.dev:443 | net=104.21.74.0/24 | SNI=free.server11peekconfig.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. 172.67.153.110:443 | net=172.67.153.0/24 | SNI=free.server11peekconfig.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev:443 | net=172.67.140.0/24 | SNI=05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. flat-night-edd0.hosein9saleazhuongooyeh87.workers.dev:443 | net=172.67.219.0/24 | SNI=flat-night-edd0.hosein9saleazhuongooyeh87.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. 104.21.31.99:443 | net=104.21.31.0/24 | SNI=6-m23.daegu2031.ccwu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. 104.16.89.120:443 | net=104.16.89.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. 104.16.6.70:443 | net=104.16.6.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. 188.114.97.3:443 | net=188.114.97.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. paid.sshehi.ggff.net:443 | net=152.42.221.0/24 | SNI=aka.ms | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. 52.84.199.28:443 | net=52.84.199.0/24 | SNI=d1yxsk0zprgivr.cloudfront.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. millionaire.levikogjgfdd.ir:443 | net=104.18.28.0/24 | SNI=rayan-007.foton.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. 31.76.65.234.fwqfw783rg2dad.website:443 | net=31.76.65.0/24 | SNI=31.76.65.234.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. 104.16.251.148:443 | net=104.16.251.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. 198.62.62.171:443 | net=198.62.62.0/24 | SNI=639222734213747055.forester-homaxe.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_12.txt: 20 configs
-  01. 104.19.109.202:443 | net=104.19.109.0/24 | SNI=cf.udpid.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  02. 172.64.150.28:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  03. 104.21.90.215:443 | net=104.21.90.0/24 | SNI=0-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  04. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  05. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  06. 81.177.214.150:443 | net=81.177.214.0/24 | SNI=fin4.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. meshbuzz.bond:443 | net=104.17.108.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. be2.wba-pn.ru:443 | net=113.30.152.0/24 | SNI=be2.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. 149.202.58.99:443 | net=149.202.58.0/24 | SNI=bab-6.site | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. 162.251.82.131:443 | net=162.251.82.0/24 | SNI=workspace.evan00.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. 104.16.117.43:443 | net=104.16.117.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. 104.16.79.73:443 | net=104.16.79.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. 162.159.44.195:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  17. 63.141.128.22:443 | net=63.141.128.0/24 | SNI=misty-tooth-78ca.fobogah414-e7b.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  18. 188.114.96.3:443 | net=188.114.96.0/24 | SNI=masterserver1-vsh.kalleh.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. www.4chan.org:443 | net=104.16.228.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. it2ws.wba-pn.ru:443 | net=45.155.68.0/24 | SNI=it2ws.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  01. 43.167.239.81:443 | net=43.167.239.0/24 | SNI=43.167.239.81 | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  02. 104.19.109.202:443 | net=104.19.109.0/24 | SNI=cf.udpid.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. 172.64.150.28:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  04. 104.21.90.215:443 | net=104.21.90.0/24 | SNI=0-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. 81.177.214.150:443 | net=81.177.214.0/24 | SNI=fin4.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. meshbuzz.bond:443 | net=104.17.108.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. be2.wba-pn.ru:443 | net=113.30.152.0/24 | SNI=be2.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. 149.202.58.99:443 | net=149.202.58.0/24 | SNI=bab-6.site | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. 162.251.82.131:443 | net=162.251.82.0/24 | SNI=workspace.evan00.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. 104.16.117.43:443 | net=104.16.117.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. 104.16.79.73:443 | net=104.16.79.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. 162.159.44.195:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. 63.141.128.22:443 | net=63.141.128.0/24 | SNI=misty-tooth-78ca.fobogah414-e7b.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. 188.114.96.3:443 | net=188.114.96.0/24 | SNI=masterserver1-vsh.kalleh.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. www.4chan.org:443 | net=104.16.229.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
