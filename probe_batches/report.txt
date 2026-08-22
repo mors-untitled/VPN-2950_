@@ -211,7 +211,7 @@ batch_10.txt: 20 configs
   07. 60.248.219.52:443 | net=60.248.219.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   08. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. www.zsu.gov.ua:443 | net=172.65.90.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. proxyip.hk.cmliussss.net:443 | net=202.61.87.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. proxyip.hk.cmliussss.net:443 | net=156.239.245.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   11. 199.232.78.160:443 | net=199.232.78.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. spider-panel-production-19f9.up.railway.app:443 | net=69.46.46.0/24 | SNI=spider-panel-production-19f9.up.railway.app | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 144.31.82.201.fwqfw783rg2dad.website:443 | net=144.31.82.0/24 | SNI=144.31.82.201.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -231,7 +231,7 @@ batch_11.txt: 20 configs
   05. 185.193.30.94:443 | net=185.193.30.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   06. dx.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   07. free.server11peekconfig.workers.dev:443 | net=172.67.153.0/24 | SNI=free.server11peekconfig.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev:443 | net=104.21.70.0/24 | SNI=05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. 05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev:443 | net=172.67.140.0/24 | SNI=05a5f9v5a6cm563ieoye7j-8tnpd.hsysyegegrygvvvdujhh.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. flat-night-edd0.hosein9saleazhuongooyeh87.workers.dev:443 | net=104.21.78.0/24 | SNI=flat-night-edd0.hosein9saleazhuongooyeh87.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   10. 104.21.31.99:443 | net=104.21.31.0/24 | SNI=6-m23.daegu2031.ccwu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   11. 104.16.89.120:443 | net=104.16.89.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
