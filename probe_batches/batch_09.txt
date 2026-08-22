@@ -17,4 +17,4 @@ vless://7ce54bb3-d612-4aa7-be08-089d3c461d53@52.84.199.28:443?fp=chrome&host=d1y
 vless://d2d0f796-edb0-427a-af32-ae360679f9e7@millionaire.levikogjgfdd.ir:443?path=%2F&security=tls&encryption=none&host=rAyAn-007.fOtOn.dPdNs.oRg&fp=chrome&type=ws&sni=rAyAn-007.fOtOn.dPdNs.oRg#🇯🇵[www.v2nodes.com
 vless://5ca83936-136d-4314-8453-4ba10a86cf60@31.76.65.234.fwqfw783rg2dad.website:443?&security=tls&fp=chrome&sni=31.76.65.234.fwqfw783rg2dad.website&type=ws&headerType=none&host=31.76.65.234.fwqfw783rg2dad.website&path=%2Fwebsocket#🇷🇺[www.v2nodes.com
 vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?path=%2Fconnect&security=tls&encryption=none&host=129.121.95.159&fp=firefox&type=ws&sni=129.121.95.159#🇬🇧[www.v2nodes.com
-vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@188.114.97.3:443?security=tls&type=ws&path=/sg-melbi&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net&fp=chrome#🇸🇬[www.v2nodes.com
+vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.6.70:443?security=tls&type=ws&path=/musiclovers85?ed=512&host=josni.hoyes.cloudns.ch&packetEncoding=xudp&sni=josni.hoyes.cloudns.ch&fp=chrome&encryption=none#🇸🇬[www.v2nodes.com

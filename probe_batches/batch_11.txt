@@ -1,4 +1,4 @@
-vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@172.67.118.45:443?type=ws&security=tls&sni=josni.hoyes.cloudns.ch&path=musiclovers85%3Fed%3D512&host=josni.hoyes.cloudns.ch#🇸🇬[www.v2nodes.com
+vless://d361072e-9e0e-4e2d-8ec7-2a4189b5b23a@chatgpt.com:2053?encryption=none&security=tls&sni=ov.iran-servers.shop&fp=chrome&allowinsecure=0&type=ws&host=ov.iran-servers.shop&path=%2FJ5aLQOY1R9ONWYCM#🇫🇷[www.v2nodes.com
 vless://c7e9c591-2764-423a-afca-efbd010fd396@45.38.143.54:2053?&security=tls&fp=chrome&sni=forfreeuse.rtqa.ru&type=ws&headerType=none&host=forfreeuse.rtqa.ru&path=%2F#🇫🇮[www.v2nodes.com
 vless://da4747a6-be0d-4c1b-90f4-d82ec3012be2@music1000.melobitmusic1.ir:2053?path=/&security=tls&encryption=none&insecure=0&host=music1000.melobitmusic1.ir&fp=chrome&type=ws&allowInsecure=0&sni=music1000.melobitmusic1.ir#🇵🇱[www.v2nodes.com
 vless://180e7d3a-3947-44dc-ba47-68244400f61d@www.speedtest.net:8443?&security=tls&fp=chrome&sni=arvan2.dearhossein-taktaz.ir&type=ws&headerType=none&host=arvan2.dearhossein-taktaz.ir&path=%2F#🇩🇪[www.v2nodes.com
