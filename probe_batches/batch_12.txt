@@ -1,3 +1,4 @@
+vless://2f60be6f-be0c-48b4-9772-b56f42b51ba1@whatismyipaddress.com:2053?&security=tls&fp=firefox&sni=4o4bcp.sixtmapp.com&type=ws&headerType=none&host=4o4bcp.sixtmapp.com&path=%2F#🇨🇦[www.v2nodes.com
 vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@xmm5.130209.xyz:8443?&security=tls&fp=edge&sni=hongkong.11459178.xyz&type=ws&headerType=none&host=hongkong.11459178.xyz&path=%2Fcdn%2Fpackages%2Fruntime-core.tar.gz#🇭🇰[www.v2nodes.com
 vless://fd3ff7be-f277-494b-a651-c210b93f2c19@72.56.236.219:2053?&security=tls&fp=firefox&sni=usa1.wba-pn.ru&type=ws&headerType=none&path=%2F#🇺🇸[www.v2nodes.com
 vless://c7e9c591-2764-423a-afca-efbd010fd396@188.241.241.37:2053?path=%2F&security=tls&encryption=none&insecure=0&host=forfreeuse.rtqa.ru&type=ws&allowInsecure=0&sni=forfreeuse.rtqa.ru#🇫🇮[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@157.137.218.222:62145?&type=tcp&hea
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@134.98.135.220:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
 vless://060a5db6-7ff9-4a64-87c1-8a27be4f11ab@93.119.168.215:60771?type=tcp&headerType=none&path=%2F#🇵🇹[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@92.5.227.75:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@158.178.153.49:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
