@@ -52,7 +52,7 @@ TOP 100:
  185 | 45.155.52.231:443 | IP=45.155.52.231 | SNI=ru2.skydrgn-online.online | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 45.155.52.231:443 | IP=45.155.52.231 | SNI=ru2.skydrgn-online.online | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  175 | 95.85.224.51:443 | IP=95.85.224.51 | SNI=max.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | savesafe.co:443 | IP=162.35.231.138,162.35.231.52,162.35.231.145,162.35.231.142,162.35.231.139,162.35.231.137,162.35.231.141,162.35.231.143,162.35.231.61,162.35.231.140 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | savesafe.co:443 | IP=162.35.231.143,162.35.231.139,162.35.231.140,162.35.231.52,162.35.231.145,162.35.231.141,162.35.231.61,162.35.231.142,162.35.231.138,162.35.231.137 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 167.233.219.201:443 | IP=167.233.219.201 | SNI=www.bing.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 163.53.244.247:443 | IP=163.53.244.247 | SNI=www.bing.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 195.184.247.224:443 | IP=195.184.247.224 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -65,11 +65,11 @@ TOP 100:
  175 | 2.26.101.64:443 | IP=2.26.101.64 | SNI=nordic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.70.32:443 | IP=31.76.70.32 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 2.26.124.49:443 | IP=2.26.124.49 | SNI=www.rumedia-cdn.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | se1.se-cdn.ru:443 | IP=89.125.37.41,89.125.37.51,89.125.37.39,89.125.37.50,89.125.37.37,89.125.37.44,89.125.37.33,89.125.37.43,89.125.37.32,89.125.37.36,89.125.37.40 | SNI=se1.se-cdn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | se1.se-cdn.ru:443 | IP=89.125.37.50,89.125.37.33,89.125.37.43,89.125.37.51,89.125.37.32,89.125.37.39,89.125.37.41,89.125.37.44,89.125.37.40 | SNI=se1.se-cdn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node21.mxvpn.dev:443 | IP=89.208.97.226 | SNI=node21.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.70.31:443 | IP=31.76.70.31 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=edge | REALITY,TCP/RAW,PORT-443
- 175 | ee.cdn-global.pro:443 | IP=217.9.12.233,132.243.65.4,132.243.65.14,132.243.65.13,132.243.65.2,132.243.65.10,132.243.65.16,132.243.65.8,132.243.65.1 | SNI=ee.cdn-global.pro | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | ee.cdn-global.pro:443 | IP=132.243.65.4,132.243.65.1,132.243.65.10,132.243.65.14,132.243.65.8,132.243.65.13,132.243.65.2,132.243.65.16,217.9.12.233 | SNI=ee.cdn-global.pro | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.83.114:443 | IP=31.76.83.114 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 188.127.247.129:443 | IP=188.127.247.129 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.90.56.231:443 | IP=45.90.56.231 | SNI=www.cloudflare.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
