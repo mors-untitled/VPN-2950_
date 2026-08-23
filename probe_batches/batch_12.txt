@@ -1,3 +1,4 @@
+vless://180e7d3a-3947-44dc-ba47-68244400f61d@www.speedtest.net:8443?&security=tls&fp=chrome&sni=arvan2.dearhossein-taktaz.ir&type=ws&headerType=none&host=arvan2.dearhossein-taktaz.ir&path=%2F#🇩🇪[www.v2nodes.com
 vless://f1d247db-d7ce-4eb8-9c0d-7b10603cd0b4@103.148.73.167:8443?&security=tls&fp=chrome&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#🇭🇰[www.v2nodes.com
 vless://fd3ff7be-f277-494b-a651-c210b93f2c19@72.56.236.219:2053?&security=tls&fp=firefox&sni=usa1.wba-pn.ru&type=ws&headerType=none&path=%2F#🇺🇸[www.v2nodes.com
 vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@xmm5.130209.xyz:8443?&security=tls&fp=edge&sni=hongkong.11459178.xyz&type=ws&headerType=none&host=hongkong.11459178.xyz&path=%2Fcdn%2Fpackages%2Fruntime-core.tar.gz#🇭🇰[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@141.148.232.137:62145?&type=tcp&hea
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@141.144.195.7:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@92.5.227.75:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@158.178.153.49:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@134.98.135.220:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
