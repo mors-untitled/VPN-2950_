@@ -195,7 +195,7 @@ batch_09.txt: 20 configs
   13. 5hsytrdbbvcrxokk.localip.ir:443 | net=104.18.32.0/24 | SNI=nl-10.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. paid.sshehi.ggff.net:443 | net=178.128.209.0/24 | SNI=aka.ms | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   15. 104.16.63.25:443 | net=104.16.63.0/24 | SNI=germany-2.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. cdn4.velnaro.ir:443 | net=172.67.201.0/24 | SNI=cdn4.velnaro.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. cdn4.velnaro.ir:443 | net=104.21.36.0/24 | SNI=cdn4.velnaro.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   17. 52.84.199.28:443 | net=52.84.199.0/24 | SNI=d1yxsk0zprgivr.cloudfront.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   18. millionaire.levikogjgfdd.ir:443 | net=104.18.28.0/24 | SNI=rayan-007.foton.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   19. 45.155.68.9:443 | net=45.155.68.0/24 | SNI=it2ws.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -206,64 +206,64 @@ batch_10.txt: 20 configs
   02. 31.76.65.234.fwqfw783rg2dad.website:443 | net=31.76.65.0/24 | SNI=31.76.65.234.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   03. 104.16.89.120:443 | net=104.16.89.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   04. 60.248.219.53:443 | net=60.248.219.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  05. dx.mmhh.eu.cc:443 | net=162.159.12.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  06. cfyes.ziyoufly.xyz:443 | net=172.64.145.0/24 | SNI=cf-uh-jp01.23523463.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. 104.17.28.89:443 | net=104.17.28.0/24 | SNI=workspace.evan00.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. 198.62.62.171:443 | net=198.62.62.0/24 | SNI=639222734213747055.forester-homaxe.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. 172.67.161.109:443 | net=172.67.161.0/24 | SNI=1-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. 185.193.30.94:443 | net=185.193.30.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. 104.20.6.134:443 | net=104.20.6.0/24 | SNI=r.mediashoppp.sbs | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. 104.16.72.251:443 | net=104.16.72.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. 104.19.109.202:443 | net=104.19.109.0/24 | SNI=cf.udpid.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  17. 104.16.79.73:443 | net=104.16.79.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  18. 104.16.80.73:443 | net=104.16.80.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. 81.177.214.150:443 | net=81.177.214.0/24 | SNI=fin4.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. dx.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. cfyes.ziyoufly.xyz:443 | net=104.18.42.0/24 | SNI=cf-uh-jp01.23523463.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. yd.mmhh.eu.cc:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. 104.17.28.89:443 | net=104.17.28.0/24 | SNI=workspace.evan00.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. 198.62.62.171:443 | net=198.62.62.0/24 | SNI=639222734213747055.forester-homaxe.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. 172.67.161.109:443 | net=172.67.161.0/24 | SNI=1-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. 185.193.30.94:443 | net=185.193.30.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. 104.20.6.134:443 | net=104.20.6.0/24 | SNI=r.mediashoppp.sbs | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. 104.16.72.251:443 | net=104.16.72.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. 104.19.109.202:443 | net=104.19.109.0/24 | SNI=cf.udpid.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. 104.16.79.73:443 | net=104.16.79.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. 104.16.80.73:443 | net=104.16.80.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_11.txt: 20 configs
-  01. meshbuzz.bond:443 | net=104.17.108.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  02. be2.wba-pn.ru:443 | net=113.30.152.0/24 | SNI=be2.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  03. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  04. 104.19.45.195:443 | net=104.19.45.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  05. 104.16.117.43:443 | net=104.16.117.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  06. 162.159.44.195:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. ipw.ygdfw.com:443 | net=104.25.233.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. proxyip.hk.cmliussss.net:443 | net=43.168.16.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. japan.com:443 | net=172.67.70.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. singapore.com:443 | net=104.26.12.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. 88.216.69.144:443 | net=88.216.69.0/24 | SNI=r5zenrelur2s.pqzdileiu8es.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. music1000.melobitmusic1.ir:2053 | net=172.67.180.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  14. 185.112.249.201:8443 | net=185.112.249.0/24 | SNI=web-socket.tgdaosheng.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  15. www.speedtest.net:8443 | net=104.17.148.0/24 | SNI=arvan2.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  16. 103.148.73.167:8443 | net=103.148.73.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  17. 72.56.236.219:2053 | net=72.56.236.0/24 | SNI=usa1.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  18. 188.241.241.37:2053 | net=188.241.241.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  19. 104.18.155.141:8443 | net=104.18.155.0/24 | SNI=arvan.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  20. 177.3.212.127:8443 | net=177.3.212.0/24 | SNI=- | type=- | flow=- | score=20 | TLS,PORT-8443
+  01. 81.177.214.150:443 | net=81.177.214.0/24 | SNI=fin4.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  02. meshbuzz.bond:443 | net=104.17.108.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. be2.wba-pn.ru:443 | net=113.30.152.0/24 | SNI=be2.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  04. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. 104.19.45.195:443 | net=104.19.45.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. 104.16.117.43:443 | net=104.16.117.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. chat.openai.com:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. ipw.ygdfw.com:443 | net=104.25.233.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. proxyip.hk.cmliussss.net:443 | net=219.76.13.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. japan.com:443 | net=104.26.4.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. singapore.com:443 | net=104.26.13.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. 88.216.69.144:443 | net=88.216.69.0/24 | SNI=r5zenrelur2s.pqzdileiu8es.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. music1000.melobitmusic1.ir:2053 | net=172.67.180.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  15. 185.112.249.201:8443 | net=185.112.249.0/24 | SNI=web-socket.tgdaosheng.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  16. www.speedtest.net:8443 | net=104.17.147.0/24 | SNI=arvan2.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  17. 103.148.73.167:8443 | net=103.148.73.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  18. 72.56.236.219:2053 | net=72.56.236.0/24 | SNI=usa1.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  19. 188.241.241.37:2053 | net=188.241.241.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  20. 104.18.155.141:8443 | net=104.18.155.0/24 | SNI=arvan.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
 
 batch_12.txt: 20 configs
-  01. xn-de.dbsll.ir:20017 | net=144.31.157.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  02. 158.178.153.49:62145 | net=158.178.153.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  03. 164.68.127.108:24144 | net=164.68.127.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  04. 149.130.189.155:62145 | net=149.130.189.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  05. trone.soundfiy.ir:61169 | net=93.114.98.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  06. 45.74.159.200:10131 | net=45.74.159.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  07. 164.92.230.180:8880 | net=164.92.230.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  08. 63.183.163.238:22222 | net=63.183.163.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  09. 64.226.117.146:8880 | net=64.226.117.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  10. 104.248.251.106:8880 | net=104.248.251.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  11. 63.188.40.90:22223 | net=63.188.40.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  12. 92.5.227.75:62145 | net=92.5.227.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  13. 134.98.136.110:62145 | net=134.98.136.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  14. 193.123.37.20:62145 | net=193.123.37.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  15. 143.47.183.183:62145 | net=143.47.183.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  16. 141.148.232.137:62145 | net=141.148.232.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  17. 141.144.195.7:62145 | net=141.144.195.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  18. 193.124.204.145:49853 | net=193.124.204.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  19. 130.185.123.32:19896 | net=130.185.123.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  20. 134.98.135.220:62145 | net=134.98.135.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  01. 177.3.212.127:8443 | net=177.3.212.0/24 | SNI=- | type=- | flow=- | score=20 | TLS,PORT-8443
+  02. xn-de.dbsll.ir:20017 | net=144.31.157.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  03. 158.178.153.49:62145 | net=158.178.153.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  04. 164.68.127.108:24144 | net=164.68.127.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  05. 149.130.189.155:62145 | net=149.130.189.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  06. trone.soundfiy.ir:61169 | net=93.114.98.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  07. 45.74.159.200:10131 | net=45.74.159.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  08. 164.92.230.180:8880 | net=164.92.230.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  09. 63.183.163.238:22222 | net=63.183.163.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  10. 64.226.117.146:8880 | net=64.226.117.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  11. 104.248.251.106:8880 | net=104.248.251.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  12. 63.188.40.90:22223 | net=63.188.40.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  13. 92.5.227.75:62145 | net=92.5.227.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  14. 134.98.136.110:62145 | net=134.98.136.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  15. 193.123.37.20:62145 | net=193.123.37.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  16. 143.47.183.183:62145 | net=143.47.183.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  17. 141.148.232.137:62145 | net=141.148.232.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  18. 141.144.195.7:62145 | net=141.144.195.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  19. 193.124.204.145:49853 | net=193.124.204.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  20. 130.185.123.32:19896 | net=130.185.123.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
 
