@@ -1,6 +1,7 @@
 vless://9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d@ipw.ygdfw.com:443?&security=tls&fp=unsafe&sni=p2bm6l1.freelanceriran98.ir&type=ws&headerType=none&host=p2bm6l1.freelanceriran98.ir&path=%2Fws-dk#🇩🇰[www.v2nodes.com
 vless://c1c04450-bf71-4049-ad0c-9cf6d94d9f1f@60.248.219.78:443?&security=tls&sni=ty986gfazs.cainiaohub.xyz&type=ws&headerType=none&host=ty986gfazs.cainiaohub.xyz&path=%2F81574b6b-c9d7-44a0-b83d-dad56e8cb530#🇹🇼[www.v2nodes.com
 vless://1078d418-b4e0-4668-9018-dc90c2042d61@104.17.28.89:443?encryption=none&type=ws&path=%252F&host=workspace.evan00.dpdns.org&security=tls&sni=workspace.evan00.dpdns.org#🇸🇬[www.v2nodes.com
+vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@162.159.44.195:443?allowInsecure=1&encryption=none&host=hhlfy.twiladaphne.ndjp.net&path=%2Ffp%3Drandom&security=tls&sni=hhlfy.twiladaphne.ndjp.net&type=ws#🇯🇵[www.v2nodes.com
 vless://2b622609-bb92-49e8-9631-4ada00324f47@it2ws.wba-pn.ru:443?path=%2F&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=it2ws.wba-pn.ru#🇮🇹[www.v2nodes.com
 vless://50414e45-4c5f-5a45-5553-4d64f1370eeb@88.216.69.144:443?encryption=none&security=tls&sni=r5zenrelur2s.pqzdileiu8es.workers.dev&fp=ios&insecure=0&allowInsecure=0&type=ws&host=r5zenrelur2s.pqzdileiu8es.workers.dev&path=%2Fstream%2FPANEL_ZEUS%2F4d64f1370eeb%2Floc-0#🇹🇷[www.v2nodes.com
 vless://9ede262c-37f9-4363-82cd-9802dafe9e1f@50.7.249.218:8443?&security=tls&fp=firefox&alpn=http%2F1.1&sni=apkav-5.bosx.net&type=ws&headerType=none&path=%2Fapi%2Fconnect#🇵🇱[www.v2nodes.com
@@ -17,4 +18,3 @@ vless://ac7fb60f-0b7a-465d-a002-05160ec04ed6@143.246.136.78:443?sni=wok1.api3-ma
 vless://81d520e6-079a-49cb-a2ef-05c3cd3946d8@31.15.16.37:80?&type=tcp&headerType=none&path=%2F#🇱🇻[www.v2nodes.com
 vless://7e85ed3f-3829-45b1-8b1c-6a2e45ebc967@164.68.127.108:24144?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=none&encryption=none&headerType=none&type=tcp#🇫🇷[www.v2nodes.com
 vless://d2733ae6-44e7-4b14-8c2d-3f5bef74cdec@144.31.157.104:20017?security=none&encryption=none&host=play.google.com&headerType=http&type=tcp#🏳[www.v2nodes.com
-vless://caec0d8d-ab2f-4247-b97d-7fb1a34ab195@182.16.61.2:45647?encryption=none&security=none&type=tcp&headerType=none#🇺🇸[www.v2nodes.com
