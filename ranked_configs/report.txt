@@ -30,12 +30,12 @@ TOP 100:
  127 | 150.241.82.19:443 | IP=150.241.82.19 | SNI=america.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 80.66.78.227:443 | IP=80.66.78.227 | SNI=cdn-se.alohaapp.uk | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 2.26.124.49:443 | IP=2.26.124.49 | SNI=www.rumedia-cdn.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | se1.se-cdn.ru:443 | IP=89.125.37.44,89.125.37.51,89.125.37.41,89.125.37.32,89.125.37.43,89.125.37.50,89.125.37.39,89.125.37.33,89.125.37.40 | SNI=se1.se-cdn.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | se1.se-cdn.ru:443 | IP=89.125.37.51,89.125.37.39,89.125.37.43,89.125.37.50,89.125.37.33,89.125.37.41,89.125.37.32,89.125.37.40,89.125.37.44 | SNI=se1.se-cdn.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | node21.mxvpn.dev:443 | IP=89.208.97.226 | SNI=node21.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 77.221.152.100:443 | IP=77.221.152.100 | SNI=node14.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 31.76.70.31:443 | IP=31.76.70.31 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | ee.cdn-global.pro:443 | IP=132.243.65.2,132.243.65.16,132.243.65.13,132.243.65.1,132.243.65.4,132.243.65.14,132.243.65.10,217.9.12.233,132.243.65.8 | SNI=ee.cdn-global.pro | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | ee.cdn-global.pro:443 | IP=132.243.65.4,132.243.65.13,132.243.65.14,132.243.65.8,132.243.65.1,132.243.65.2,217.9.12.233,132.243.65.16,132.243.65.10 | SNI=ee.cdn-global.pro | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 31.76.83.114:443 | IP=31.76.83.114 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 188.127.247.129:443 | IP=188.127.247.129 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 138.124.125.211:443 | IP=138.124.125.211 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
@@ -50,7 +50,7 @@ TOP 100:
  127 | ha0o-6njhon.uniora.top:443 | IP=23.251.47.71 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 77.91.66.178:443 | IP=77.91.66.178 | SNI=de1.hat.onl | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 84.21.189.193:443 | IP=84.21.189.193 | SNI=stackoverflow.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | savesafe.co:443 | IP=162.35.231.142,162.35.231.143,162.35.231.141,162.35.231.140,162.35.231.138,162.35.231.139,162.35.231.52,162.35.231.145,162.35.231.137,162.35.231.61 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | savesafe.co:443 | IP=162.35.231.61,162.35.231.137,162.35.231.142,162.35.231.140,162.35.231.141,162.35.231.139,162.35.231.52,162.35.231.145,162.35.231.138,162.35.231.143 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 213.165.39.188:443 | IP=213.165.39.188 | SNI=node3.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 213.165.39.193:443 | IP=213.165.39.193 | SNI=node4.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
