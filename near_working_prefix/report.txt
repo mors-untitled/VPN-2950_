@@ -84,7 +84,7 @@ TOP 100:
  175 | 31.76.70.32:443 | IP=31.76.70.32 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.70.31:443 | IP=31.76.70.31 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=edge | REALITY,TCP/RAW,PORT-443
- 175 | ee.cdn-global.pro:443 | IP=132.243.65.10,132.243.65.4,217.9.12.233,132.243.65.13,132.243.65.2,132.243.65.14,132.243.65.16,132.243.65.1,132.243.65.8 | SNI=ee.cdn-global.pro | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | ee.cdn-global.pro:443 | IP=132.243.65.13,132.243.65.4,132.243.65.16,132.243.65.2,132.243.65.8,132.243.65.14,217.9.12.233,132.243.65.10,132.243.65.1 | SNI=ee.cdn-global.pro | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.83.114:443 | IP=31.76.83.114 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 188.127.247.129:443 | IP=188.127.247.129 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 167.233.219.201:443 | IP=167.233.219.201 | SNI=www.bing.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -92,7 +92,7 @@ TOP 100:
  175 | 85.155.226.140:443 | IP=85.155.226.140 | SNI=getsavesafe.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 89.105.208.121:443 | IP=89.105.208.121 | SNI=n1.cloudgaming.one | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.219.161:443 | IP=144.31.219.161 | SNI=eu-west.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | savesafe.co:443 | IP=162.35.231.143,162.35.231.145,162.35.231.140,162.35.231.139,162.35.231.61,162.35.231.137,162.35.231.141,162.35.231.52,162.35.231.138,162.35.231.142 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | savesafe.co:443 | IP=162.35.231.139,162.35.231.143,162.35.231.140,162.35.231.141,162.35.231.137,162.35.231.145,162.35.231.138,162.35.231.61,162.35.231.142,162.35.231.52 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | ha0o-6njhon.uniora.top:443 | IP=23.251.47.71 | SNI=www.apple.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | free-amsterdam-node-1.cloudwidecdn.com:443 | IP=86.54.28.75 | SNI=www.apple.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 139.64.166.55:443 | IP=139.64.166.55 | SNI=www.cloudflare.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
