@@ -36,7 +36,7 @@ TOP 100:
  127 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 31.76.70.31:443 | IP=31.76.70.31 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | ee.cdn-global.pro:443 | IP=132.243.65.4,132.243.65.10,132.243.65.1,132.243.65.14,132.243.65.13,217.9.12.233,132.243.65.2,132.243.65.8,132.243.65.16 | SNI=ee.cdn-global.pro | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | ee.cdn-global.pro:443 | IP=132.243.65.1,132.243.65.4,132.243.65.2,132.243.65.16,217.9.12.233,132.243.65.8,132.243.65.14,132.243.65.10,132.243.65.13 | SNI=ee.cdn-global.pro | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 31.76.83.114:443 | IP=31.76.83.114 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 188.127.247.129:443 | IP=188.127.247.129 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 151.242.168.181:443 | IP=151.242.168.181 | SNI=kibi-institut.de | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
@@ -57,7 +57,7 @@ TOP 100:
  127 | 95.85.228.212:443 | IP=95.85.228.212 | SNI=est.hatvpn.org | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.168.24:443 | IP=144.31.168.24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.219.161:443 | IP=144.31.219.161 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | savesafe.co:443 | IP=162.35.231.139,162.35.231.52,162.35.231.141,162.35.231.140,162.35.231.143,162.35.231.138,162.35.231.142,162.35.231.145,162.35.231.137,162.35.231.61 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | savesafe.co:443 | IP=162.35.231.52,162.35.231.140,162.35.231.142,162.35.231.61,162.35.231.139,162.35.231.145,162.35.231.138,162.35.231.143,162.35.231.137,162.35.231.141 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | ha0o-6njhon.uniora.top:443 | IP=23.251.47.71 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 144.31.168.133:443 | IP=144.31.168.133 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | free-amsterdam-node-1.cloudwidecdn.com:443 | IP=86.54.28.75 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
