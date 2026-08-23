@@ -1,269 +1,269 @@
-Total VLESS source: 431
-Unique /24 groups: 303
+Total VLESS source: 450
+Unique /24 groups: 327
 Selected candidates: 240
 Batches: 12
 
 batch_01.txt: 20 configs
   01. 95.85.224.51:443 | net=95.85.224.0/24 | SNI=max.ru | type=tcp | flow=xtls-rprx-vision | score=117 | REALITY,VISION,TCP/RAW,PORT-443,KNOWN-SNI
   02. 188.225.33.206:8443 | net=188.225.33.0/24 | SNI=max.ru | type=tcp | flow=xtls-rprx-vision | score=114 | REALITY,VISION,TCP/RAW,PORT-8443,KNOWN-SNI
-  03. savesafe.co:443 | net=162.35.231.0/24 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  04. 167.233.219.201:443 | net=167.233.219.0/24 | SNI=www.bing.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  05. 163.53.244.247:443 | net=163.53.244.0/24 | SNI=www.bing.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  06. 195.184.247.224:443 | net=195.184.247.0/24 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  07. staging.lastilhame.monster:443 | net=107.181.151.0/24 | SNI=www.microsoft.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  08. 132.243.223.88:443 | net=132.243.223.0/24 | SNI=fin2.freeinternat.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  09. 185.218.194.71:443 | net=185.218.194.0/24 | SNI=www.amd.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  10. 45.195.228.227:443 | net=45.195.228.0/24 | SNI=storage.yandex.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  11. 85.192.49.151:443 | net=85.192.49.0/24 | SNI=de.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  12. 150.241.75.198:443 | net=150.241.75.0/24 | SNI=lv1.hat.onl | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  13. 150.241.86.150:443 | net=150.241.86.0/24 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  14. 2.26.101.64:443 | net=2.26.101.0/24 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  15. 31.76.70.32:443 | net=31.76.70.0/24 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  16. 31.76.3.54:443 | net=31.76.3.0/24 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  17. 150.241.82.19:443 | net=150.241.82.0/24 | SNI=america.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  03. 144.31.86.136:443 | net=144.31.86.0/24 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  04. nodefulcrum.mooo.com:443 | net=2.27.9.0/24 | SNI=nodefulcrum.mooo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  05. free-amsterdam-node-1.cloudwidecdn.com:443 | net=86.54.28.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  06. staging.lastilhame.monster:443 | net=107.181.151.0/24 | SNI=www.microsoft.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  07. 132.243.223.88:443 | net=132.243.223.0/24 | SNI=fin2.freeinternat.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  08. 185.218.194.71:443 | net=185.218.194.0/24 | SNI=www.amd.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  09. 45.195.228.227:443 | net=45.195.228.0/24 | SNI=storage.yandex.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  10. 150.241.75.198:443 | net=150.241.75.0/24 | SNI=lv1.hat.onl | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  11. 150.241.86.150:443 | net=150.241.86.0/24 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  12. 150.241.73.137:443 | net=150.241.73.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  13. 31.76.70.32:443 | net=31.76.70.0/24 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  14. 31.76.3.54:443 | net=31.76.3.0/24 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  15. 2.26.101.64:443 | net=2.26.101.0/24 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  16. 150.241.82.19:443 | net=150.241.82.0/24 | SNI=america.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  17. 80.66.78.227:443 | net=80.66.78.0/24 | SNI=cdn-se.alohaapp.uk | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   18. 2.26.124.49:443 | net=2.26.124.0/24 | SNI=www.rumedia-cdn.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   19. se1.se-cdn.ru:443 | net=89.125.37.0/24 | SNI=se1.se-cdn.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   20. 77.221.152.100:443 | net=77.221.152.0/24 | SNI=node14.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
 
 batch_02.txt: 20 configs
-  01. node21.mxvpn.dev:443 | net=89.208.97.0/24 | SNI=node21.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  01. 89.208.97.226:443 | net=89.208.97.0/24 | SNI=node21.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   02. 152.53.114.186:443 | net=152.53.114.0/24 | SNI=as.tunnelx.space | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   03. ee.cdn-global.pro:443 | net=132.243.65.0/24 | SNI=ee.cdn-global.pro | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   04. 31.76.83.114:443 | net=31.76.83.0/24 | SNI=baltic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   05. 188.127.247.129:443 | net=188.127.247.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  06. 45.90.56.231:443 | net=45.90.56.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  07. gb1.murhost.network:443 | net=164.37.104.0/24 | SNI=gb1.murhost.network | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  08. nl.go-vpn.club:443 | net=unresolved | SNI=gateway.icloud.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  09. 31.76.5.26:443 | net=31.76.5.0/24 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  10. 178.162.253.64:443 | net=178.162.253.0/24 | SNI=de.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  11. 103.109.234.166:443 | net=103.109.234.0/24 | SNI=dep.opngtr.nl | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  06. 144.31.213.225:443 | net=144.31.213.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  07. 155.103.70.160:443 | net=155.103.70.0/24 | SNI=tr.savesafe.cc | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  08. 195.184.247.220:443 | net=195.184.247.0/24 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  09. 150.241.102.202:443 | net=150.241.102.0/24 | SNI=america.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  10. 85.155.226.140:443 | net=85.155.226.0/24 | SNI=getsavesafe.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  11. 85.192.49.151:443 | net=85.192.49.0/24 | SNI=de.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
   12. 185.221.163.211:443 | net=185.221.163.0/24 | SNI=fin1.panel11.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  13. 87.239.249.137:443 | net=87.239.249.0/24 | SNI=www.foxsports.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  14. 144.31.171.143:443 | net=144.31.171.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  15. 94.183.157.249:443 | net=94.183.157.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  16. 144.31.168.133:443 | net=144.31.168.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  17. 144.31.125.60:443 | net=144.31.125.0/24 | SNI=www.intel.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  18. 144.31.219.161:443 | net=144.31.219.0/24 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  19. 2.27.9.209:443 | net=2.27.9.0/24 | SNI=nodefulcrum.mooo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  20. 84.21.189.193:443 | net=84.21.189.0/24 | SNI=stackoverflow.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  13. 94.183.157.249:443 | net=94.183.157.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  14. 144.31.125.60:443 | net=144.31.125.0/24 | SNI=www.intel.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  15. 144.31.166.71:443 | net=144.31.166.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  16. 84.21.189.193:443 | net=84.21.189.0/24 | SNI=stackoverflow.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  17. savesafe.co:443 | net=162.35.231.0/24 | SNI=savesafe.co | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  18. ha0o-6njhon.uniora.top:443 | net=23.251.47.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  19. 212.118.40.187:443 | net=212.118.40.0/24 | SNI=www.cisco.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  20. 89.105.208.121:443 | net=89.105.208.0/24 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
 
 batch_03.txt: 20 configs
-  01. ha0o-6njhon.uniora.top:443 | net=23.251.47.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  02. free-amsterdam-node-1.cloudwidecdn.com:443 | net=86.54.28.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  03. 212.118.40.187:443 | net=212.118.40.0/24 | SNI=www.cisco.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  04. 213.165.39.188:443 | net=213.165.39.0/24 | SNI=node3.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  05. 95.85.228.212:443 | net=95.85.228.0/24 | SNI=est.hatvpn.org | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  06. 150.241.102.202:443 | net=150.241.102.0/24 | SNI=america.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  07. 50.7.41.142:443 | net=50.7.41.0/24 | SNI=deepl.com | type=raw | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  08. 43.165.177.82:443 | net=43.165.177.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  09. 194.48.250.172:443 | net=194.48.250.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  10. 45.12.254.86:443 | net=45.12.254.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  11. 77.91.66.178:443 | net=77.91.66.0/24 | SNI=de1.hat.onl | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  12. 95.85.247.156:443 | net=95.85.247.0/24 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  13. 85.155.226.27:443 | net=85.155.226.0/24 | SNI=getsavesafe.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  14. 89.105.208.121:443 | net=89.105.208.0/24 | SNI=n1.cloudgaming.one | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  15. u234-6njjdk.startora.top:443 | net=23.251.55.0/24 | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  16. it.getsavesafe.com:443 | net=37.202.205.0/24 | SNI=it.savesafe.cc | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  17. 144.31.86.136:443 | net=144.31.86.0/24 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  18. 139.64.166.55:443 | net=139.64.166.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  19. 155.103.70.160:443 | net=155.103.70.0/24 | SNI=tr.savesafe.cc | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  20. 64.188.77.13:443 | net=64.188.77.0/24 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  01. 213.165.39.188:443 | net=213.165.39.0/24 | SNI=node3.mxvpn.dev | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  02. 95.85.228.212:443 | net=95.85.228.0/24 | SNI=est.hatvpn.org | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  03. 50.7.41.142:443 | net=50.7.41.0/24 | SNI=deepl.com | type=raw | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  04. cdn-ru3.alohaapp.uk:443 | net=217.114.14.0/24 | SNI=cdn-ru3.alohaapp.uk | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  05. 138.124.125.211:443 | net=138.124.125.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  06. 178.162.253.64:443 | net=178.162.253.0/24 | SNI=de.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  07. 144.31.168.24:443 | net=144.31.168.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  08. 77.91.66.178:443 | net=77.91.66.0/24 | SNI=de1.hat.onl | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  09. 139.64.166.55:443 | net=139.64.166.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  10. 140.99.223.187:443 | net=140.99.223.0/24 | SNI=savesafe.run | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  11. 45.12.254.86:443 | net=45.12.254.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  12. 95.85.247.155:443 | net=95.85.247.0/24 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  13. 64.188.77.13:443 | net=64.188.77.0/24 | SNI=eu-west.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  14. 151.242.168.181:443 | net=151.242.168.0/24 | SNI=kibi-institut.de | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  15. 43.165.177.82:443 | net=43.165.177.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  16. 163.128.98.110:443 | net=163.128.98.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  17. 23.81.34.120:443 | net=23.81.34.0/24 | SNI=gb.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  18. 184.107.141.174:443 | net=184.107.141.0/24 | SNI=ca.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  19. 207.56.137.51:443 | net=207.56.137.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  20. 169.40.42.15:443 | net=169.40.42.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
 
 batch_04.txt: 20 configs
-  01. kz2.techdatacloud.org:443 | net=5.180.42.0/24 | SNI=cloud.mail.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  02. cdn-ru3.alohaapp.uk:443 | net=217.114.14.0/24 | SNI=cdn-ru3.alohaapp.uk | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  03. 138.124.125.211:443 | net=138.124.125.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  04. 45.150.66.201:443 | net=45.150.66.0/24 | SNI=www.nvidia.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  05. cdn.pinecloud.net:443 | net=144.31.213.0/24 | SNI=cdn.pinecloud.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  06. 163.128.98.110:443 | net=163.128.98.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  07. 23.81.34.120:443 | net=23.81.34.0/24 | SNI=gb.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  08. 184.107.141.174:443 | net=184.107.141.0/24 | SNI=ca.servers.gracevpnbuy.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  09. 138.124.180.137:443 | net=138.124.180.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  10. 144.31.242.1:443 | net=144.31.242.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  11. 178.128.112.70:443 | net=178.128.112.0/24 | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  12. 78.159.131.235:443 | net=78.159.131.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  13. 46.29.235.9:443 | net=46.29.235.0/24 | SNI=telegraf.lv | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  14. 162.128.181.182:443 | net=162.128.181.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  15. 5.34.182.23:443 | net=5.34.182.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  16. 158.69.112.254:443 | net=158.69.112.0/24 | SNI=www.speedtest.net | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  17. 83.147.18.3:443 | net=83.147.18.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  18. 91.192.81.214:443 | net=91.192.81.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  19. 169.40.42.173:443 | net=169.40.42.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  20. 178.83.31.93:443 | net=178.83.31.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  01. 46.29.235.9:443 | net=46.29.235.0/24 | SNI=telegraf.lv | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  02. 162.128.181.182:443 | net=162.128.181.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  03. 144.31.242.69:443 | net=144.31.242.0/24 | SNI=dk1.hat.onl | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  04. 45.91.52.125:443 | net=45.91.52.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  05. 5.34.182.23:443 | net=5.34.182.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  06. 66.175.217.170:443 | net=66.175.217.0/24 | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  07. 148.113.5.44:443 | net=148.113.5.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  08. u234-6njjdk.startora.top:443 | net=23.251.55.0/24 | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  09. 178.83.31.93:443 | net=178.83.31.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  10. 91.192.81.214:443 | net=91.192.81.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  11. 31.76.4.103:443 | net=31.76.4.0/24 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  12. 216.152.147.28:443 | net=216.152.147.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  13. 79.127.243.217:443 | net=79.127.243.0/24 | SNI=www.bing.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  14. 6ucb-1936he6.qvanta.top:443 | net=162.128.84.0/24 | SNI=www.bing.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  15. yebm-1936hwy.revora.top:443 | net=162.128.87.0/24 | SNI=www.bing.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  16. 138.124.180.137:443 | net=138.124.180.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  17. 193.238.153.15:443 | net=193.238.153.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  18. 82.117.255.87:443 | net=82.117.255.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  19. 167.17.69.171:443 | net=167.17.69.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
+  20. de-193-58.neobo-tooth.ru:2053 | net=193.58.121.0/24 | SNI=vk.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-2053
 
 batch_05.txt: 20 configs
-  01. 167.17.69.171:443 | net=167.17.69.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-443
-  02. 89.36.161.222:2053 | net=89.36.161.0/24 | SNI=vk.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-2053
-  03. de-193-58.neobo-tooth.ru:2053 | net=193.58.121.0/24 | SNI=vk.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-2053
-  04. 172.236.210.140:8443 | net=172.236.210.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
-  05. 201.24.53.247:8443 | net=201.24.53.0/24 | SNI=www.rumedia-cdn.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
-  06. 144.31.131.241:8443 | net=144.31.131.0/24 | SNI=mold.speedload.online | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
-  07. b2.cryptoofarm.com:8443 | net=177.3.213.0/24 | SNI=b2.cryptoofarm.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
-  08. 84.32.209.7:443 | net=84.32.209.0/24 | SNI=dartsearch-cn.net | type=tcp | flow=xtls-rprx-vision | score=106 | REALITY,VISION,TCP/RAW,PORT-443
-  09. 77.110.99.144:443 | net=77.110.99.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=106 | REALITY,VISION,TCP/RAW,PORT-443
-  10. 47.253.226.114:443 | net=47.253.226.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=106 | REALITY,VISION,TCP/RAW,PORT-443
-  11. 144.31.76.198:13443 | net=144.31.76.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  12. 51.158.206.26:23576 | net=51.158.206.0/24 | SNI=fuck.rkn | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  01. 172.236.210.140:8443 | net=172.236.210.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
+  02. b2.cryptoofarm.com:8443 | net=177.3.213.0/24 | SNI=b2.cryptoofarm.com | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
+  03. 144.31.131.241:8443 | net=144.31.131.0/24 | SNI=mold.speedload.online | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
+  04. 45.84.1.247:8443 | net=45.84.1.0/24 | SNI=rbc.ru | type=tcp | flow=xtls-rprx-vision | score=109 | REALITY,VISION,TCP/RAW,PORT-8443
+  05. 84.32.209.7:443 | net=84.32.209.0/24 | SNI=dartsearch-cn.net | type=tcp | flow=xtls-rprx-vision | score=106 | REALITY,VISION,TCP/RAW,PORT-443
+  06. 77.110.99.144:443 | net=77.110.99.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=106 | REALITY,VISION,TCP/RAW,PORT-443
+  07. 47.253.226.114:443 | net=47.253.226.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=106 | REALITY,VISION,TCP/RAW,PORT-443
+  08. 46.243.235.177:5443 | net=46.243.235.0/24 | SNI=max.ru | type=tcp | flow=xtls-rprx-vision | score=104 | REALITY,VISION,TCP/RAW,KNOWN-SNI
+  09. 15.204.97.195:23576 | net=15.204.97.0/24 | SNI=fuck.rkn | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  10. 3.0.111.82:12972 | net=3.0.111.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  11. 51.158.206.96:23576 | net=51.158.206.0/24 | SNI=fuck.rkn | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  12. 83.219.97.128:13443 | net=83.219.97.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
   13. 77.91.84.96:57228 | net=77.91.84.0/24 | SNI=www.googletagmanager.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
   14. 195.123.210.168:13443 | net=195.123.210.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  15. 150.241.73.177:13443 | net=150.241.73.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  16. 62.210.91.2:23576 | net=62.210.91.0/24 | SNI=fuck.rkn | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  17. 5.253.30.99:40443 | net=5.253.30.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  18. 78.159.247.253:2027 | net=78.159.247.0/24 | SNI=storage.yandex.net | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  19. djuc1.rapidmesh.ir:2096 | net=57.131.138.0/24 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  20. 87.121.89.80:13443 | net=87.121.89.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  15. 62.210.91.2:23576 | net=62.210.91.0/24 | SNI=fuck.rkn | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  16. 78.159.247.253:2027 | net=78.159.247.0/24 | SNI=storage.yandex.net | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  17. 87.121.89.80:13443 | net=87.121.89.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  18. 144.31.5.171:753 | net=144.31.5.0/24 | SNI=www.nvidia.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  19. 31.76.5.26:13443 | net=31.76.5.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  20. 94.241.174.157:40443 | net=94.241.174.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
 
 batch_06.txt: 20 configs
-  01. 144.31.5.171:753 | net=144.31.5.0/24 | SNI=www.nvidia.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  02. 45.121.50.241:50159 | net=45.121.50.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  03. 35.180.187.82:12228 | net=35.180.187.0/24 | SNI=www.tesla.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  04. 5.253.42.164:40443 | net=5.253.42.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  05. 94.241.174.157:40443 | net=94.241.174.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  06. 15.204.97.195:23576 | net=15.204.97.0/24 | SNI=fuck.rkn | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  07. 154.19.187.249:20725 | net=154.19.187.0/24 | SNI=buylite.tv.apple.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  08. netraidly.ru:40443 | net=72.56.92.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  09. 31.76.79.118:2444 | net=31.76.79.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  10. 3.0.111.82:12972 | net=3.0.111.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  11. 3.39.4.109:13672 | net=3.39.4.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  12. 193.151.108.89:13443 | net=193.151.108.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  13. 138.124.254.21:2096 | net=138.124.254.0/24 | SNI=it-one.quiet-rogue.site | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  14. 67.220.73.204:18662 | net=67.220.73.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
-  15. 193.233.246.80:8443 | net=193.233.246.0/24 | SNI=ads.x5.ru | type=grpc | flow=- | score=96 | REALITY,gRPC,PORT-8443,KNOWN-SNI
-  16. 157.90.165.181:11762 | net=157.90.165.0/24 | SNI=swdist.apple.com | type=tcp | flow=xtls-rprx-vision | score=96 | REALITY,VISION,TCP/RAW
-  17. 92.63.99.228:4353 | net=92.63.99.0/24 | SNI=tradingview.com | type=tcp | flow=xtls-rprx-vision | score=96 | REALITY,VISION,TCP/RAW
-  18. 212.46.33.18:443 | net=212.46.33.0/24 | SNI=login.moktana.app | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-443
+  01. 35.180.187.82:12228 | net=35.180.187.0/24 | SNI=www.tesla.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  02. 144.31.76.198:13443 | net=144.31.76.0/24 | SNI=auto.cendora.ru | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  03. netraidly.ru:40443 | net=72.56.92.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  04. 72.56.81.165:40443 | net=72.56.81.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  05. 31.76.79.118:2444 | net=31.76.79.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  06. 138.124.254.21:2096 | net=138.124.254.0/24 | SNI=it-one.quiet-rogue.site | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  07. 5.253.30.99:40443 | net=5.253.30.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  08. 103.75.118.228:11452 | net=103.75.118.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  09. billing.netraidly.ru:40443 | net=186.246.21.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  10. preview.netraidly.ru:40443 | net=5.253.42.0/24 | SNI=deepl.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  11. 3.114.220.22:10583 | net=3.114.220.0/24 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  12. 103.149.183.198:13779 | net=103.149.183.0/24 | SNI=tesla.com | type=tcp | flow=xtls-rprx-vision | score=99 | REALITY,VISION,TCP/RAW
+  13. 157.90.165.181:11762 | net=157.90.165.0/24 | SNI=swdist.apple.com | type=tcp | flow=xtls-rprx-vision | score=96 | REALITY,VISION,TCP/RAW
+  14. 137.184.218.169:36925 | net=137.184.218.0/24 | SNI=www.cloudflare.com | type=tcp | flow=xtls-rprx-vision | score=96 | REALITY,VISION,TCP/RAW
+  15. 144.31.3.127:443 | net=144.31.3.0/24 | SNI=pl.moktana.app | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-443
+  16. 212.46.33.18:443 | net=212.46.33.0/24 | SNI=login.moktana.app | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-443
+  17. 188.130.234.239:443 | net=188.130.234.0/24 | SNI=kz.node.goidanet.com | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-443
+  18. 5.129.210.63:8443 | net=5.129.210.0/24 | SNI=sun6-21.userapi.com | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-8443
   19. 217.60.24.57:8443 | net=217.60.24.0/24 | SNI=cdn.shopify.com | type=grpc | flow=- | score=88 | REALITY,gRPC,PORT-8443
-  20. 31.76.91.72:2087 | net=31.76.91.0/24 | SNI=ads.x5.ru | type=grpc | flow=- | score=86 | REALITY,gRPC,KNOWN-SNI
+  20. 31.76.84.62:443 | net=31.76.84.0/24 | SNI=id.pervye.ru | type=grpc | flow=- | score=85 | REALITY,gRPC,PORT-443
 
 batch_07.txt: 20 configs
   01. 45.155.52.231:443 | net=45.155.52.0/24 | SNI=ru2.skydrgn-online.online | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-443
-  02. 194.58.95.183:9871 | net=194.58.95.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
-  03. 176.108.243.192:9880 | net=176.108.243.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
-  04. 85.192.41.222:25565 | net=85.192.41.0/24 | SNI=yandex.ru | type=grpc | flow=- | score=78 | REALITY,gRPC
-  05. 176.117.75.143:2087 | net=176.117.75.0/24 | SNI=www.cloudflare.com | type=grpc | flow=- | score=78 | REALITY,gRPC
-  06. 185.141.227.153:9001 | net=185.141.227.0/24 | SNI=api-maps.yandex.ru | type=grpc | flow=- | score=78 | REALITY,gRPC
-  07. 176.108.240.241:9894 | net=176.108.240.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=75 | REALITY,gRPC
-  08. 31.76.46.138:20422 | net=31.76.46.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  09. 91.197.3.43:52463 | net=91.197.3.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  10. tr.cellser.ir:24949 | net=158.94.216.0/24 | SNI=www.yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  11. 172.239.26.211:32855 | net=172.239.26.0/24 | SNI=amp-api-edge.apps.apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  02. 46.8.158.22:443 | net=46.8.158.0/24 | SNI=www.icloud.com | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-443
+  03. 194.58.95.183:9871 | net=194.58.95.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
+  04. 176.108.243.192:9880 | net=176.108.243.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
+  05. 85.192.41.222:25565 | net=85.192.41.0/24 | SNI=yandex.ru | type=grpc | flow=- | score=78 | REALITY,gRPC
+  06. 176.117.75.143:2087 | net=176.117.75.0/24 | SNI=www.cloudflare.com | type=grpc | flow=- | score=78 | REALITY,gRPC
+  07. 185.141.227.153:9001 | net=185.141.227.0/24 | SNI=api-maps.yandex.ru | type=grpc | flow=- | score=78 | REALITY,gRPC
+  08. 81.208.170.142:1500 | net=81.208.170.0/24 | SNI=www.ebay.com | type=grpc | flow=- | score=78 | REALITY,gRPC
+  09. 77.110.115.8:25565 | net=77.110.115.0/24 | SNI=yandex.ru | type=grpc | flow=- | score=78 | REALITY,gRPC
+  10. 31.76.46.138:20422 | net=31.76.46.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  11. 91.197.3.43:52463 | net=91.197.3.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   12. 194.76.154.31:40443 | net=194.76.154.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  13. 104.105.3.99:32855 | net=104.105.3.0/24 | SNI=amp-api-edge.apps.apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  13. 172.239.26.211:32855 | net=172.239.26.0/24 | SNI=amp-api-edge.apps.apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   14. 77.246.109.191:34045 | net=77.246.109.0/24 | SNI=visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  15. 77.91.68.70:55983 | net=77.91.68.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  16. 46.29.238.139:40443 | net=46.29.238.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  17. 194.55.189.249:40443 | net=194.55.189.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  18. 204.48.20.223:30906 | net=204.48.20.0/24 | SNI=www.cloudflare.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  19. 80.66.78.227:443 | net=80.66.78.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
+  15. 104.105.3.99:32855 | net=104.105.3.0/24 | SNI=amp-api-edge.apps.apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  16. 70.39.198.93:46197 | net=70.39.198.0/24 | SNI=updates.cdn-apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  17. 204.48.20.223:30906 | net=204.48.20.0/24 | SNI=www.cloudflare.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  18. 167.233.219.201:443 | net=167.233.219.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
+  19. 163.53.244.247:443 | net=163.53.244.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
   20. de3.voronvpn.com:443 | net=2.27.200.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
 
 batch_08.txt: 20 configs
   01. 142.91.105.104:443 | net=142.91.105.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
   02. 209.50.241.126:443 | net=209.50.241.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
-  03. 9wf3-zili1w.laurelmedco.com:443 | net=128.1.12.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
-  04. 140.99.223.187:443 | net=140.99.223.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
-  05. 207.56.137.51:443 | net=207.56.137.0/24 | SNI=- | type=- | flow=- | score=60 | REALITY,PORT-443
-  06. 72.56.81.165:40443 | net=72.56.81.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  07. 185.79.138.71:448 | net=185.79.138.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  08. 217.69.167.135:15392 | net=217.69.167.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  09. 132.243.212.205:41503 | net=132.243.212.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  10. 201.24.117.62:14407 | net=201.24.117.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  11. 178.236.16.98:35728 | net=178.236.16.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  12. 185.168.195.211:21527 | net=185.168.195.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  13. 47.89.186.170:55861 | net=47.89.186.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  14. 92yqc126g8qwe6v23n01.haiyucloud.com:50567 | net=211.76.176.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  15. 103.149.183.198:13779 | net=103.149.183.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
-  16. estproxy4.lockdwn.com:8443 | net=94.183.170.0/24 | SNI=- | type=tcp | flow=- | score=38 | TLS,TCP/RAW,PORT-8443
-  17. 151.242.17.99:8443 | net=151.242.17.0/24 | SNI=- | type=grpc | flow=- | score=32 | gRPC,PORT-8443
-  18. 144.31.166.71:443 | net=144.31.166.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
-  19. 89.208.113.16:443 | net=89.208.113.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
-  20. 139.28.241.77:443 | net=139.28.241.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
+  03. tr.cellser.ir:24949 | net=158.94.216.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  04. 185.79.138.71:448 | net=185.79.138.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  05. 217.69.167.135:15392 | net=217.69.167.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  06. 201.24.117.62:14407 | net=201.24.117.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  07. 132.243.212.205:41503 | net=132.243.212.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  08. 47.89.186.170:55861 | net=47.89.186.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  09. 178.236.16.98:35728 | net=178.236.16.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  10. 185.168.195.211:21527 | net=185.168.195.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  11. 92yqc126g8qwe6v23n01.haiyucloud.com:50567 | net=211.76.176.0/24 | SNI=- | type=- | flow=- | score=50 | REALITY
+  12. lizca2.footballfantasyforum.com:443 | net=184.107.106.0/24 | SNI=lizca2.footballfantasyforum.com | type=tcp | flow=- | score=38 | TLS,TCP/RAW,PORT-443
+  13. 177.3.212.127:8443 | net=177.3.212.0/24 | SNI=neth6.lckdwn.ru | type=tcp | flow=- | score=38 | TLS,TCP/RAW,PORT-8443
+  14. estproxy4.lockdwn.com:8443 | net=94.183.170.0/24 | SNI=- | type=tcp | flow=- | score=38 | TLS,TCP/RAW,PORT-8443
+  15. laoye.in-gect.fun:2083 | net=89.36.161.0/24 | SNI=- | type=grpc | flow=- | score=32 | TLS,gRPC
+  16. 151.242.17.99:8443 | net=151.242.17.0/24 | SNI=- | type=grpc | flow=- | score=32 | gRPC,PORT-8443
+  17. 185.39.204.155:8443 | net=185.39.204.0/24 | SNI=- | type=grpc | flow=- | score=32 | gRPC,PORT-8443
+  18. 139.28.241.77:443 | net=139.28.241.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
+  19. 89.208.113.16:443 | net=89.208.113.0/24 | SNI=/?bia_telegram@marambashi_marambashi_marambashi_marambashi | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
+  20. france.me.pingsf.ir:443 | net=95.182.116.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
 
 batch_09.txt: 20 configs
-  01. france.me.pingsf.ir:443 | net=95.182.116.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
+  01. 134.122.154.210:443 | net=134.122.154.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-443
   02. 45.155.70.123:8443 | net=45.155.70.0/24 | SNI=- | type=tcp | flow=- | score=28 | TCP/RAW,PORT-8443
-  03. 149.202.58.99:443 | net=149.202.58.0/24 | SNI=bab-6.site | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. 104.16.63.25:443 | net=104.16.63.0/24 | SNI=germany-2.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   04. www.zsu.gov.ua:443 | net=172.65.90.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  05. 104.21.31.99:443 | net=104.21.31.0/24 | SNI=6-m23.daegu2031.ccwu.cc | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  06. hys40.wba-pn.ru:443 | net=201.51.23.0/24 | SNI=hys40.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. 82.115.6.93:443 | net=82.115.6.0/24 | SNI=kuraakavaa-5l7.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. 144.31.82.201.fwqfw783rg2dad.website:443 | net=144.31.82.0/24 | SNI=144.31.82.201.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. api.fuck-you.dyn.site.fwqfw783rg2dad.website:443 | net=13.143.130.0/24 | SNI=api.fuck-you.dyn.site.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. 199.232.78.160:443 | net=199.232.78.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. 185.178.208.176:443 | net=185.178.208.0/24 | SNI=stream.telemetryapi.uk | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. 164.90.217.130:443 | net=164.90.217.0/24 | SNI=white-forest-2c01.alvlirm222.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. 185.193.30.94:443 | net=185.193.30.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. 104.16.251.148:443 | net=104.16.251.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. 141.101.122.147:443 | net=141.101.122.0/24 | SNI=a.cwvps.eu.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. 199.232.78.159:443 | net=199.232.78.0/24 | SNI=ssl.fastly.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. cdn4.velnaro.ir:443 | net=104.21.36.0/24 | SNI=cdn4.velnaro.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. 185.178.208.176:443 | net=185.178.208.0/24 | SNI=stream.telemetryapi.uk | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. 164.90.217.130:443 | net=164.90.217.0/24 | SNI=white-forest-2c01.alvlirm222.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. hys40.wba-pn.ru:443 | net=201.51.23.0/24 | SNI=hys40.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 5hsytrdbbvcrxokk.localip.ir:443 | net=104.18.32.0/24 | SNI=nl-10.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. paid.sshehi.ggff.net:443 | net=178.128.209.0/24 | SNI=aka.ms | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. 104.16.63.25:443 | net=104.16.63.0/24 | SNI=germany-2.ariyuz.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. cdn4.velnaro.ir:443 | net=104.21.36.0/24 | SNI=cdn4.velnaro.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  17. 52.84.199.28:443 | net=52.84.199.0/24 | SNI=d1yxsk0zprgivr.cloudfront.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  18. millionaire.levikogjgfdd.ir:443 | net=104.18.28.0/24 | SNI=rayan-007.foton.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. 45.155.68.9:443 | net=45.155.68.0/24 | SNI=it2ws.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. irhub-production-4401.up.railway.app:443 | net=69.46.46.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. 104.16.117.43:443 | net=104.16.117.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. 31.76.65.234.fwqfw783rg2dad.website:443 | net=31.76.65.0/24 | SNI=31.76.65.234.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. irhub-production-4401.up.railway.app:443 | net=69.46.46.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. www.5h.com:443 | net=172.67.142.0/24 | SNI=youxuanku.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. 60.248.219.53:443 | net=60.248.219.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. 16.176.42.97:443 | net=16.176.42.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. adf.ly:443 | net=172.66.40.0/24 | SNI=rayan-007.parvin.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_10.txt: 20 configs
-  01. one-for-all.levikogjgfdd.ir:443 | net=188.114.97.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  02. 31.76.65.234.fwqfw783rg2dad.website:443 | net=31.76.65.0/24 | SNI=31.76.65.234.fwqfw783rg2dad.website | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  03. 104.16.89.120:443 | net=104.16.89.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  04. 60.248.219.53:443 | net=60.248.219.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  05. dx.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  06. cfyes.ziyoufly.xyz:443 | net=104.18.42.0/24 | SNI=cf-uh-jp01.23523463.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. yd.mmhh.eu.cc:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. 104.17.28.89:443 | net=104.17.28.0/24 | SNI=workspace.evan00.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. 198.62.62.171:443 | net=198.62.62.0/24 | SNI=639222734213747055.forester-homaxe.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. 172.67.161.109:443 | net=172.67.161.0/24 | SNI=1-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. 185.193.30.94:443 | net=185.193.30.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. 104.20.6.134:443 | net=104.20.6.0/24 | SNI=r.mediashoppp.sbs | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. 104.16.72.251:443 | net=104.16.72.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  17. 104.19.109.202:443 | net=104.19.109.0/24 | SNI=cf.udpid.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  01. 172.66.43.117:443 | net=172.66.43.0/24 | SNI=rayan-007.parvin.dpdns.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  02. 104.20.6.134:443 | net=104.20.6.0/24 | SNI=r.mediashoppp.sbs | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. 45.130.125.207:443 | net=45.130.125.0/24 | SNI=terazhediii.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  04. 104.18.34.124:443 | net=104.18.34.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. lt.mmhh.eu.cc:443 | net=104.16.96.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. dx.mmhh.eu.cc:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. 188.114.97.3:443 | net=188.114.97.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. 104.19.109.202:443 | net=104.19.109.0/24 | SNI=cf.udpid.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. 104.16.72.251:443 | net=104.16.72.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. 104.21.90.215:443 | net=104.21.90.0/24 | SNI=0-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. millionaire.levikogjgfdd.ir:443 | net=104.18.28.0/24 | SNI=netlivpn5505.ffffdsaaa.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. 43.167.239.81:443 | net=43.167.239.0/24 | SNI=43.167.239.81 | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. cf-vless-4cf55824.aimall.fr:443 | net=172.67.222.0/24 | SNI=cf-vless-4cf55824.aimall.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. cfd.130209.xyz:443 | net=104.18.2.0/24 | SNI=ukraine.142568.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   18. 104.16.79.73:443 | net=104.16.79.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. 104.16.80.73:443 | net=104.16.80.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. 81.177.214.150:443 | net=81.177.214.0/24 | SNI=fin4.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. gr2.levikogjgfdd.ir:443 | net=169.58.143.0/24 | SNI=finite-node.rtxconfigz.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_11.txt: 20 configs
-  01. 81.177.214.150:443 | net=81.177.214.0/24 | SNI=fin4.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  02. meshbuzz.bond:443 | net=104.17.108.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  03. be2.wba-pn.ru:443 | net=113.30.152.0/24 | SNI=be2.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  04. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  05. 104.19.45.195:443 | net=104.19.45.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  06. 104.16.117.43:443 | net=104.16.117.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. chat.openai.com:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. ipw.ygdfw.com:443 | net=104.25.233.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. proxyip.hk.cmliussss.net:443 | net=219.76.13.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. japan.com:443 | net=104.26.4.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. singapore.com:443 | net=104.26.13.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  13. 88.216.69.144:443 | net=88.216.69.0/24 | SNI=r5zenrelur2s.pqzdileiu8es.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. music1000.melobitmusic1.ir:2053 | net=172.67.180.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  15. 185.112.249.201:8443 | net=185.112.249.0/24 | SNI=web-socket.tgdaosheng.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  16. www.speedtest.net:8443 | net=104.17.147.0/24 | SNI=arvan2.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  17. 103.148.73.167:8443 | net=103.148.73.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
-  18. 72.56.236.219:2053 | net=72.56.236.0/24 | SNI=usa1.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  19. 188.241.241.37:2053 | net=188.241.241.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
-  20. 104.18.155.141:8443 | net=104.18.155.0/24 | SNI=arvan.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  01. meshbuzz.bond:443 | net=104.17.108.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  02. japan.com:443 | net=104.26.5.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. 104.17.3.81:443 | net=104.17.3.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  04. 104.16.6.70:443 | net=104.16.6.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. 92.42.96.240:443 | net=92.42.96.0/24 | SNI=mahanrealiteam.mahkhan.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. 104.18.152.148:443 | net=104.18.152.0/24 | SNI=03agsdvc2c3n8737nu5787h6e0nip9.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. proxyip.hk.cmliussss.net:443 | net=156.224.76.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. 104.19.45.195:443 | net=104.19.45.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. www.4chan.org:443 | net=104.16.229.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. 88.216.69.144:443 | net=88.216.69.0/24 | SNI=r5zenrelur2s.pqzdileiu8es.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  13. singapore.com:443 | net=104.26.12.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  14. 104.16.80.73:443 | net=104.16.80.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. ipw.ygdfw.com:443 | net=104.25.233.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. it2ws.wba-pn.ru:443 | net=45.155.68.0/24 | SNI=it2ws.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. www.baipiao.eu.org:443 | net=104.21.88.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. chatgpt.com:2053 | net=172.64.155.0/24 | SNI=ov.iran-servers.shop | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  19. music1000.melobitmusic1.ir:2053 | net=104.21.35.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  20. www.speedtest.net:8443 | net=104.17.147.0/24 | SNI=arvan2.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
 
 batch_12.txt: 20 configs
-  01. 177.3.212.127:8443 | net=177.3.212.0/24 | SNI=- | type=- | flow=- | score=20 | TLS,PORT-8443
-  02. xn-de.dbsll.ir:20017 | net=144.31.157.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  03. 158.178.153.49:62145 | net=158.178.153.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  04. 164.68.127.108:24144 | net=164.68.127.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  05. 149.130.189.155:62145 | net=149.130.189.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  06. trone.soundfiy.ir:61169 | net=93.114.98.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  07. 45.74.159.200:10131 | net=45.74.159.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  08. 164.92.230.180:8880 | net=164.92.230.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  09. 63.183.163.238:22222 | net=63.183.163.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  10. 64.226.117.146:8880 | net=64.226.117.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  11. 104.248.251.106:8880 | net=104.248.251.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  01. 103.148.73.167:8443 | net=103.148.73.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  02. 72.56.236.219:2053 | net=72.56.236.0/24 | SNI=usa1.wba-pn.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  03. xmm5.130209.xyz:8443 | net=104.19.149.0/24 | SNI=hongkong.11459178.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  04. whatismyipaddress.com:2053 | net=104.19.222.0/24 | SNI=4o4bcp.sixtmapp.com | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  05. 188.241.241.37:2053 | net=188.241.241.0/24 | SNI=forfreeuse.rtqa.ru | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  06. 104.18.155.141:8443 | net=104.18.155.0/24 | SNI=arvan.dearhossein-taktaz.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
+  07. po.fastbrokencompony.com:2053 | net=104.21.41.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  08. 64.226.117.146:8880 | net=64.226.117.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  09. 164.68.127.108:24144 | net=164.68.127.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  10. 144.31.157.104:20017 | net=144.31.157.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  11. 164.92.230.180:8880 | net=164.92.230.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
   12. 63.188.40.90:22223 | net=63.188.40.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  13. 92.5.227.75:62145 | net=92.5.227.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  14. 134.98.136.110:62145 | net=134.98.136.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  15. 193.123.37.20:62145 | net=193.123.37.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  16. 143.47.183.183:62145 | net=143.47.183.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  17. 141.148.232.137:62145 | net=141.148.232.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  18. 141.144.195.7:62145 | net=141.144.195.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  19. 193.124.204.145:49853 | net=193.124.204.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
-  20. 130.185.123.32:19896 | net=130.185.123.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  13. 104.248.251.106:8880 | net=104.248.251.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  14. 193.123.37.20:62145 | net=193.123.37.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  15. 143.47.183.183:62145 | net=143.47.183.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  16. 141.148.232.137:62145 | net=141.148.232.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  17. 141.144.195.7:62145 | net=141.144.195.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  18. 92.5.227.75:62145 | net=92.5.227.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  19. 158.178.153.49:62145 | net=158.178.153.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
+  20. 134.98.135.220:62145 | net=134.98.135.0/24 | SNI=- | type=tcp | flow=- | score=18 | TCP/RAW
 
