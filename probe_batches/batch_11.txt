@@ -7,7 +7,6 @@ vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.64.150.28:443?security=tls&type
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@188.114.99.0:443?security=tls&type=ws&path=/sg-melbi&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net&fp=chrome#🇸🇬[www.v2nodes.com
 vless://13da3f61-36bc-4f4f-9b49-4152de570bd3@104.21.90.215:443?&security=tls&fp=chrome&alpn=http%2F1.1&sni=0-M14.AyUTTHayA-1.KDnS.fr&type=ws&headerType=none&host=0-M14.ayutTHAYa-1.kDNS.FR&path=%2FawsDCktnglce5OhBQMBK8JLBwh2V#🏳[www.v2nodes.com
 vless://476bdb75-0d9b-49f2-a492-4cd68f594d32@piracy-android.video-streams.org:443?&security=tls&fp=chrome&packet-encoding=xudp&alpn=http%2F1.1&sni=piracy-android.video-streams.org&type=ws&headerType=none&host=piracy-android.video-streams.org&path=%2Fws#🇺🇸[www.v2nodes.com
-vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@188.114.97.3:443?&security=tls&fp=chrome&sni=hhlfy.twiladaphne.ndjp.net&type=ws&headerType=none&host=hhlfy.twiladaphne.ndjp.net&path=%2Fsg-melbi#🇸🇬[www.v2nodes.com
 vless://c4edb87e-8544-4fa4-bd1c-b0cda9a34b46@141.101.122.147:443?&security=tls&fp=chrome&sni=a.cwvps.eu.org&type=ws&headerType=none&host=a.cwvps.eu.org&path=%2Fws#🇺🇸[www.v2nodes.com
 vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@159.112.235.52:443?security=tls&type=ws&path=/musiclovers85?ed=512&host=josni.hoyes.cloudns.ch&packetEncoding=xudp&sni=josni.hoyes.cloudns.ch&fp=chrome#🇸🇬[www.v2nodes.com
 vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.79.73:443?&security=tls&fp=chrome&sni=josni.hoyes.cloudns.ch&type=ws&headerType=none&host=josni.hoyes.cloudns.ch&path=musiclovers85%3Fed%3D512#🇸🇬[www.v2nodes.com
@@ -18,3 +17,4 @@ vless://9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d@meshbuzz.bond:443?&security=tls&fp=
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.18.28.234:443?path=%2Fsg-melbi&security=tls&encryption=none&insecure=0&host=hhlfy.twiladaphne.ndjp.net&type=ws&allowInsecure=0&sni=hhlfy.twiladaphne.ndjp.net#🇸🇬[www.v2nodes.com
 vless://mahanvpn-mahanvpn@92.42.96.240:443?sni=mAhaNrEaliteAm.MaHkHan.iR&type=ws&host=mAhaNrEaliteAm.MaHkHan.iR&path=/?ed=2560fp=chrome&security=tls#🇩🇪[www.v2nodes.com
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@172.67.185.178:443?allowInsecure=1&encryption=none&host=hhlfy.twiladaphne.ndjp.net&path=%2F&security=tls&sni=hhlfy.twiladaphne.ndjp.net&type=ws#🇸🇬[www.v2nodes.com
+vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@162.159.44.195:443?allowInsecure=1&encryption=none&host=hhlfy.twiladaphne.ndjp.net&path=%2Ffp%3Drandom&security=tls&sni=hhlfy.twiladaphne.ndjp.net&type=ws#🇯🇵[www.v2nodes.com
