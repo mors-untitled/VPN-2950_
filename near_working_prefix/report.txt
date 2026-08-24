@@ -58,7 +58,7 @@ TOP 100:
  175 | staging.lastilhame.monster:443 | IP=107.181.151.241 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 94.183.157.249:443 | IP=94.183.157.249 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.171.143:443 | IP=144.31.171.143 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | pl1.nihaovpn.ru:443 | IP=150.241.93.96,178.17.59.95 | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | pl1.nihaovpn.ru:443 | IP=178.17.59.95,150.241.93.96 | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 150.241.82.19:443 | IP=150.241.82.19 | SNI=america.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | sw2.nihaovpn.ru:443 | IP=- | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 150.241.73.137:443 | IP=150.241.73.137 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
@@ -66,7 +66,7 @@ TOP 100:
  175 | 31.76.70.32:443 | IP=31.76.70.32 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node21.mxvpn.dev:443 | IP=89.208.97.226 | SNI=node21.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 77.221.152.100:443 | IP=77.221.152.100 | SNI=node14.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | pl1.nihaovpn.ru:443 | IP=150.241.93.96,178.17.59.95 | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | pl1.nihaovpn.ru:443 | IP=178.17.59.95,150.241.93.96 | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.70.31:443 | IP=31.76.70.31 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=edge | REALITY,TCP/RAW,PORT-443
  175 | 188.127.247.129:443 | IP=188.127.247.129 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 195.184.247.225:443 | IP=195.184.247.225 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
