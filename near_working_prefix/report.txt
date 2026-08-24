@@ -76,7 +76,7 @@ TOP 100:
  175 | node21.mxvpn.dev:443 | IP=89.208.97.226 | SNI=node21.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 152.53.114.186:443 | IP=152.53.114.186 | SNI=as.tunnelx.space | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.70.31:443 | IP=31.76.70.31 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=edge | REALITY,TCP/RAW,PORT-443
- 175 | ee.cdn-global.pro:443 | IP=132.243.65.13,217.9.12.233,132.243.65.8,132.243.65.1,132.243.65.16,132.243.65.14,132.243.65.4,132.243.65.10,132.243.65.2 | SNI=ee.cdn-global.pro | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | ee.cdn-global.pro:443 | IP=132.243.65.10,132.243.65.16,132.243.65.2,217.9.12.233,132.243.65.13,132.243.65.1,132.243.65.4,132.243.65.14,132.243.65.8 | SNI=ee.cdn-global.pro | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 188.127.247.129:443 | IP=188.127.247.129 | SNI=yahoo.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 195.184.247.225:443 | IP=195.184.247.225 | SNI=savesafe.co | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 45.12.254.86:443 | IP=45.12.254.86 | SNI=www.apple.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
