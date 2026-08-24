@@ -1,4 +1,3 @@
-vless://20595050-84c7-40e6-b9e3-cf90c99f8a4c@81.177.214.150:443?encryption=none&host=81.177.214.150&path=%2F&security=tls&sni=fin4.wba-pn.ru&type=ws#🇫🇮[www.v2nodes.com
 vless://25f3beef-a4b6-40bc-aa74-17a0f89f683c@finite-node.rtxconfigz.com:443?encryption=none&host=telegram.us&path=/&security=tls&sni=finite-node.rtxconfigz.com&type=ws#🇫🇷[www.v2nodes.com
 vless://9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d@meshbuzz.bond:443?&security=tls&fp=unsafe&alpn=http%2F1.1&sni=4fspx0q.uploodmusicmelody.ir&type=ws&headerType=none&host=4fspx0q.uploodmusicmelody.ir&path=%2Fws-at#🇦🇹[www.v2nodes.com
 vless://08f84d53-e262-459c-a15a-26213e7a07c9@be2.wba-pn.ru:443?path=/&security=tls&encryption=none&insecure=0&type=ws&allowInsecure=0&sni=be2.wba-pn.ru#🇧🇪[www.v2nodes.com
@@ -18,3 +17,4 @@ vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.117.43:443?path=/?TELEGRAM-M
 vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@104.16.80.73:443?path=musiclovers85?ed&security=tls&encryption=none&insecure=0&host=josni.hoyes.cloudns.ch&ech=ip.gs+udp://8.8.8.8&type=ws&allowInsecure=0&sni=josni.hoyes.cloudns.ch#🇸🇬[www.v2nodes.com
 vless://d361072e-9e0e-4e2d-8ec7-2a4189b5b23a@172.64.155.209:2053?path=/J5aLQOY1R9ONWYCM&security=tls&encryption=none&insecure=0&host=ov.iran-servers.shop&fp=chrome&type=ws&allowInsecure=0&sni=ov.iran-servers.shop#🇫🇷[www.v2nodes.com
 vless://9ede262c-37f9-4363-82cd-9802dafe9e1f@50.7.249.218:8443?&security=tls&fp=firefox&alpn=http%2F1.1&sni=apkav-5.bosx.net&type=ws&headerType=none&path=%2Fapi%2Fconnect#🇵🇱[www.v2nodes.com
+vless://180e7d3a-3947-44dc-ba47-68244400f61d@www.speedtest.net:8443?&security=tls&fp=chrome&sni=arvan2.dearhossein-taktaz.ir&type=ws&headerType=none&host=arvan2.dearhossein-taktaz.ir&path=%2F#🇩🇪[www.v2nodes.com

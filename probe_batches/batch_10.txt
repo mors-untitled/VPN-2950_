@@ -9,7 +9,6 @@ vless://60cf6ea2-7a3c-4a97-b7db-92f4de0be0cc@198.62.62.171:443?path=/afpmrsws&se
 vless://5fce1c98-0192-4d03-a8b4-9ba8a8eef474@cfyes.ziyoufly.xyz:443?&security=tls&fp=chrome&sni=cf-uh-jp01.23523463.xyz&type=ws&headerType=none&host=cf-uh-jp01.23523463.xyz&path=%2Fziyou#🇯🇵[www.v2nodes.com
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@104.17.22.240:443?&security=tls&fp=random&sni=hhlfy.twiladaphne.ndjp.net&type=ws&headerType=none&host=hhlfy.twiladaphne.ndjp.net&path=%2F#🇸🇬[www.v2nodes.com
 vless://2088ef0d-4d2c-43b3-874b-b6a03531c81b@104.20.6.134:443?security=tls&type=ws&path=/eyJqdW5rIjoiVVpPeXNodUFQMHNVcU12aCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=&host=r.mediashoppp.sbs&ed=2560&packetEncoding=xudp&sni=r.meDiASHOPPp.sbS&fp=chrome&encryption=none#🇭🇰[www.v2nodes.com
-vless://506e4a91-1d05-5683-b84c-2113f673cb19@172.64.147.2:443?path=/id-pusat&security=tls&encryption=none&insecure=0&host=vltj.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=vltj.qzz.io#🇸🇬[www.v2nodes.com
 vless://b2f6aa3a-2550-4a1c-b2c0-1c94b1207217@45.130.125.207:443?path=%2Fhdgrbws&security=tls&encryption=none&insecure=0&host=terazhediii.info&fp=chrome&type=ws&allowInsecure=0&sni=terazhediii.info#🇬🇧[www.v2nodes.com
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@dx.mmhh.eu.cc:443?security=tls&type=ws&path=/fp=chrome&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net&fp=chrome&encryption=none#🇯🇵[www.v2nodes.com
 vless://65c56e1f-5c41-40bc-b0b5-9346772476ca@cfd.130209.xyz:443?&security=tls&fp=edge&sni=ukraine.142568.xyz&type=ws&headerType=none&host=ukraine.142568.xyz&path=%2Fassets%2Fdist%2Fapp-update-payload.dat#🇺🇦[www.v2nodes.com
@@ -18,3 +17,4 @@ vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@159.112.235.52:443?security=tls&typ
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@yd.mmhh.eu.cc:443?security=tls&type=ws&path=/&host=hhlfy.twiladaphne.ndjp.net&packetEncoding=xudp&sni=hhlfy.twiladaphne.ndjp.net&fp=chrome#🇯🇵[www.v2nodes.com
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@188.114.99.0:443?encryption=none&type=ws&security=tls&path=%2Fsg-melbi&host=hhlfy.twiladaphne.ndjp.net&sni=hhlfy.twiladaphne.ndjp.net&insecure=0&allowInsecure=0#🇸🇬[www.v2nodes.com
 vless://83afd88f-200f-4d89-bfc7-66eff160c1d8@172.66.44.97:443?path=%2Fsg-melbi&security=tls&encryption=none&host=josni.hoyes.cloudns.ch&type=ws&sni=josni.hoyes.cloudns.ch#🇸🇬[www.v2nodes.com
+vless://20595050-84c7-40e6-b9e3-cf90c99f8a4c@81.177.214.150:443?encryption=none&host=81.177.214.150&path=%2F&security=tls&sni=fin4.wba-pn.ru&type=ws#🇫🇮[www.v2nodes.com
