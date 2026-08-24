@@ -1,3 +1,5 @@
+vless://04c808e2-0b59-47b0-a54b-32fc7ef1c902@russia.com:443?sni=misaka.cndyw.ggff.net&type=ws&host=misaka.cndyw.ggff.net&path=%2F%3Fed%3D2560fp%3Dchrome&security=tls#🇭🇰[www.v2nodes.com
+vless://04c808e2-0b59-47b0-a54b-32fc7ef1c902@japan.com:443?sni=misaka.cndyw.ggff.net&type=ws&host=misaka.cndyw.ggff.net&path=%2F%3Fed%3D2560fp%3Dchrome&security=tls#🇭🇰[www.v2nodes.com
 vless://50414e45-4c5f-5a45-5553-4d64f1370eeb@88.216.69.144:443?encryption=none&security=tls&sni=r5zenrelur2s.pqzdileiu8es.workers.dev&fp=ios&insecure=0&allowInsecure=0&type=ws&host=r5zenrelur2s.pqzdileiu8es.workers.dev&path=%2Fstream%2FPANEL_ZEUS%2F4d64f1370eeb%2Floc-0#🇹🇷[www.v2nodes.com
 vless://da4747a6-be0d-4c1b-90f4-d82ec3012be2@music1000.melobitmusic1.ir:2053?path=%2F&security=tls&encryption=none&insecure=0&host=music1000.melobitmusic1.ir&fp=chrome&type=ws&allowInsecure=0&sni=music1000.melobitmusic1.ir#🇵🇱[www.v2nodes.com
 vless://9ede262c-37f9-4363-82cd-9802dafe9e1f@50.7.249.218:8443?&security=tls&fp=firefox&alpn=http%2F1.1&sni=apkav-5.bosx.net&type=ws&headerType=none&path=%2Fapi%2Fconnect#🇵🇱[www.v2nodes.com
@@ -16,5 +18,3 @@ vless://81d520e6-079a-49cb-a2ef-05c3cd3946d8@31.15.16.37:80?&type=tcp&headerType
 vless://7e85ed3f-3829-45b1-8b1c-6a2e45ebc967@164.68.127.108:24144?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=none&encryption=none&headerType=none&type=tcp#🇫🇷[www.v2nodes.com
 vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@134.98.135.220:62145?&type=tcp&headerType=none&path=%2F#🇳🇱[www.v2nodes.com
 vless://603819a3-dd65-408a-abab-15d8dc49887f@64.226.117.146:8880?security=&encryption=none&host=store.steampowered.com&headerType=http&type=tcp#🇩🇪[www.v2nodes.com
-vless://603819a3-dd65-408a-abab-15d8dc49887f@164.92.230.180:8880?security=&encryption=none&host=store.steampowered.com&headerType=http&type=tcp#🇩🇪[www.v2nodes.com
-vless://8fb65472-5957-4f64-ba2d-b5812b2f155a@143.47.183.8:62145?&type=tcp&headerType=none&path=/#🇳🇱[www.v2nodes.com
