@@ -60,7 +60,7 @@ TOP 100:
  175 | 144.31.171.143:443 | IP=144.31.171.143 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | pl1.nihaovpn.ru:443 | IP=150.241.93.96,178.17.59.95 | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 150.241.82.19:443 | IP=150.241.82.19 | SNI=america.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | sw2.nihaovpn.ru:443 | IP=89.125.37.21 | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | sw2.nihaovpn.ru:443 | IP=- | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 150.241.73.137:443 | IP=150.241.73.137 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 150.241.86.150:443 | IP=150.241.86.150 | SNI=nordic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.70.32:443 | IP=31.76.70.32 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
