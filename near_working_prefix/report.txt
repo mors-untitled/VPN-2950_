@@ -23,7 +23,7 @@ TOP 100:
  190 | 31.76.91.72:2087 | IP=31.76.91.72 | SNI=ads.x5.ru | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 217.69.167.135:15392 | IP=217.69.167.135 | SNI=google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 194.58.95.183:9871 | IP=194.58.95.183 | SNI=dl.google.com | type=grpc | security=reality | fp=qq | REALITY,gRPC
- 190 | almanpasar.horlutr.ir:11458 | IP=10.10.34.36 | SNI=play.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
+ 190 | almanpasar.horlutr.ir:11458 | IP=77.90.45.60 | SNI=play.google.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 5.129.210.63:8443 | IP=5.129.210.63 | SNI=sun6-21.userapi.com | type=grpc | security=reality | fp=chrome | REALITY,gRPC
  190 | 176.108.240.241:9894 | IP=176.108.240.241 | SNI=dl.google.com | type=grpc | security=reality | fp=qq | REALITY,gRPC
  190 | 176.108.243.192:9880 | IP=176.108.243.192 | SNI=dl.google.com | type=grpc | security=reality | fp=qq | REALITY,gRPC
