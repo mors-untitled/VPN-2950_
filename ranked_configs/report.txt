@@ -89,7 +89,7 @@ TOP 100:
  127 | 158.69.112.254:443 | IP=158.69.112.254 | SNI=www.speedtest.net | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 5.34.182.23:443 | IP=5.34.182.23 | SNI=eu-central.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 45.134.26.97:443 | IP=45.134.26.97 | SNI=nordic.cendora.ru | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
- 127 | u234-6njjdk.startora.top:443 | IP=23.251.55.216 | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
+ 127 | u234-6njjdk.startora.top:443 | IP=- | SNI=www.amazon.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 169.40.42.75:443 | IP=169.40.42.75 | SNI=yahoo.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 43.161.225.44:443 | IP=43.161.225.44 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
  127 | 138.124.125.211:443 | IP=138.124.125.211 | SNI=www.apple.com | type=tcp | flow=xtls-rprx-vision | REALITY,TCP/RAW,VISION,PORT-443
