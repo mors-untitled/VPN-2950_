@@ -145,7 +145,7 @@ batch_07.txt: 20 configs
   07. 45.155.70.123:8443 | net=45.155.70.0/24 | SNI=s1.test.anti-zapret.com | type=tcp | flow=- | score=84 | REALITY,TCP/RAW,PORT-8443
   08. 194.58.95.183:9871 | net=194.58.95.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
   09. 81.208.170.142:1500 | net=81.208.170.0/24 | SNI=www.ebay.com | type=grpc | flow=- | score=78 | REALITY,gRPC
-  10. almanpasar.horlutr.ir:11458 | net=10.10.34.0/24 | SNI=play.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
+  10. almanpasar.horlutr.ir:11458 | net=77.90.45.0/24 | SNI=play.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
   11. 176.108.243.192:9880 | net=176.108.243.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
   12. 176.108.240.241:9894 | net=176.108.240.0/24 | SNI=dl.google.com | type=grpc | flow=- | score=78 | REALITY,gRPC
   13. 176.117.75.143:2087 | net=176.117.75.0/24 | SNI=www.cloudflare.com | type=grpc | flow=- | score=78 | REALITY,gRPC
@@ -159,12 +159,12 @@ batch_07.txt: 20 configs
 
 batch_08.txt: 20 configs
   01. 194.76.154.31:40443 | net=194.76.154.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  02. birmengham.surup.shop:46142 | net=195.72.166.0/24 | SNI=www.yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  03. 77.246.109.191:34045 | net=77.246.109.0/24 | SNI=visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  04. 46.29.238.139:40443 | net=46.29.238.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  05. 70.39.198.183:46197 | net=70.39.198.0/24 | SNI=updates.cdn-apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  06. 77.91.68.70:55983 | net=77.91.68.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
-  07. 158.94.216.61:57728 | net=158.94.216.0/24 | SNI=www.yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  02. tr.cellser.ir:24949 | net=158.94.216.0/24 | SNI=www.yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  03. birmengham.surup.shop:46142 | net=195.72.166.0/24 | SNI=www.yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  04. 77.246.109.191:34045 | net=77.246.109.0/24 | SNI=visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  05. 46.29.238.139:40443 | net=46.29.238.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  06. 70.39.198.183:46197 | net=70.39.198.0/24 | SNI=updates.cdn-apple.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
+  07. 77.91.68.70:55983 | net=77.91.68.0/24 | SNI=yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   08. 204.48.20.223:30906 | net=204.48.20.0/24 | SNI=www.cloudflare.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   09. turj2.surup.shop:46142 | net=144.225.65.0/24 | SNI=www.yahoo.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
   10. 194.55.189.249:40443 | net=194.55.189.0/24 | SNI=deepl.com | type=tcp | flow=- | score=74 | REALITY,TCP/RAW
@@ -224,10 +224,10 @@ batch_10.txt: 20 configs
   20. 91.250.248.151:443 | net=91.250.248.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_11.txt: 20 configs
-  01. yd.mmhh.eu.cc:443 | net=162.159.60.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  02. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  03. piracy-android.video-streams.org:443 | net=151.101.41.0/24 | SNI=piracy-android.video-streams.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  04. 45.130.125.207:443 | net=45.130.125.0/24 | SNI=terazhediii.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  01. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  02. piracy-android.video-streams.org:443 | net=140.248.145.0/24 | SNI=piracy-android.video-streams.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. 45.130.125.207:443 | net=45.130.125.0/24 | SNI=terazhediii.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  04. grimness-backlogs.cdn-content.com:443 | net=146.75.105.0/24 | SNI=grimness-backlogs.cdn-content.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   05. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   06. finite-node.rtxconfigz.com:443 | net=169.58.143.0/24 | SNI=finite-node.rtxconfigz.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   07. meshbuzz.bond:443 | net=104.17.108.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
@@ -235,14 +235,14 @@ batch_11.txt: 20 configs
   09. 92.42.96.240:443 | net=92.42.96.0/24 | SNI=mahanrealiteam.mahkhan.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   10. 172.64.150.28:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   11. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. ipw.ygdfw.com:443 | net=104.25.114.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. ipw.ygdfw.com:443 | net=104.25.233.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  14. japan.com:443 | net=172.67.70.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. russia.com:443 | net=172.67.71.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  16. 88.216.69.144:443 | net=88.216.69.0/24 | SNI=r5zenrelur2s.pqzdileiu8es.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  17. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  18. 104.17.3.81:443 | net=104.17.3.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. music1000.melobitmusic1.ir:2053 | net=104.21.35.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  14. japan.com:443 | net=104.26.5.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. 88.216.69.144:443 | net=88.216.69.0/24 | SNI=r5zenrelur2s.pqzdileiu8es.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  16. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  17. 104.17.3.81:443 | net=104.17.3.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  18. music1000.melobitmusic1.ir:2053 | net=172.67.180.0/24 | SNI=music1000.melobitmusic1.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
+  19. chatgpt.com:2053 | net=172.64.155.0/24 | SNI=ov.iran-servers.shop | type=ws | flow=- | score=25 | TLS,WS,PORT-2053
   20. 50.7.249.218:8443 | net=50.7.249.0/24 | SNI=apkav-5.bosx.net | type=ws | flow=- | score=25 | TLS,WS,PORT-8443
 
 batch_12.txt: 20 configs
