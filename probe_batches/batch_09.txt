@@ -11,10 +11,10 @@ vless://a04814d9-d006-4e7b-ae20-8ab304b3b429@151.242.17.99:8443?type=grpc&amp;se
 vless://adce7c2a-3191-49ae-b61c-9b8258ea1b0e@89.208.113.16:443?security=none&encryption=none&headerType=none&type=tcp&sni=/?bia_telegram@marambashi_marambashi_marambashi_marambashi#🇫🇷[www.v2nodes.com
 vless://5d5c40b1-102c-4343-94cc-d5b794dbd0c6@139.28.241.77:443?security=none&encryption=none&headerType=none&type=tcp#🇩🇪[www.v2nodes.com
 vless://901e6dca-1b73-4266-978b-f7dc1266a7f6@153.80.249.125:443?type=tcp&amp;security=reality&amp;encryption=none&amp;flow=xtls-rprx-vision&amp;fp=firefox&amp;pbk=1_a2G1x-DIEjDogZAiV4WFuOczGWcj-3zPiPxenUZhs&amp;sid=23ae46816e87c7b8&amp;sni=google.com#🇳🇱[www.v2nodes.com
-vless://da4747a6-be0d-4c1b-90f4-d82ec3012be2@music1000.melobitmusic1.ir:2053?path=%2F&security=tls&encryption=none&insecure=0&host=music1000.melobitmusic1.ir&fp=chrome&type=ws&allowInsecure=0&sni=music1000.melobitmusic1.ir#🇵🇱[www.v2nodes.com
 vless://2b622609-bb92-49e8-9631-4ada00324f47@45.155.68.9:443?encryption=none&type=ws&security=tls&path=%2F&sni=it2ws.wba-pn.ru&fp=chrome&insecure=0&allowInsecure=0#🇮🇹[www.v2nodes.com
 vless://1078d418-b4e0-4668-9018-dc90c2042d61@104.17.28.89:443?path=%2F&security=tls&encryption=none&insecure=0&host=workspace.evan00.dpdns.org&fp=chrome&type=ws&allowInsecure=0&sni=workspace.evan00.dpdns.org#🇸🇬[www.v2nodes.com
 vless://f6190ff2-864c-46cf-ac16-93908c069b75@129.121.95.159:443?path=%2Fconnect&security=tls&encryption=none&host=129.121.95.159&fp=firefox&type=ws&sni=129.121.95.159#🇬🇧[www.v2nodes.com
 vless://20595050-84c7-40e6-b9e3-cf90c99f8a4c@81.177.214.150:443?&security=tls&fp=chrome&sni=fin4.wba-pn.ru&type=ws&headerType=none&path=/#🇫🇮[www.v2nodes.com
 vless://04c808e2-0b59-47b0-a54b-32fc7ef1c902@www.zsu.gov.ua:443?security=tls&type=ws&path=/?ed=2560fp=random&host=misaka.cndyw.ggff.net&packetEncoding=xudp&sni=misaka.cndyw.ggff.net&fp=chrome#🇨🇿[www.v2nodes.com
 vless://e5cc16a6-ea42-46b2-82ae-ad2157e1641b@lt.mmhh.eu.cc:443?encryption=none&fp=chrome&host=hhlfy.twiladaphne.ndjp.net&path=%2F&security=tls&sni=hhlfy.twiladaphne.ndjp.net&type=ws#🇸🇬[www.v2nodes.com
+vless://4bc8ff7a-20b4-41b2-9751-dfca869f0553@gb1.wba-pn.ru:443?path=%2F&security=tls&encryption=none&insecure=0&host=gb1.wba-pn.ru&fp=edge&type=ws&allowInsecure=0&sni=gb1.wba-pn.ru#🇬🇧[www.v2nodes.com
