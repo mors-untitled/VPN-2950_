@@ -40,7 +40,7 @@ TOP 100:
  185 | 195.184.247.225:443 | IP=195.184.247.225 | SNI=savesafe.co | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 144.31.125.60:443 | IP=144.31.125.60 | SNI=www.intel.com | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 195.184.247.223:443 | IP=195.184.247.223 | SNI=savesafe.co | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
- 185 | pl1.nihaovpn.ru:443 | IP=150.241.93.96,178.17.59.95 | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
+ 185 | pl1.nihaovpn.ru:443 | IP=- | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 31.76.70.32:443 | IP=31.76.70.32 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 2.26.101.64:443 | IP=2.26.101.64 | SNI=nordic.cendora.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
  185 | 31.76.3.54:443 | IP=31.76.3.54 | SNI=nordic.cendora.ru | type=tcp | security=reality | fp=firefox | REALITY,TCP/RAW,PORT-443,FP-FIREFOX
@@ -73,7 +73,7 @@ TOP 100:
  175 | 150.241.82.19:443 | IP=150.241.82.19 | SNI=america.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | sw2.nihaovpn.ru:443 | IP=- | SNI=stackoverflow.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 150.241.86.150:443 | IP=150.241.86.150 | SNI=nordic.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | pl1.nihaovpn.ru:443 | IP=150.241.93.96,178.17.59.95 | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | pl1.nihaovpn.ru:443 | IP=- | SNI=pl1.nihaovpn.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | node21.mxvpn.dev:443 | IP=89.208.97.226 | SNI=node21.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 77.221.152.100:443 | IP=77.221.152.100 | SNI=node14.mxvpn.dev | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 31.76.70.31:443 | IP=31.76.70.31 | SNI=baltic.cendora.ru | type=tcp | security=reality | fp=edge | REALITY,TCP/RAW,PORT-443
