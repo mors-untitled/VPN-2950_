@@ -1,7 +1,7 @@
 Whitelist networks: 3
 Public source seeds: 7
-Pages visited: 500
-Unique public VLESS found: 190
+Pages visited: 388
+Unique public VLESS found: 533
 Whitelist endpoint matches: 0
 REALITY matches: 0
 REALITY + gRPC: 0
@@ -18,6 +18,6 @@ MATCHES:
 PAGES PER HOST:
 sshocean.com: 1
 sshstores.net: 43
-vlesskey.com: 113
+vlesskey.com: 300
 www.freevpn.us: 43
-www.v2nodes.com: 300
+www.v2nodes.com: 1
