@@ -212,30 +212,30 @@ batch_10.txt: 20 configs
   08. cfd.130209.xyz:443 | net=104.18.2.0/24 | SNI=ukraine.142568.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   09. 104.21.90.215:443 | net=104.21.90.0/24 | SNI=0-m14.ayutthaya-1.kdns.fr | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   10. 172.67.118.45:443 | net=172.67.118.0/24 | SNI=zero.csmaster.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. dx.mmhh.eu.cc:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. dx.mmhh.eu.cc:443 | net=162.159.12.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   12. 59.125.69.19:443 | net=59.125.69.0/24 | SNI=ty986gfazs.cainiaohub.xyz | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 104.20.6.134:443 | net=104.20.6.0/24 | SNI=r.mediashoppp.sbs | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. 104.16.79.73:443 | net=104.16.79.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  15. proxyip.hk.cmliussss.net:443 | net=209.33.160.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  15. proxyip.hk.cmliussss.net:443 | net=154.219.104.0/24 | SNI=vp10.pages.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   16. sjzhehzs-production.up.railway.app:443 | net=69.46.46.0/24 | SNI=- | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   17. 104.19.109.202:443 | net=104.19.109.0/24 | SNI=cf.udpid.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   18. 91.250.248.151:443 | net=91.250.248.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  19. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  20. piracy-android.video-streams.org:443 | net=140.248.145.0/24 | SNI=piracy-android.video-streams.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  19. yd.mmhh.eu.cc:443 | net=162.159.44.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  20. 188.114.99.0:443 | net=188.114.99.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
 
 batch_11.txt: 20 configs
-  01. 45.130.125.207:443 | net=45.130.125.0/24 | SNI=terazhediii.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  02. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  03. finite-node.rtxconfigz.com:443 | net=169.58.143.0/24 | SNI=finite-node.rtxconfigz.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  04. meshbuzz.bond:443 | net=172.67.141.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  05. 104.18.28.234:443 | net=104.18.28.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  06. 92.42.96.240:443 | net=92.42.96.0/24 | SNI=mahanrealiteam.mahkhan.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  07. 172.64.150.28:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  08. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  09. ipw.ygdfw.com:443 | net=104.25.114.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  10. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  11. japan.com:443 | net=172.67.70.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
-  12. russia.com:443 | net=172.67.71.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  01. piracy-android.video-streams.org:443 | net=140.248.145.0/24 | SNI=piracy-android.video-streams.org | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  02. 45.130.125.207:443 | net=45.130.125.0/24 | SNI=terazhediii.info | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  03. 104.18.37.228:443 | net=104.18.37.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  04. finite-node.rtxconfigz.com:443 | net=169.58.143.0/24 | SNI=finite-node.rtxconfigz.com | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  05. meshbuzz.bond:443 | net=172.67.141.0/24 | SNI=4fspx0q.uploodmusicmelody.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  06. 104.18.28.234:443 | net=104.18.28.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  07. 92.42.96.240:443 | net=92.42.96.0/24 | SNI=mahanrealiteam.mahkhan.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  08. 172.64.150.28:443 | net=172.64.150.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  09. 172.66.44.97:443 | net=172.66.44.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  10. ipw.ygdfw.com:443 | net=104.25.233.0/24 | SNI=p2bm6l1.freelanceriran98.ir | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  11. 208.103.161.32:443 | net=208.103.161.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
+  12. japan.com:443 | net=104.26.5.0/24 | SNI=misaka.cndyw.ggff.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   13. 88.216.69.144:443 | net=88.216.69.0/24 | SNI=r5zenrelur2s.pqzdileiu8es.workers.dev | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   14. 172.67.185.178:443 | net=172.67.185.0/24 | SNI=hhlfy.twiladaphne.ndjp.net | type=ws | flow=- | score=25 | TLS,WS,PORT-443
   15. 104.17.3.81:443 | net=104.17.3.0/24 | SNI=josni.hoyes.cloudns.ch | type=ws | flow=- | score=25 | TLS,WS,PORT-443
