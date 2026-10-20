@@ -67,7 +67,7 @@ TOP 100:
  175 | 85.155.226.108:443 | IP=85.155.226.108 | SNI=getsavesafe.net | type=tcp | security=reality | fp=qq | REALITY,TCP/RAW,PORT-443
  175 | 85.155.226.140:443 | IP=85.155.226.140 | SNI=getsavesafe.net | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | staging.lastilhame.monster:443 | IP=107.181.151.241 | SNI=www.microsoft.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
- 175 | server.slavkiti.monster:443 | IP=107.181.151.39 | SNI=www.techradar.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
+ 175 | server.slavkiti.monster:443 | IP=193.124.17.190 | SNI=www.techradar.com | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 94.183.157.249:443 | IP=94.183.157.249 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 144.31.171.143:443 | IP=144.31.171.143 | SNI=eu-central.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
  175 | 150.241.82.19:443 | IP=150.241.82.19 | SNI=america.cendora.ru | type=tcp | security=reality | fp=chrome | REALITY,TCP/RAW,PORT-443
